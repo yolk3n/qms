@@ -1,0 +1,1091 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="182"/>
+		</InputField>
+		<Pages name="Группа" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаExtendedTooltip" id="183"/>
+			<ChildItems>
+				<Page name="ПравилаОтправкиДанных" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правила отправки данных</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПравилаОтправкиДанныхExtendedTooltip" id="184"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиВыгрузки" id="166">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиВыгрузкиРасширеннаяПодсказка" id="185"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВариантЗаполненияНСИ" id="315">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нормативно-справочная информация</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаВариантЗаполненияНСИРасширеннаяПодсказка" id="316"/>
+									<ChildItems>
+										<RadioButtonField name="ПереключательОтправлятьНСИАвтоматически" id="306">
+											<DataPath>Объект.ПравилаОтправкиСправочников</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Отправлять всю</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">АвтоматическаяСинхронизация</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПереключательОтправлятьНСИАвтоматическиКонтекстноеМеню" id="307"/>
+											<ExtendedTooltip name="ПереключательОтправлятьНСИАвтоматическиExtendedTooltip" id="308">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Программа будет автоматически отслеживать изменения всей нормативно-справочной информации, и регистрировать ее к отправке.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ПереключательОтправлятьНСИАвтоматическиПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<RadioButtonField name="ПереключательОтправлятьНСИПоНеобходимости" id="309">
+											<DataPath>Объект.ПравилаОтправкиСправочников</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Отправлять только используемую в документах</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">СинхронизироватьПоНеобходимости</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПереключательОтправлятьНСИПоНеобходимостиКонтекстноеМеню" id="310"/>
+											<ExtendedTooltip name="ПереключательОтправлятьНСИПоНеобходимостиExtendedTooltip" id="311">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Программа будет автоматически отслеживать изменения, и регистрировать к отправке только используемую в документах нормативно-справочную информацию.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ПереключательОтправлятьНСИПоНеобходимостиПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<RadioButtonField name="ПереключательОтправлятьНСИНикогда" id="312">
+											<DataPath>Объект.ПравилаОтправкиСправочников</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Не отправлять</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">НеСинхронизировать</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПереключательОтправлятьНСИНикогдаКонтекстноеМеню" id="313"/>
+											<ExtendedTooltip name="ПереключательОтправлятьНСИНикогдаExtendedTooltip" id="314">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Нормативно-справочная информация отправляться не будет.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ПереключательОтправлятьНСИНикогдаПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаДокументы" id="130">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документы</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаДокументыExtendedTooltip" id="186"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПереключательИДатаНачала" id="138">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа переключатель и дата начала</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПереключательИДатаНачалаExtendedTooltip" id="192">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Программа будет автоматически отслеживать изменения документов, и регистрировать их к отправке начиная с указанной даты.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<ChildItems>
+												<RadioButtonField name="ПереключательДокументыОтправлятьАвтоматически" id="139">
+													<DataPath>Объект.ПравилаОтправкиДокументов</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отправлять все, начиная с даты</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">АвтоматическаяСинхронизация</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ПереключательДокументыОтправлятьАвтоматическиКонтекстноеМеню" id="140"/>
+													<ExtendedTooltip name="ПереключательДокументыОтправлятьАвтоматическиExtendedTooltip" id="193"/>
+													<Events>
+														<Event name="OnChange">ПереключательДокументыОтправлятьАвтоматическиПриИзменении</Event>
+													</Events>
+												</RadioButtonField>
+												<InputField name="ДатаНачалаВыгрузкиДокументов" id="141">
+													<DataPath>Объект.ДатаНачалаВыгрузкиДокументов</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ДатаНачалаВыгрузкиДокументовКонтекстноеМеню" id="142"/>
+													<ExtendedTooltip name="ДатаНачалаВыгрузкиДокументовExtendedTooltip" id="194"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<RadioButtonField name="ПереключательДокументыОтправлятьВручную" id="237">
+											<DataPath>Объект.ПравилаОтправкиДокументов</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ручная синхронизация данных</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ИнтерактивнаяСинхронизация</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПереключательДокументыОтправлятьВручнуюКонтекстноеМеню" id="238"/>
+											<ExtendedTooltip name="ПереключательДокументыОтправлятьВручнуюРасширеннаяПодсказка" id="239">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Пользователь самостоятельно регистрирует документы к отправке, при этом контроль актуальности документов в информационной базе-корреспонденте он также выполняет самостоятельно.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ПереключательДокументыОтправлятьВручнуюПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<RadioButtonField name="ПереключательДокументыНеОтправлять" id="151">
+											<DataPath>Объект.ПравилаОтправкиДокументов</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Не отправлять</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">НеСинхронизировать</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПереключательДокументыНеОтправлятьКонтекстноеМеню" id="152"/>
+											<ExtendedTooltip name="ПереключательДокументыНеОтправлятьExtendedTooltip" id="197">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Документы отправляться не будут.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ПереключательДокументыНеОтправлятьПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДатаЗапретаРедактированияДанных" id="124">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата запрета редактирования данных</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаЗапретаРедактированияДанныхExtendedTooltip" id="211"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаИнформацияДатыЗапрета" id="125">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка информация даты запрета</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>StdPicture.Information</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаИнформацияДатыЗапретаКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="ДекорацияКартинкаИнформацияДатыЗапретаExtendedTooltip" id="212"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияНадписьИнформацияДатыЗапрета" id="127">
+									<TextColor>style:FormTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ограничить изменение данных можно с помощью установки даты запрета редактирования.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНадписьИнформацияДатыЗапретаКонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="ДекорацияНадписьИнформацияДатыЗапретаExtendedTooltip" id="213"/>
+								</LabelDecoration>
+								<Button name="УстановитьДатуЗапретаИзменений" id="129">
+									<Type>Hyperlink</Type>
+									<CommandName>InformationRegister.ДатыЗапретаИзменения.Command.ДатыЗапретаИзмененияДанных</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установить дату запрета изменения данных</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="УстановитьДатуЗапретаИзмененийExtendedTooltip" id="214"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтборы" id="243">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отборы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="244"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОтборыЛевая" id="345">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа отборы левая</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтборыЛеваяРасширеннаяПодсказка" id="346"/>
+									<ChildItems>
+										<Pages name="ГруппаСтраницыОтборПоОрганизациям" id="155">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа страницы отбор по организациям</v8:content>
+												</v8:item>
+											</Title>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="ГруппаСтраницыОтборПоОрганизациямExtendedTooltip" id="215"/>
+											<ChildItems>
+												<Page name="ГруппаСтраницаОтборПоОрганизациям" id="156">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа страница отбор по организациям</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<ExtendedTooltip name="ГруппаСтраницаОтборПоОрганизациямExtendedTooltip" id="216">
+														<HorizontalStretch>true</HorizontalStretch>
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ограничение синхронизации данных по выбранным организациям.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтборПоОрганизации" id="157">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отбор по организации</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтборПоОрганизацииExtendedTooltip" id="217"/>
+															<ChildItems>
+																<CheckBoxField name="ФлагИспользоватьОтборПоОрганизациям" id="158">
+																	<DataPath>Объект.ИспользоватьОтборПоОрганизациям</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Отбор по организациям</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ФлагИспользоватьОтборПоОрганизациямКонтекстноеМеню" id="159"/>
+																	<ExtendedTooltip name="ФлагИспользоватьОтборПоОрганизациямExtendedTooltip" id="218"/>
+																	<Events>
+																		<Event name="OnChange">ФлагИспользоватьОтборПоОрганизациямПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<Button name="ОткрытьСписокВыбранныхОрганизаций" id="160">
+																	<Type>Hyperlink</Type>
+																	<CommandName>Form.Command.ОткрытьСписокВыбранныхОрганизаций</CommandName>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Выбрать организации</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ОткрытьСписокВыбранныхОрганизацийExtendedTooltip" id="219"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаСтраницаОтборПоОрганизациямПустая" id="163">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа страница отбор по организациям пустая</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ГруппаСтраницаОтборПоОрганизациямПустаяExtendedTooltip" id="221"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияНадписьПустаяОтборПоОрганизациям" id="164">
+															<ContextMenu name="ДекорацияНадписьПустаяОтборПоОрганизациямКонтекстноеМеню" id="165"/>
+															<ExtendedTooltip name="ДекорацияНадписьПустаяОтборПоОрганизациямExtendedTooltip" id="222"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+										<Pages name="ГруппаСтраницыОтправляемыеВидыЦен" id="349">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа страницы отправляемые виды цен</v8:content>
+												</v8:item>
+											</Title>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="ГруппаСтраницыОтправляемыеВидыЦенРасширеннаяПодсказка" id="350"/>
+											<ChildItems>
+												<Page name="ГруппаСтраницаОтправляемыеВидыЦен" id="351">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа страница отправляемые виды цен</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ГруппаСтраницаОтправляемыеВидыЦенРасширеннаяПодсказка" id="352"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтправляемыеВидыЦен" id="353">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отправляемые виды цен</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтправляемыеВидыЦенРасширеннаяПодсказка" id="354">
+																<HorizontalStretch>true</HorizontalStretch>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Возможность выгрузки цен номенклатуры по выбранным видам цен.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<ChildItems>
+																<CheckBoxField name="ФлагОтправлятьВидыЦенНоменклатуры" id="355">
+																	<DataPath>Объект.ВыгружатьЦеныНоменклатуры</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Выгружать цены номенклатуры</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ФлагОтправлятьВидыЦенНоменклатурыКонтекстноеМеню" id="356"/>
+																	<ExtendedTooltip name="ФлагОтправлятьВидыЦенНоменклатурыРасширеннаяПодсказка" id="357"/>
+																	<Events>
+																		<Event name="OnChange">ФлагОтправлятьВидыЦенНоменклатурыПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<Button name="ОткрытьСписокОтправляемыхВидовЦен" id="358">
+																	<Type>Hyperlink</Type>
+																	<CommandName>Form.Command.ОткрытьСписокОтправляемыхВидовЦен</CommandName>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Выбрать виды цен</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ОткрытьСписокОтправляемыхВидовЦенРасширеннаяПодсказка" id="359"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаСтраницаОтправляемыеВидыЦенПустая" id="360">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа страница отправляемые виды цен пустая</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ГруппаСтраницаОтправляемыеВидыЦенПустаяРасширеннаяПодсказка" id="361"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияНадписьПустаяОтправляемыеВидыЦен" id="362">
+															<ContextMenu name="ДекорацияНадписьПустаяОтправляемыеВидыЦенКонтекстноеМеню" id="363"/>
+															<ExtendedTooltip name="ДекорацияНадписьПустаяОтправляемыеВидыЦенРасширеннаяПодсказка" id="364"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОтборыПравая" id="347">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа отборы правая</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтборыПраваяРасширеннаяПодсказка" id="348"/>
+									<ChildItems>
+										<Pages name="ГруппаСтраницыОтборПоТипамДокументов" id="245">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа страницы отбор по типам документов</v8:content>
+												</v8:item>
+											</Title>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="ГруппаСтраницыОтборПоТипамДокументовРасширеннаяПодсказка" id="246"/>
+											<ChildItems>
+												<Page name="ГруппаСтраницаОтборПоТипамДокументов" id="247">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа страница отбор по типам документов</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ГруппаСтраницаОтборПоТипамДокументовРасширеннаяПодсказка" id="248"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОтборПоТипамДокументов" id="249">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отбор по типам документов</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтборПоТипамДокументовРасширеннаяПодсказка" id="250">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Ограничение синхронизации данных по выбранным типам документов.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<ChildItems>
+																<CheckBoxField name="ИспользоватьОтборПоТипамДокументов" id="251">
+																	<DataPath>Объект.ИспользоватьОтборПоТипамДокументов</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Отбор по типам документов</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИспользоватьОтборПоТипамДокументовКонтекстноеМеню" id="252"/>
+																	<ExtendedTooltip name="ИспользоватьОтборПоТипамДокументовРасширеннаяПодсказка" id="253"/>
+																	<Events>
+																		<Event name="OnChange">ИспользоватьОтборПоТипамДокументовПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<Button name="ОткрытьСписокВыбранныхДокументов" id="254">
+																	<Type>Hyperlink</Type>
+																	<CommandName>Form.Command.ОткрытьСписокВыбранныхДокументов</CommandName>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Выбрать типы документов</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ОткрытьСписокВыбранныхДокументовРасширеннаяПодсказка" id="255"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<CheckBoxField name="СписыватьПриОтпускеВОтделениеБезСкладскогоУчета" id="365">
+															<DataPath>Объект.ОтключитьСписаниеПриОтпускеВОтделениеБезСкладскогоУчета</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Устанавливается, если необходимо отключить автоматическое формирование документов списания в информационной базе-корреспонденте, при отпуске товаров в отделение с отключенным складским учетом.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="СписыватьПриОтпускеВОтделениеБезСкладскогоУчетаКонтекстноеМеню" id="366"/>
+															<ExtendedTooltip name="СписыватьПриОтпускеВОтделениеБезСкладскогоУчетаРасширеннаяПодсказка" id="367"/>
+														</CheckBoxField>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаСтраницаОтборПоТипамДокументовПустая" id="259">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа страница отбор по типам документов пустая</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ГруппаСтраницаОтборПоТипамДокументовПустаяРасширеннаяПодсказка" id="260"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияНадписьПустаяОтборПоТипамДокументов" id="261">
+															<ContextMenu name="ДекорацияНадписьПустаяОтборПоТипамДокументовКонтекстноеМеню" id="262"/>
+															<ExtendedTooltip name="ДекорацияНадписьПустаяОтборПоТипамДокументовРасширеннаяПодсказка" id="263"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ПравилаПолученияДанных" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правила получения данных</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПравилаПолученияДанныхExtendedTooltip" id="223"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИнформацияНастройкаСоставаПолучаемыхДанных" id="325">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа информация настройка состава получаемых данных</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнформацияНастройкаСоставаПолучаемыхДанныхExtendedTooltip" id="326"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаИнформацияНастройкаСоставаПолучаемыхДанных" id="327">
+									<Width>2</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка информация настройка состава получаемых данных</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Информация02</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаИнформацияНастройкаСоставаПолучаемыхДанныхКонтекстноеМеню" id="328"/>
+									<ExtendedTooltip name="ДекорацияКартинкаИнформацияНастройкаСоставаПолучаемыхДанныхExtendedTooltip" id="329"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияНадписьИнформацияНастройкаСоставаПолучаемыхДанных" id="330">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<TextColor>style:FormTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состав и другие характеристики получаемых данных настраиваются с помощью правил отправки в программе-корреспонденте.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНадписьИнформацияНастройкаСоставаПолучаемыхДанныхКонтекстноеМеню" id="331"/>
+									<ExtendedTooltip name="ДекорацияНадписьИнформацияНастройкаСоставаПолучаемыхДанныхExtendedTooltip" id="332"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДатаЗапретаПолученияДанных" id="333">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата запрета получения данных</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаЗапретаПолученияДанныхРасширеннаяПодсказка" id="334"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаИнформацияДатыЗапретаПолученияДанных" id="335">
+									<Width>2</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка информация даты запрета</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Информация02</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаИнформацияДатыЗапретаПолученияДанныхКонтекстноеМеню" id="336"/>
+									<ExtendedTooltip name="ДекорацияКартинкаИнформацияДатыЗапретаПолученияДанныхРасширеннаяПодсказка" id="337"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаУстановитьДатуЗапретаПолученияДанных" id="338">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа установить дату запрета получения данных</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУстановитьДатуЗапретаПолученияДанныхРасширеннаяПодсказка" id="339"/>
+									<ChildItems>
+										<LabelDecoration name="ОписаниеДатаЗапрета" id="340">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:FormTextColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ограничить получение документов прошлых периодов можно с помощью даты запрета получения данных.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ОписаниеДатаЗапретаКонтекстноеМеню" id="341"/>
+											<ExtendedTooltip name="ОписаниеДатаЗапретаРасширеннаяПодсказка" id="342"/>
+										</LabelDecoration>
+										<Button name="УстановитьДатуЗапретаПолученияДанных" id="343">
+											<Type>Hyperlink</Type>
+											<CommandName>InformationRegister.ДатыЗапретаИзменения.Command.ДатыЗапретаЗагрузкиДанных</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить дату запрета получения данных</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="УстановитьДатуЗапретаПолученияДанныхExtendedTooltip" id="344"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СлужебнаяИнформация" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служебная информация</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СлужебнаяИнформацияExtendedTooltip" id="227"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияНадписьНомераСообщений" id="109">
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номера сообщений:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНадписьНомераСообщенийКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ДекорацияНадписьНомераСообщенийExtendedTooltip" id="229"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаНомераСообщений" id="111">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номера сообщений</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомераСообщенийExtendedTooltip" id="230"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНадписьОтступНомераСообщений" id="112">
+									<ContextMenu name="ДекорацияНадписьОтступНомераСообщенийКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ДекорацияНадписьОтступНомераСообщенийExtendedTooltip" id="231"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПринятоеОтправленное" id="114">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа принятое отправленное</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПринятоеОтправленноеExtendedTooltip" id="232"/>
+									<ChildItems>
+										<InputField name="НомерПринятого" id="115">
+											<DataPath>Объект.ReceivedNo</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Принятого</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НомерПринятогоКонтекстноеМеню" id="116"/>
+											<ExtendedTooltip name="НомерПринятогоExtendedTooltip" id="233"/>
+										</InputField>
+										<InputField name="НомерОтправленного" id="117">
+											<DataPath>Объект.SentNo</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отправленного</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НомерОтправленногоКонтекстноеМеню" id="118"/>
+											<ExtendedTooltip name="НомерОтправленногоExtendedTooltip" id="234"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияНадписьПрочее" id="317">
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прочее:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНадписьПрочееКонтекстноеМеню" id="318"/>
+							<ExtendedTooltip name="ДекорацияНадписьПрочееРасширеннаяПодсказка" id="319"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаСлужебнаяИнформацияПрочее" id="323">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номера сообщений</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСлужебнаяИнформацияПрочееРасширеннаяПодсказка" id="324"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНадписьПрочееОтступ" id="320">
+									<ContextMenu name="ДекорацияНадписьПрочееОтступКонтекстноеМеню" id="321"/>
+									<ExtendedTooltip name="ДекорацияНадписьПрочееОтступРасширеннаяПодсказка" id="322"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПрочее" id="290">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прочее</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПрочееРасширеннаяПодсказка" id="291"/>
+									<ChildItems>
+										<InputField name="Код" id="107">
+											<DataPath>Объект.Code</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Код узла синхронизации данных (префикс базы корреспондента)</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КодКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="КодExtendedTooltip" id="228"/>
+										</InputField>
+										<InputField name="ВерсияФорматаОбмена" id="295">
+											<DataPath>Объект.ВерсияФорматаОбмена</DataPath>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:string">1.5</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:string">1.4</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:string">1.3</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:string">1.2</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:string">1.1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:string">1.0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:string">1.0.beta</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ВерсияФорматаОбменаКонтекстноеМеню" id="296"/>
+											<ExtendedTooltip name="ВерсияФорматаОбменаРасширеннаяПодсказка" id="297"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExchangePlanObject.СинхронизацияДанныхЧерезУниверсальныйФормат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДоступныеДокументы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьСписокВыбранныхОрганизаций" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список выбранных организаций</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F8</Shortcut>
+			<Action>ОткрытьСписокВыбранныхОрганизаций</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСписокВыбранныхДокументов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список выбранных документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список выбранных документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСписокВыбранныхДокументов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСписокОтправляемыхВидовЦен" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список отправляемых видов цен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F8</Shortcut>
+			<Action>ОткрытьСписокОтправляемыхВидовЦен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

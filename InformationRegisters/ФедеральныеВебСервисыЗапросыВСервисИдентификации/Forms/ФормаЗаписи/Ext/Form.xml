@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ВремяИзменения" id="7">
+			<DataPath>Запись.ВремяИзменения</DataPath>
+			<ContextMenu name="ВремяИзмененияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВремяИзмененияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="УзелОбменаСМИС" id="4">
+			<DataPath>Запись.ИдКлиента</DataPath>
+			<ContextMenu name="УзелОбменаСМИСКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="УзелОбменаСМИСРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ИдентификаторСообщенияИзМИС" id="1">
+			<DataPath>Запись.ИдентификаторСообщенияИзМИС</DataPath>
+			<ContextMenu name="ИдентификаторСообщенияИзМИСКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИдентификаторСообщенияИзМИСРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="СтатусЗапроса" id="19">
+			<DataPath>Запись.СтатусЗапроса</DataPath>
+			<ContextMenu name="СтатусЗапросаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СтатусЗапросаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<TextDocumentField name="СообщениеЗапрос" id="16">
+			<DataPath>Запись.СообщениеЗапрос</DataPath>
+			<ContextMenu name="СообщениеЗапросКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СообщениеЗапросРасширеннаяПодсказка" id="18"/>
+		</TextDocumentField>
+		<InputField name="ДатаПолученияОтвета" id="10">
+			<DataPath>Запись.ДатаПолученияОтвета</DataPath>
+			<ContextMenu name="ДатаПолученияОтветаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДатаПолученияОтветаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ИдентификаторСообщенияИзСервиса" id="22">
+			<DataPath>Запись.ИдентификаторСообщенияИзСервиса</DataPath>
+			<ContextMenu name="ИдентификаторСообщенияИзСервисаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ИдентификаторСообщенияИзСервисаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<TextDocumentField name="ОтветСервиса" id="13">
+			<DataPath>Запись.ОтветСервиса</DataPath>
+			<ContextMenu name="ОтветСервисаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОтветСервисаРасширеннаяПодсказка" id="15"/>
+		</TextDocumentField>
+		<InputField name="Комментарий" id="25">
+			<DataPath>Запись.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="OIDМО" id="28">
+			<DataPath>Запись.OIDМО</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="OIDМОКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="OIDМОРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="Фамилия" id="31">
+			<DataPath>Запись.Фамилия</DataPath>
+			<ContextMenu name="ФамилияКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="Имя" id="34">
+			<DataPath>Запись.Имя</DataPath>
+			<ContextMenu name="ИмяКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Отчество" id="37">
+			<DataPath>Запись.Отчество</DataPath>
+			<ContextMenu name="ОтчествоКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="ДокументВид" id="40">
+			<DataPath>Запись.ДокументВид</DataPath>
+			<ContextMenu name="ДокументВидКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ДокументВидРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="ДокументСерия" id="46">
+			<DataPath>Запись.ДокументСерия</DataPath>
+			<ContextMenu name="ДокументСерияКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ДокументСерияРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="ДокументНомер" id="43">
+			<DataPath>Запись.ДокументНомер</DataPath>
+			<ContextMenu name="ДокументНомерКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ДокументНомерРасширеннаяПодсказка" id="45"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ФедеральныеВебСервисыЗапросыВСервисИдентификации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

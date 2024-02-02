@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыФормы" id="129">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыФормыРасширеннаяПодсказка" id="130"/>
+			<ChildItems>
+				<Page name="СтраницаЗагрузки" id="133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница загрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаЗагрузкиРасширеннаяПодсказка" id="134"/>
+					<ChildItems>
+						<Pages name="СтраницыИнформация" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы информация</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыИнформацияРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<Page name="СтраницаИнформацииВыборЭлементов" id="79">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница информации выбор элементов</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница информации выбор элементов</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<ExtendedTooltip name="СтраницаИнформацииВыборЭлементовРасширеннаяПодсказка" id="80"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаВыборЭлемента" id="81">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка выбор элемента</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Информация32</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаВыборЭлементаКонтекстноеМеню" id="82"/>
+											<ExtendedTooltip name="КартинкаВыборЭлементаРасширеннаяПодсказка" id="83"/>
+										</PictureDecoration>
+										<LabelDecoration name="ИнформацияВыборЭлемента" id="84">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выберите элементы, которые необходимо загрузить (для выделения нескольких строк удерживайте клавишу Ctrl или Shift).</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ИнформацияВыборЭлементаКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="ИнформацияВыборЭлементаРасширеннаяПодсказка" id="86"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаИнформацииПолучениеДанных" id="87">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница информации получение данных</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница информации получение данных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<ExtendedTooltip name="СтраницаИнформацииПолучениеДанныхРасширеннаяПодсказка" id="88"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаПолучениеДанных" id="89">
+											<Width>3</Width>
+											<Height>1</Height>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаПолучениеДанныхКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="КартинкаПолучениеДанныхРасширеннаяПодсказка" id="91"/>
+										</PictureDecoration>
+										<LabelDecoration name="ИнформацияПолучениеДанных" id="92">
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получение данных.
+Пожалуйста, подождите...</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ИнформацияПолучениеДанныхКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ИнформацияПолучениеДанныхРасширеннаяПодсказка" id="94"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаИнформацииЗагрузкиДанных" id="95">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница информации загрузки данных</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница информации загрузки данных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<ExtendedTooltip name="СтраницаИнформацииЗагрузкиДанныхРасширеннаяПодсказка" id="96"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаЗагрузкиДанных" id="97">
+											<Width>3</Width>
+											<Height>1</Height>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка загрузки данных</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЗагрузкиДанныхКонтекстноеМеню" id="98"/>
+											<ExtendedTooltip name="КартинкаЗагрузкиДанныхРасширеннаяПодсказка" id="99"/>
+										</PictureDecoration>
+										<LabelDecoration name="ИнформацияЗагрузкиДанных" id="100">
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Загрузка данных.
+Пожалуйста, подождите...</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ИнформацияЗагрузкиДанныхКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ИнформацияЗагрузкиДанныхРасширеннаяПодсказка" id="102"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<UsualGroup name="ОсновнаяПанель" id="103">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основная панель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основная панель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОсновнаяПанельРасширеннаяПодсказка" id="104"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИсточникДанных" id="9">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа источник данных</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа источник данных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИсточникДанныхРасширеннаяПодсказка" id="10"/>
+									<ChildItems>
+										<RadioButtonField name="СпособЗагрузки" id="159">
+											<DataPath>СпособЗагрузки</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Загрузка с сайта МДЛП</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Сайт</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Файл</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Файл</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="СпособЗагрузкиКонтекстноеМеню" id="160"/>
+											<ExtendedTooltip name="СпособЗагрузкиРасширеннаяПодсказка" id="161"/>
+											<Events>
+												<Event name="OnChange">СпособЗагрузкиПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<InputField name="Организация" id="13">
+											<DataPath>Организация</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация МДЛП</v8:content>
+												</v8:item>
+											</ToolTip>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>30</MaxWidth>
+											<ChoiceParameters>
+												<app:item name="Отбор.СобственнаяОрганизация">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xs:boolean">true</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ОрганизацияКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="15"/>
+										</InputField>
+										<InputField name="ПутьКФайлу" id="154">
+											<DataPath>ПутьКФайлу</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>30</MaxWidth>
+											<ChoiceButton>true</ChoiceButton>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Путь к файлу</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="155"/>
+											<ExtendedTooltip name="ПутьКФайлуРасширеннаяПодсказка" id="156"/>
+											<Events>
+												<Event name="StartChoice">ПутьКФайлуНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<Button name="ПолучитьРешенияОПриостановкеМДЛП" id="19">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПолучитьРешенияОПриостановкеМДЛП</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить решения о приостановке МДЛП</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПолучитьРешенияОПриостановкеМДЛПРасширеннаяПодсказка" id="20"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаДинамическиеОтборы" id="21">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Фильтр</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>PopUp</Behavior>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаДинамическиеОтборыРасширеннаяПодсказка" id="22"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаФильтрЗагрузка" id="112">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Загрузка</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Фильтр по статусу загружаемых решений о приостановке/отмене приостановки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>25</Width>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<ExtendedTooltip name="ГруппаФильтрЗагрузкаРасширеннаяПодсказка" id="113"/>
+											<ChildItems>
+												<CheckBoxField name="ФильтрСтатусЗагрузкаНеВыполнялась" id="123">
+													<DataPath>ФильтрСтатусЗагрузкаНеВыполнялась</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФильтрСтатусЗагрузкаНеВыполняласьКонтекстноеМеню" id="124"/>
+													<ExtendedTooltip name="ФильтрСтатусЗагрузкаНеВыполняласьРасширеннаяПодсказка" id="125"/>
+													<Events>
+														<Event name="OnChange">ФильтрСтатусЗагрузкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ФильтрСтатусЗагрузкаНеТребуется" id="120">
+													<DataPath>ФильтрСтатусЗагрузкаНеТребуется</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФильтрСтатусЗагрузкаНеТребуетсяКонтекстноеМеню" id="121"/>
+													<ExtendedTooltip name="ФильтрСтатусЗагрузкаНеТребуетсяРасширеннаяПодсказка" id="122"/>
+													<Events>
+														<Event name="OnChange">ФильтрСтатусЗагрузкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ФильтрСтатусЗагрузкаНеРекомендуется" id="117">
+													<DataPath>ФильтрСтатусЗагрузкаНеРекомендуется</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФильтрСтатусЗагрузкаНеРекомендуетсяКонтекстноеМеню" id="118"/>
+													<ExtendedTooltip name="ФильтрСтатусЗагрузкаНеРекомендуетсяРасширеннаяПодсказка" id="119"/>
+													<Events>
+														<Event name="OnChange">ФильтрСтатусЗагрузкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ФильтрСтатусЗагрузкаНедоступна" id="114">
+													<DataPath>ФильтрСтатусЗагрузкаНедоступна</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФильтрСтатусЗагрузкаНедоступнаКонтекстноеМеню" id="115"/>
+													<ExtendedTooltip name="ФильтрСтатусЗагрузкаНедоступнаРасширеннаяПодсказка" id="116"/>
+													<Events>
+														<Event name="OnChange">ФильтрСтатусЗагрузкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="ДанныеМДЛП" id="23">
+									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<MultipleChoice>true</MultipleChoice>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ДанныеМДЛП</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ДанныеМДЛПКонтекстноеМеню" id="24"/>
+									<AutoCommandBar name="ДанныеМДЛПКоманднаяПанель" id="25">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="Справка" id="64">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.Help</CommandName>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="65"/>
+											</Button>
+											<Button name="ИзменитьФорму" id="62">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+												<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="63"/>
+											</Button>
+											<Button name="ЗаписатьИзмененияДанныхМДЛП" id="60">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаписатьИзменения</CommandName>
+												<ExtendedTooltip name="ЗаписатьИзмененияДанныхМДЛПРасширеннаяПодсказка" id="61"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДанныеМДЛПРасширеннаяПодсказка" id="26"/>
+									<SearchStringAddition name="ДанныеМДЛПСтрокаПоиска" id="27">
+										<AdditionSource>
+											<Item>ДанныеМДЛП</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДанныеМДЛПСтрокаПоискаКонтекстноеМеню" id="28"/>
+										<ExtendedTooltip name="ДанныеМДЛПСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДанныеМДЛПСостояниеПросмотра" id="30">
+										<AdditionSource>
+											<Item>ДанныеМДЛП</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДанныеМДЛПСостояниеПросмотраКонтекстноеМеню" id="31"/>
+										<ExtendedTooltip name="ДанныеМДЛПСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДанныеМДЛПУправлениеПоиском" id="33">
+										<AdditionSource>
+											<Item>ДанныеМДЛП</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДанныеМДЛПУправлениеПоискомКонтекстноеМеню" id="34"/>
+										<ExtendedTooltip name="ДанныеМДЛПУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ДанныеМДЛПВыбор</Event>
+										<Event name="BeforeAddRow">ДанныеМДЛППередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ДанныеМДЛППередУдалением</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ДанныеМДЛПГруппаНоменклатура" id="66">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные МДЛПГруппа номенклатура</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные МДЛПГруппа номенклатура</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ДанныеМДЛПГруппаНоменклатураРасширеннаяПодсказка" id="67"/>
+											<ChildItems>
+												<InputField name="ДанныеМДЛПGTIN" id="36">
+													<DataPath>ДанныеМДЛП.GTIN</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ДанныеМДЛПGTINКонтекстноеМеню" id="37"/>
+													<ExtendedTooltip name="ДанныеМДЛПGTINРасширеннаяПодсказка" id="38"/>
+												</InputField>
+												<InputField name="ДанныеМДЛПНоменклатура" id="51">
+													<DataPath>ДанныеМДЛП.Номенклатура</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>false</ChoiceButton>
+													<ClearButton>false</ClearButton>
+													<OpenButton>true</OpenButton>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ДанныеМДЛПНоменклатураКонтекстноеМеню" id="52"/>
+													<ExtendedTooltip name="ДанныеМДЛПНоменклатураРасширеннаяПодсказка" id="53"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ДанныеМДЛПГруппаСерия" id="68">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные МДЛПГруппа серия</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные МДЛПГруппа серия</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ДанныеМДЛПГруппаСерияРасширеннаяПодсказка" id="69"/>
+											<ChildItems>
+												<InputField name="ДанныеМДЛПНомерСерии" id="39">
+													<DataPath>ДанныеМДЛП.НомерСерии</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ДанныеМДЛПНомерСерииКонтекстноеМеню" id="40"/>
+													<ExtendedTooltip name="ДанныеМДЛПНомерСерииРасширеннаяПодсказка" id="41"/>
+												</InputField>
+												<InputField name="ДанныеМДЛПСерия" id="54">
+													<DataPath>ДанныеМДЛП.Серия</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>false</ChoiceButton>
+													<ClearButton>false</ClearButton>
+													<OpenButton>true</OpenButton>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ДанныеМДЛПСерияКонтекстноеМеню" id="55"/>
+													<ExtendedTooltip name="ДанныеМДЛПСерияРасширеннаяПодсказка" id="56"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ДанныеМДЛПГруппаРешениеОПриостановке" id="70">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные МДЛПГруппа решение о приостановке</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные МДЛПГруппа решение о приостановке</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ДанныеМДЛПГруппаРешениеОПриостановкеРасширеннаяПодсказка" id="71"/>
+											<ChildItems>
+												<ColumnGroup name="ДанныеМДЛПГруппаРешениеОПриостановкеМДЛП" id="72">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Данные МДЛПГруппа решение о приостановке МДЛП</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Данные МДЛПГруппа решение о приостановке МДЛП</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<ExtendedTooltip name="ДанныеМДЛПГруппаРешениеОПриостановкеМДЛПРасширеннаяПодсказка" id="73"/>
+													<ChildItems>
+														<InputField name="ДанныеМДЛПДатаРешенияОПриостановке" id="42">
+															<DataPath>ДанныеМДЛП.ДатаРешенияОПриостановке</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<TextEdit>false</TextEdit>
+															<ContextMenu name="ДанныеМДЛПДатаРешенияОПриостановкеКонтекстноеМеню" id="43"/>
+															<ExtendedTooltip name="ДанныеМДЛПДатаРешенияОПриостановкеРасширеннаяПодсказка" id="44"/>
+														</InputField>
+														<InputField name="ДанныеМДЛПНомерРешенияОПриостановке" id="45">
+															<DataPath>ДанныеМДЛП.НомерРешенияОПриостановке</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<TextEdit>false</TextEdit>
+															<ContextMenu name="ДанныеМДЛПНомерРешенияОПриостановкеКонтекстноеМеню" id="46"/>
+															<ExtendedTooltip name="ДанныеМДЛПНомерРешенияОПриостановкеРасширеннаяПодсказка" id="47"/>
+														</InputField>
+														<InputField name="ДанныеМДЛПТипРешенияОПриостановке" id="126">
+															<DataPath>ДанныеМДЛП.ТипРешенияОПриостановке</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ДанныеМДЛПТипРешенияОПриостановкеКонтекстноеМеню" id="127"/>
+															<ExtendedTooltip name="ДанныеМДЛПТипРешенияОПриостановкеРасширеннаяПодсказка" id="128"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<InputField name="ДанныеМДЛПРешениеОПриостановке" id="57">
+													<DataPath>ДанныеМДЛП.РешениеОПриостановке</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>false</ChoiceButton>
+													<OpenButton>true</OpenButton>
+													<ContextMenu name="ДанныеМДЛПРешениеОПриостановкеКонтекстноеМеню" id="58"/>
+													<ExtendedTooltip name="ДанныеМДЛПРешениеОПриостановкеРасширеннаяПодсказка" id="59"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ДанныеМДЛПГруппаСтатус" id="110">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные МДЛПГруппа статус</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные МДЛПГруппа статус</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ДанныеМДЛПГруппаСтатусРасширеннаяПодсказка" id="111"/>
+											<ChildItems>
+												<InputField name="ДанныеМДЛПСтатус" id="107">
+													<DataPath>ДанныеМДЛП.Статус</DataPath>
+													<Visible>false</Visible>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДанныеМДЛПСтатусКонтекстноеМеню" id="108"/>
+													<ExtendedTooltip name="ДанныеМДЛПСтатусРасширеннаяПодсказка" id="109"/>
+												</InputField>
+												<InputField name="ДанныеМДЛППримечание" id="74">
+													<DataPath>ДанныеМДЛП.Информация</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoCellHeight>true</AutoCellHeight>
+													<Width>50</Width>
+													<TextEdit>false</TextEdit>
+													<HeightControlVariant>UseContentHeight</HeightControlVariant>
+													<ContextMenu name="ДанныеМДЛППримечаниеКонтекстноеМеню" id="75"/>
+													<ExtendedTooltip name="ДанныеМДЛППримечаниеРасширеннаяПодсказка" id="76"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОрганизацииМДЛП</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>Организация</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДанныеМДЛП" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные МДЛП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="GTIN" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>GTIN</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.GTIN</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="НомерСерии" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер серии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаРешенияОПриостановке" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата решения о приостановке</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерРешенияОПриостановке" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер решения о приостановке</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипРешенияОПриостановке" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип решения о приостановке</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Серия" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РешениеОПриостановке" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Решение о приостановке</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЗабракованныеСерии</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Информация" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗагрузкаДоступна" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка доступна</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ФильтрСтатусЗагрузкаНедоступна" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>недоступна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФильтрСтатусЗагрузкаНеРекомендуется" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>не рекомендуется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФильтрСтатусЗагрузкаНеТребуется" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>не требуется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФильтрСтатусЗагрузкаНеВыполнялась" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>не выполнялась</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКФайлу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>ПутьКФайлу</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СпособЗагрузки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсточникиДанных" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источники данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресФайлаНаСервере" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес файла на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьРешенияОПриостановкеМДЛП" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить решения о приостановке МДЛП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить решения о приостановке МДЛП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучитьРешенияОПриостановкеМДЛП</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗаписатьИзменения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИзменения</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОрганизацииМДЛП</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="МестоДеятельности">
+			<Type>
+				<v8:Type>cfg:CatalogRef.МестаДеятельностиМДЛП</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

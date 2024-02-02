@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЖурналПК" id="22">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ЖурналПК</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЖурналПКРасширеннаяПодсказка" id="23"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<PictureField name="ПодписанЭП" id="48">
+					<DataPath>Список.КартинкаСтатусПроверкиЭП</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписан</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СтатусПроверкиЭП</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="ПодписанЭПКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ПодписанЭПРасширеннаяПодсказка" id="50"/>
+				</PictureField>
+				<LabelField name="Дата" id="16">
+					<DataPath>Список.Дата</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Номер" id="19">
+					<DataPath>Список.Номер</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="ДокументПоступления" id="24">
+					<DataPath>Список.ДокументПоступления</DataPath>
+					<ContextMenu name="ДокументПоступленияКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДокументПоступленияРасширеннаяПодсказка" id="26"/>
+				</LabelField>
+				<LabelField name="Поставщик" id="39">
+					<DataPath>Список.Поставщик</DataPath>
+					<ContextMenu name="ПоставщикКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="41"/>
+				</LabelField>
+				<CheckBoxField name="Изъятие" id="30">
+					<DataPath>Список.Изъятие</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИзъятиеКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ИзъятиеРасширеннаяПодсказка" id="32"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВизуальныйОсмотр" id="36">
+					<DataPath>Список.ВизуальныйОсмотр</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Визуал. осмотр</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Визуальный осмотр</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВизуальныйОсмотрКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ВизуальныйОсмотрРасширеннаяПодсказка" id="38"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПолнотаКомплектацииСопроводительныхДокументов" id="45">
+					<DataPath>Список.ПолнотаКомплектацииСопроводительныхДокументов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полнота комплектации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полнота комплектации сопроводительных документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПолнотаКомплектацииСопроводительныхДокументовКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ПолнотаКомплектацииСопроводительныхДокументовРасширеннаяПодсказка" id="47"/>
+				</CheckBoxField>
+				<CheckBoxField name="СоответствиеТовараСопроводительнымДокументам" id="42">
+					<DataPath>Список.СоответствиеТовараСопроводительнымДокументам</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие товара</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие товара сопроводительным документам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СоответствиеТовараСопроводительнымДокументамКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="СоответствиеТовараСопроводительнымДокументамРасширеннаяПодсказка" id="44"/>
+				</CheckBoxField>
+				<CheckBoxField name="Завершено" id="27">
+					<DataPath>Список.Завершено</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗавершеноКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ЗавершеноРасширеннаяПодсказка" id="29"/>
+				</CheckBoxField>
+				<LabelField name="Ответственный" id="33">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="35"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Ссылка КАК Ссылка,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Номер КАК Номер,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Дата КАК Дата,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Проведен КАК Проведен,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ДокументПоступления КАК ДокументПоступления,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Поставщик КАК Поставщик,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ВизуальныйОсмотр КАК ВизуальныйОсмотр,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ВизуальныйОсмотрТекст КАК ВизуальныйОсмотрТекст,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.СоответствиеТовараСопроводительнымДокументам КАК СоответствиеТовараСопроводительнымДокументам,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.СоответствиеТовараСопроводительнымДокументамТекст КАК СоответствиеТовараСопроводительнымДокументамТекст,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ПолнотаКомплектацииСопроводительныхДокументов КАК ПолнотаКомплектацииСопроводительныхДокументов,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ПолнотаКомплектацииСопроводительныхДокументовТекст КАК ПолнотаКомплектацииСопроводительныхДокументовТекст,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.СостояниеПроверкиИзъятия КАК СостояниеПроверкиИзъятия,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Изъятие КАК Изъятие,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.АктНП КАК АктНП,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Завершено КАК Завершено,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Ответственный КАК Ответственный,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.Комментарий КАК Комментарий,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ДатаПроверкиИзъятия КАК ДатаПроверкиИзъятия,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ПодписанЭП КАК ПодписанЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписиНет)
+			ТОГДА 0
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНеПроверена)
+			ТОГДА 1
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьДействительна)
+			ТОГДА 2
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНедействительна)
+			ТОГДА 3
+		ИНАЧЕ ВЫБОР
+				КОГДА ДокументЗаписьЖурналаПриемочногоКонтроля.ПодписанЭП
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК КартинкаСтатусПроверкиЭП,
+	ВЫБОР
+		КОГДА ДокументЗаписьЖурналаПриемочногоКонтроля.ПодписанЭП
+			ТОГДА ЕСТЬNULL(КешИнформацииОбОбъектах.СтатусЭП, ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНеПроверена))
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписиНет)
+	КОНЕЦ КАК СтатусПроверкиЭП,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ПринятыеМеры.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Описание КАК Описание,
+		ДатаМероприятия КАК ДатаМероприятия
+	) КАК ПринятыеМеры,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.ЭлектронныеПодписи.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ДатаПодписи КАК ДатаПодписи,
+		ИмяФайлаПодписи КАК ИмяФайлаПодписи,
+		Комментарий КАК Комментарий,
+		КомуВыданСертификат КАК КомуВыданСертификат,
+		Отпечаток КАК Отпечаток,
+		Подпись КАК Подпись,
+		УстановившийПодпись КАК УстановившийПодпись,
+		Сертификат КАК Сертификат,
+		ДатаПроверкиПодписи КАК ДатаПроверкиПодписи,
+		ПодписьВерна КАК ПодписьВерна
+	) КАК ЭлектронныеПодписи,
+	ДокументЗаписьЖурналаПриемочногоКонтроля.МоментВремени КАК МоментВремени
+ИЗ
+	Документ.ЗаписьЖурналаПриемочногоКонтроля КАК ДокументЗаписьЖурналаПриемочногоКонтроля
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КэшИнформацииОбОбъектах КАК КешИнформацииОбОбъектах
+		ПО ДокументЗаписьЖурналаПриемочногоКонтроля.Ссылка = КешИнформацииОбОбъектах.Объект}</QueryText>
+				<MainTable>Document.ЗаписьЖурналаПриемочногоКонтроля</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЖурналПК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал ПК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал ПК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЖурналПК</Action>
+		</Command>
+	</Commands>
+</Form>

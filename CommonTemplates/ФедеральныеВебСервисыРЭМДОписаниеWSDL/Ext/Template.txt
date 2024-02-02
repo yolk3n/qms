@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:tns="http://egisz.rosminzdrav.ru/iehr/emdr/callback/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://egisz.rosminzdrav.ru" name="EmdrClientCallbackImplService" targetNamespace="http://egisz.rosminzdrav.ru/iehr/emdr/callback/">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://egisz.rosminzdrav.ru/iehr/emdr/callback/" elementFormDefault="qualified" targetNamespace="http://egisz.rosminzdrav.ru/iehr/emdr/callback/" version="1.0">
+			<xs:element name="callbackResponse" type="tns:callbackResponse"/>
+			<xs:element name="getDocumentFileRequest" type="tns:getDocumentFileRequest"/>
+			<xs:element name="getDocumentFileResponse" type="tns:getDocumentFileResponse"/>
+			<xs:element name="registerDocumentResult" type="tns:registerDocumentResult"/>
+			<xs:element name="sendDocumentFileRequest" type="tns:sendDocumentFileRequest"/>
+			<xs:element name="sendNoticeRequest" type="tns:sendNoticeRequest"/>
+			<xs:complexType name="sendDocumentFileRequest">
+				<xs:sequence>
+					<xs:element name="relatesToMessage" type="xs:string"/>
+					<xs:element name="status" type="tns:responseStatus"/>
+					<xs:element minOccurs="0" name="file" type="tns:binaryData"/>
+					<xs:element minOccurs="0" name="errors" type="tns:errors"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="binaryData">
+				<xs:sequence>
+					<xs:element name="data" type="xs:base64Binary"/>
+					<xs:element name="checksum" type="xs:long"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="errors">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" name="item" type="tns:error"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="error">
+				<xs:sequence>
+					<xs:element name="code" type="xs:string"/>
+					<xs:element minOccurs="0" name="message" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="callbackResponse">
+				<xs:sequence>
+					<xs:element name="status" type="tns:responseStatus"/>
+					<xs:element minOccurs="0" name="errors" type="tns:errors"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="registerDocumentResult">
+				<xs:sequence>
+					<xs:element name="relatesToMessage" type="xs:string"/>
+					<xs:element name="status" type="tns:responseStatus"/>
+					<xs:element minOccurs="0" name="registryItem" type="tns:registryItem"/>
+					<xs:element minOccurs="0" name="errors" type="tns:errors"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="registryItem">
+				<xs:sequence>
+					<xs:element name="emdrId" type="xs:string"/>
+					<xs:element minOccurs="0" name="documentVersion" type="xs:int"/>
+					<xs:element name="registrationDate" type="xs:dateTime"/>
+					<xs:element name="registrationDateTime" type="xs:dateTime"/>
+					<xs:element name="storeTillDate" nillable="true" type="xs:date"/>
+					<xs:element minOccurs="0" name="registrationWarnings" type="tns:registrationWarnings"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="registrationWarnings">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" name="item" type="tns:registrationWarning"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="registrationWarning">
+				<xs:sequence>
+					<xs:element name="code" type="xs:string"/>
+					<xs:element minOccurs="0" name="message" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="sendNoticeRequest">
+				<xs:sequence>
+					<xs:element name="initiatingOrg" type="xs:string"/>
+					<xs:element name="document" type="tns:document"/>
+					<xs:element name="isNewDoc" type="xs:boolean"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="association" nillable="true" type="tns:association"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="document">
+				<xs:sequence>
+					<xs:element name="docKind" type="xs:string"/>
+					<xs:element name="emdrId" type="xs:string"/>
+					<xs:element minOccurs="0" name="version" type="xs:int"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="association">
+				<xs:sequence>
+					<xs:element name="type" type="tns:associationType"/>
+					<xs:element name="target" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="getDocumentFileRequest">
+				<xs:sequence>
+					<xs:element name="system" type="xs:string"/>
+					<xs:element name="organization" type="xs:string"/>
+					<xs:element name="localUid" type="xs:string"/>
+					<xs:element name="kind" type="xs:string"/>
+					<xs:element name="documentNumber" type="xs:string"/>
+					<xs:element name="creationDate" type="xs:date"/>
+					<xs:element name="creationDateTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="emdrId" type="xs:string"/>
+					<xs:element minOccurs="0" name="documentVersion" type="xs:int"/>
+					<xs:element name="registrationDate" type="xs:dateTime"/>
+					<xs:element name="registrationDateTime" type="xs:dateTime"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="getDocumentFileResponse">
+				<xs:sequence>
+					<xs:element name="status" type="tns:responseStatus"/>
+					<xs:element minOccurs="0" name="documentFile" type="tns:documentFile"/>
+					<xs:element minOccurs="0" name="errors" type="tns:errors"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="documentFile">
+				<xs:sequence>
+					<xs:element name="system" type="xs:string"/>
+					<xs:element name="organization" type="xs:string"/>
+					<xs:element name="localUid" type="xs:string"/>
+					<xs:element name="file" type="tns:binaryData"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="responseStatus">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="success"/>
+					<xs:enumeration value="error"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="associationType">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="RELATES_TO"/>
+					<xs:enumeration value="INCLUDED_IN"/>
+					<xs:enumeration value="INCLUDES"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://egisz.rosminzdrav.ru" elementFormDefault="qualified" targetNamespace="http://egisz.rosminzdrav.ru" version="1.0">
+			<xs:element name="transportHeader">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="authInfo" type="tns:authInfo"/>
+						<xs:element minOccurs="0" name="userInfo" type="tns:userInfo"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:complexType name="authInfo">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="userSession" type="xs:string"/>
+					<xs:element name="clientEntityId" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="userInfo">
+				<xs:sequence>
+					<xs:element name="userId" type="xs:string"/>
+					<xs:element name="lastName" type="xs:string"/>
+					<xs:element name="firstName" type="xs:string"/>
+					<xs:element name="middleName" type="xs:string"/>
+					<xs:element name="role" type="tns:property"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="medOrg" nillable="true" type="tns:organization"/>
+					<xs:element minOccurs="0" name="region" type="tns:property"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="education" nillable="true" type="tns:education"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="property">
+				<xs:sequence>
+					<xs:element name="code" type="xs:string"/>
+					<xs:element name="name" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="organization">
+				<xs:sequence>
+					<xs:element name="id" type="tns:property"/>
+					<xs:element name="type" type="tns:property"/>
+					<xs:element minOccurs="0" name="positionType" type="tns:property"/>
+					<xs:element minOccurs="0" name="position" type="tns:property"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="education">
+				<xs:sequence>
+					<xs:element name="type" type="tns:property"/>
+					<xs:element name="speciality" type="tns:property"/>
+					<xs:element minOccurs="0" name="diplomType" type="tns:property"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="sendRegisterDocumentResult">
+		<wsdl:part element="ns1:transportHeader" name="header"> </wsdl:part>
+		<wsdl:part element="tns:registerDocumentResult" name="body"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sendDocumentFileResponse">
+		<wsdl:part element="tns:callbackResponse" name="body"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sendNotice">
+		<wsdl:part element="ns1:transportHeader" name="header"> </wsdl:part>
+		<wsdl:part element="tns:sendNoticeRequest" name="body"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getDocumentFileResponse">
+		<wsdl:part element="tns:getDocumentFileResponse" name="body"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sendDocumentFile">
+		<wsdl:part element="ns1:transportHeader" name="header"> </wsdl:part>
+		<wsdl:part element="tns:sendDocumentFileRequest" name="body"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sendNoticeResponse">
+		<wsdl:part element="tns:callbackResponse" name="body"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sendRegisterDocumentResultResponse">
+		<wsdl:part element="tns:callbackResponse" name="body"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getDocumentFile">
+		<wsdl:part element="ns1:transportHeader" name="header"> </wsdl:part>
+		<wsdl:part element="tns:getDocumentFileRequest" name="body"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="emdrClientCallbackPort">
+		<wsdl:operation name="sendDocumentFile">
+			<wsdl:input message="tns:sendDocumentFile" name="sendDocumentFile"> </wsdl:input>
+			<wsdl:output message="tns:sendDocumentFileResponse" name="sendDocumentFileResponse"> </wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="sendRegisterDocumentResult">
+			<wsdl:input message="tns:sendRegisterDocumentResult" name="sendRegisterDocumentResult"> </wsdl:input>
+			<wsdl:output message="tns:sendRegisterDocumentResultResponse" name="sendRegisterDocumentResultResponse"> </wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="sendNotice">
+			<wsdl:input message="tns:sendNotice" name="sendNotice"> </wsdl:input>
+			<wsdl:output message="tns:sendNoticeResponse" name="sendNoticeResponse"> </wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getDocumentFile">
+			<wsdl:input message="tns:getDocumentFile" name="getDocumentFile"> </wsdl:input>
+			<wsdl:output message="tns:getDocumentFileResponse" name="getDocumentFileResponse"> </wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="EmdrClientCallbackImplServiceSoapBinding" type="tns:emdrClientCallbackPort">
+		<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsaw:UsingAddressing xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsdl:required="true"/>
+		<wsp:PolicyReference URI="#EmdrClientCallbackImplServiceSoapBinding_WSAM_Addressing_Policy"/>
+		<wsdl:operation name="sendDocumentFile">
+			<soap12:operation soapAction="sendDocumentFile" style="document"/>
+			<wsdl:input name="sendDocumentFile">
+				<soap12:header message="tns:sendDocumentFile" part="header" use="literal"> </soap12:header>
+				<soap12:body parts="body" use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="sendDocumentFileResponse">
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="sendRegisterDocumentResult">
+			<soap12:operation soapAction="sendRegisterDocumentResult" style="document"/>
+			<wsdl:input name="sendRegisterDocumentResult">
+				<soap12:header message="tns:sendRegisterDocumentResult" part="header" use="literal"> </soap12:header>
+				<soap12:body parts="body" use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="sendRegisterDocumentResultResponse">
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="sendNotice">
+			<soap12:operation soapAction="sendNotice" style="document"/>
+			<wsdl:input name="sendNotice">
+				<soap12:header message="tns:sendNotice" part="header" use="literal"> </soap12:header>
+				<soap12:body parts="body" use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="sendNoticeResponse">
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getDocumentFile">
+			<soap12:operation soapAction="getDocumentFile" style="document"/>
+			<wsdl:input name="getDocumentFile">
+				<soap12:header message="tns:getDocumentFile" part="header" use="literal"> </soap12:header>
+				<soap12:body parts="body" use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="getDocumentFileResponse">
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="EmdrClientCallbackImplService">
+		<wsdl:port binding="tns:EmdrClientCallbackImplServiceSoapBinding" name="emdrClientCallbackPort">
+			<soap12:address location="%1"/>
+		</wsdl:port>
+	</wsdl:service>
+	<wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="EmdrClientCallbackImplServiceSoapBinding_WSAM_Addressing_Policy">
+		<wsam:Addressing xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+			<wsp:Policy/>
+		</wsam:Addressing>
+	</wsp:Policy>
+</wsdl:definitions>

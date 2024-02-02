@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мобильное приложение</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШтрихкодИнтеграцииИнформация" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа штрихкод интеграции информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа штрихкод интеграции информация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШтрихкодИнтеграцииИнформацияРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияШтрихкодИнтеграцииКартинка" id="14">
+					<Picture>
+						<xr:Ref>CommonPicture.Информация32</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияШтрихкодИнтеграцииКартинкаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДекорацияШтрихкодИнтеграцииКартинкаРасширеннаяПодсказка" id="16"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияШтрихкодИнтеграцииИнформация" id="9">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Font ref="style:SmallTextFont" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для получения настроек обмена необходимо отсканировать код в мобильном приложении.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияШтрихкодИнтеграцииИнформацияКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДекорацияШтрихкодИнтеграцииИнформацияРасширеннаяПодсказка" id="11"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<PictureField name="ШтрихкодИнтеграции" id="1">
+			<DataPath>ШтрихкодИнтеграции</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Width>40</Width>
+			<Height>10</Height>
+			<Zoomable>true</Zoomable>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="ШтрихкодИнтеграцииКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ШтрихкодИнтеграцииРасширеннаяПодсказка" id="3"/>
+		</PictureField>
+		<UsualGroup name="ГруппаДанныеURL" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа данные URL</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Collapsible</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДанныеURLРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<InputField name="АдресИнформационнойБазы" id="6">
+					<DataPath>АдресИнформационнойБазы</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес информационной базы (на веб-сервере) необходимо ввести вручную (включая номер области), т.к. его не удалось получить из настроек информационной базы.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес информационной базы (на веб-сервере)</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="АдресИнформационнойБазыКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="АдресИнформационнойБазыРасширеннаяПодсказка" id="8">
+						<TextColor>style:ПоясняющийТекст</TextColor>
+						<Font ref="style:SmallTextFont" kind="StyleItem"/>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">АдресИнформационнойБазыПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.НастройкаИнтеграцииСМобильнымПриложением</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ШтрихкодИнтеграции" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод интеграции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресИнформационнойБазы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес информационной базы (на веб-сервере)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

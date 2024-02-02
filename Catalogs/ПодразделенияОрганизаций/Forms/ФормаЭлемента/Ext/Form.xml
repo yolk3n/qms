@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="30"/>
+		</InputField>
+		<InputField name="НаименованиеПолное" id="55">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="56"/>
+			<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<InputField name="ОсновнойСклад" id="19">
+			<DataPath>Объект.ОсновнойСклад</DataPath>
+			<DropListButton>false</DropListButton>
+			<ChoiceButton>true</ChoiceButton>
+			<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+			<ContextMenu name="ОсновнойСкладКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОсновнойСкладExtendedTooltip" id="34"/>
+		</InputField>
+		<InputField name="Владелец" id="3">
+			<DataPath>Объект.Owner</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ВладелецExtendedTooltip" id="31"/>
+		</InputField>
+		<InputField name="Родитель" id="49">
+			<DataPath>Объект.Parent</DataPath>
+			<DropListButton>false</DropListButton>
+			<ChoiceButton>true</ChoiceButton>
+			<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+			<ContextMenu name="РодительКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<InputField name="КодOID" id="52">
+			<DataPath>Объект.КодOID</DataPath>
+			<ContextMenu name="КодOIDКонтекстноеМеню" id="53"/>
+			<ExtendedTooltip name="КодOIDРасширеннаяПодсказка" id="54"/>
+		</InputField>
+		<UsualGroup name="ГруппаОтветственныеЛица" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственные лица</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ответственные лица отделения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Height>5</Height>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаОтветственныеЛицаExtendedTooltip" id="45"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОтветственныеЛицаРуководитель" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ответственные лица руководитель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ответственные лица отделения руководитель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтветственныеЛицаРуководительExtendedTooltip" id="46"/>
+					<ChildItems>
+						<InputField name="ТекущийРуководитель" id="26">
+							<DataPath>Объект.ТекущийРуководитель</DataPath>
+							<ContextMenu name="ТекущийРуководительКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ТекущийРуководительExtendedTooltip" id="47"/>
+							<Events>
+								<Event name="OnChange">ТекущийРуководительПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТекущаяДолжностьРуководителя" id="28">
+							<DataPath>Объект.ТекущаяДолжностьРуководителя</DataPath>
+							<ContextMenu name="ТекущаяДолжностьРуководителяКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ТекущаяДолжностьРуководителяExtendedTooltip" id="48"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПодразделенияОрганизаций</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

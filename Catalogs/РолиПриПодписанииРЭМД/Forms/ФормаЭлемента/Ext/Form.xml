@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="КодМинздрава" id="7">
+			<DataPath>Объект.КодМинздрава</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодМинздраваКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КодМинздраваРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВерсияКлассификатораМинздрава" id="53">
+			<DataPath>Объект.ВерсияКлассификатораМинздрава</DataPath>
+			<ContextMenu name="ВерсияКлассификатораМинздраваКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="ВерсияКлассификатораМинздраваРасширеннаяПодсказка" id="55"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Роль" id="10">
+			<DataPath>Объект.Роль</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РольКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="РольРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="Архивирование_Статус" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архивирование статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архивирование статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Архивирование_СтатусExtendedTooltip" id="57"/>
+		</UsualGroup>
+		<Table name="ПравилаПодписи" id="16">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ПравилаПодписи</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПравилаПодписиКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="ПравилаПодписиКоманднаяПанель" id="18"/>
+			<ExtendedTooltip name="ПравилаПодписиРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="ПравилаПодписиСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>ПравилаПодписи</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПравилаПодписиСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ПравилаПодписиСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПравилаПодписиСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>ПравилаПодписи</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПравилаПодписиСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ПравилаПодписиСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПравилаПодписиУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>ПравилаПодписи</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПравилаПодписиУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ПравилаПодписиУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПравилаПодписиНомерСтроки" id="29">
+					<DataPath>Объект.ПравилаПодписи.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПравилаПодписиНомерСтрокиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПравилаПодписиНомерСтрокиРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<InputField name="ПравилаПодписиКодМинздрава" id="32">
+					<DataPath>Объект.ПравилаПодписи.КодМинздрава</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПравилаПодписиКодМинздраваКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПравилаПодписиКодМинздраваРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ПравилаПодписиКодМинздраваВидаДокумента" id="35">
+					<DataPath>Объект.ПравилаПодписи.КодМинздраваВидаДокумента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПравилаПодписиКодМинздраваВидаДокументаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПравилаПодписиКодМинздраваВидаДокументаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ПравилаПодписиКодМинздраваДолжности" id="38">
+					<DataPath>Объект.ПравилаПодписи.КодМинздраваДолжности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПравилаПодписиКодМинздраваДолжностиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПравилаПодписиКодМинздраваДолжностиРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ПравилаПодписиМинимальноеКоличествоПодписей" id="41">
+					<DataPath>Объект.ПравилаПодписи.МинимальноеКоличествоПодписей</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПравилаПодписиМинимальноеКоличествоПодписейКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПравилаПодписиМинимальноеКоличествоПодписейРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ПравилаПодписиМаксимальноеКоличествоПодписей" id="44">
+					<DataPath>Объект.ПравилаПодписи.МаксимальноеКоличествоПодписей</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПравилаПодписиМаксимальноеКоличествоПодписейКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПравилаПодписиМаксимальноеКоличествоПодписейРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.РолиПриПодписанииРЭМД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.ПравилаПодписи"/>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

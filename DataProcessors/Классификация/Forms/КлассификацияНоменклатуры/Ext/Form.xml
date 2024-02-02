@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКомандыФормы" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПолныеЧастоИспользуемыеВозможности" id="19">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полные возможности</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<ContextMenu name="ДекорацияПолныеЧастоИспользуемыеВозможностиКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДекорацияПолныеЧастоИспользуемыеВозможностиРасширеннаяПодсказка" id="26"/>
+					<Events>
+						<Event name="Click">ДекорацияПолныеЧастоИспользуемыеВозможностиНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<Button name="Справка" id="21">
+					<Type>Hyperlink</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="27"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<Page name="СтраницаЧастоИспользуемыеВозможности" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часто используемые возможности</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница часто используемые возможности</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЧастоИспользуемыеВозможностиРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаABCКлассификацияКратко" id="4">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ABC классификация</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ABCКлассификация кратко</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаABCКлассификацияКраткоРасширеннаяПодсказка" id="30"/>
+							<ChildItems>
+								<Button name="ВыполнитьABCКлассификациюКратко" id="5">
+									<Type>UsualButton</Type>
+									<Width>24</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.ВыполнитьABCКлассификациюЧастоИспользуемыеВозможности</CommandName>
+									<ExtendedTooltip name="ВыполнитьABCКлассификациюКраткоРасширеннаяПодсказка" id="31"/>
+								</Button>
+								<LabelDecoration name="ДекорацияABCКлассификацияОписаниеЧастоИспользуемыеВозможности" id="23">
+									<Width>48</Width>
+									<Height>3</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<VerticalAlign>Top</VerticalAlign>
+									<TitleHeight>2</TitleHeight>
+									<ContextMenu name="ДекорацияABCКлассификацияОписаниеЧастоИспользуемыеВозможностиКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДекорацияABCКлассификацияОписаниеЧастоИспользуемыеВозможностиРасширеннаяПодсказка" id="32"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПолныеВозможности" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полные возможности</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница полные возможности</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПолныеВозможностиРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаABCКлассификацияПолныеВозможности" id="6">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ABC классификация</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ABCКлассификация полные возможности</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаABCКлассификацияПолныеВозможностиРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаABCКлассификацияНастройка" id="8">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ABC классификация настройка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ABCКлассификация настройка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаABCКлассификацияНастройкаРасширеннаяПодсказка" id="35"/>
+									<ChildItems>
+										<Button name="НастройкаABCКлассификации" id="7">
+											<Type>UsualButton</Type>
+											<Width>24</Width>
+											<Height>2</Height>
+											<CommandName>Form.Command.НастройкаABCКлассификации</CommandName>
+											<ExtendedTooltip name="НастройкаABCКлассификацииРасширеннаяПодсказка" id="36"/>
+										</Button>
+										<LabelDecoration name="ДекорацияABCКлассификацияНастройка" id="9">
+											<Width>48</Width>
+											<Height>3</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>После изменения настроек классификации необходимо очистить классификацию и выполнить классификацию за все периоды.</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<TitleHeight>2</TitleHeight>
+											<ContextMenu name="ДекорацияABCКлассификацияНастройкаКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="ДекорацияABCКлассификацияНастройкаРасширеннаяПодсказка" id="37"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаABCКлассификацияОчистить" id="15">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ABC классификация очистить</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ABCКлассификация очистить</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаABCКлассификацияОчиститьРасширеннаяПодсказка" id="38"/>
+									<ChildItems>
+										<Button name="ОчиститьABCКлассификацию" id="16">
+											<Type>UsualButton</Type>
+											<Width>24</Width>
+											<Height>2</Height>
+											<CommandName>Form.Command.ОчиститьABCКлассификацию</CommandName>
+											<ExtendedTooltip name="ОчиститьABCКлассификациюРасширеннаяПодсказка" id="39"/>
+										</Button>
+										<LabelDecoration name="ДекорацияABCКлассификацияОчистить" id="17">
+											<Width>48</Width>
+											<Height>3</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<VerticalAlign>Top</VerticalAlign>
+											<TitleHeight>2</TitleHeight>
+											<ContextMenu name="ДекорацияABCКлассификацияОчиститьКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="ДекорацияABCКлассификацияОчиститьРасширеннаяПодсказка" id="40"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаABCКлассификация" id="11">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ABC классификация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ABCКлассификация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаABCКлассификацияРасширеннаяПодсказка" id="41"/>
+									<ChildItems>
+										<Button name="ВыполнитьABCКлассификацию" id="12">
+											<Type>UsualButton</Type>
+											<Width>24</Width>
+											<Height>2</Height>
+											<CommandName>Form.Command.ВыполнитьABCКлассификацию</CommandName>
+											<ExtendedTooltip name="ВыполнитьABCКлассификациюРасширеннаяПодсказка" id="42"/>
+										</Button>
+										<LabelDecoration name="ДекорацияABCКлассификацияВыполнить" id="13">
+											<Width>48</Width>
+											<Height>3</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<VerticalAlign>Top</VerticalAlign>
+											<TitleHeight>2</TitleHeight>
+											<ContextMenu name="ДекорацияABCКлассификацияВыполнитьКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ДекорацияABCКлассификацияВыполнитьРасширеннаяПодсказка" id="43"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Классификация</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПолныеВозможности" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полные возможности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПолныеВозможности</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КоличествоПериодовABCКлассификации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество периодов ABC классификации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПериодABCКлассификации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период ABC классификации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьABCКлассификацию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить ABC классификацию за все периоды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить ABCКлассификацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьABCКлассификацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаABCКлассификации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка ABCКлассификации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаABCКлассификации</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьABCКлассификацию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить ABC классификацию за все периоды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить ABCКлассификацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьABCКлассификацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыполнитьABCКлассификациюЧастоИспользуемыеВозможности" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить ABC классификацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить ABC классификацию часто используемые возможности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьABCКлассификациюЧастоИспользуемыеВозможности</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

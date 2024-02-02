@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ГруппаПКУ" id="14">
+			<DataPath>ГруппаПКУ</DataPath>
+			<ContextMenu name="ГруппаПКУКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ГруппаПКУExtendedTooltip" id="22"/>
+			<Events>
+				<Event name="OnChange">ГруппаПКУПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="40"/>
+		</UsualGroup>
+		<Table name="ОписанияАптечныхТоваров" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ОписанияАптечныхТоваров</DataPath>
+			<RowPictureDataPath>ОписанияАптечныхТоваров.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="ОписанияАптечныхТоваровКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ОписанияАптечныхТоваровКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ОписанияАптечныхТоваровExtendedTooltip" id="23"/>
+			<SearchStringAddition name="ОписанияАптечныхТоваровСтрокаПоиска" id="30">
+				<AdditionSource>
+					<Item>ОписанияАптечныхТоваров</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОписанияАптечныхТоваровСтрокаПоискаКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="ОписанияАптечныхТоваровСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОписанияАптечныхТоваровСостояниеПросмотра" id="33">
+				<AdditionSource>
+					<Item>ОписанияАптечныхТоваров</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОписанияАптечныхТоваровСостояниеПросмотраКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ОписанияАптечныхТоваровСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОписанияАптечныхТоваровУправлениеПоиском" id="36">
+				<AdditionSource>
+					<Item>ОписанияАптечныхТоваров</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОписанияАптечныхТоваровУправлениеПоискомКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ОписанияАптечныхТоваровУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ValueChoice">ОписанияАптечныхТоваровВыборЗначения</Event>
+				<Event name="Selection">ОписанияАптечныхТоваровВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ОписанияАптечныхТоваровНоменклатура" id="18">
+					<DataPath>ОписанияАптечныхТоваров.Номенклатура</DataPath>
+					<ContextMenu name="ОписанияАптечныхТоваровНоменклатураКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ОписанияАптечныхТоваровНоменклатураExtendedTooltip" id="24"/>
+				</LabelField>
+				<LabelField name="ОписанияАптечныхТоваровТорговоеНаименование" id="8">
+					<DataPath>ОписанияАптечныхТоваров.ТорговоеНаименование</DataPath>
+					<Width>25</Width>
+					<ContextMenu name="ОписанияАптечныхТоваровТорговоеНаименованиеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ОписанияАптечныхТоваровТорговоеНаименованиеExtendedTooltip" id="25"/>
+				</LabelField>
+				<LabelField name="ОписанияАптечныхТоваровТорговоеНаименованиеАнглийскоеНаименование" id="12">
+					<DataPath>ОписанияАптечныхТоваров.ТорговоеНаименование.АнглийскоеНаименование</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Width>22</Width>
+					<ContextMenu name="ОписанияАптечныхТоваровТорговоеНаименованиеАнглийскоеНаименованиеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОписанияАптечныхТоваровТорговоеНаименованиеАнглийскоеНаименованиеРасширеннаяПодсказка" id="26"/>
+				</LabelField>
+				<LabelField name="ОписанияАптечныхТоваровДействующиеВеществаМНН" id="6">
+					<DataPath>ОписанияАптечныхТоваров.ДействующиеВеществаМНН</DataPath>
+					<Width>27</Width>
+					<ContextMenu name="ОписанияАптечныхТоваровДействующиеВеществаМННКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ОписанияАптечныхТоваровДействующиеВеществаМННExtendedTooltip" id="27"/>
+				</LabelField>
+				<LabelField name="ОписанияАптечныхТоваровФормаВыпуска" id="10">
+					<DataPath>ОписанияАптечныхТоваров.ФормаВыпуска</DataPath>
+					<Width>25</Width>
+					<ContextMenu name="ОписанияАптечныхТоваровФормаВыпускаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОписанияАптечныхТоваровФормаВыпускаExtendedTooltip" id="28"/>
+				</LabelField>
+				<LabelField name="ОписанияАптечныхТоваровГруппаПКУ" id="4">
+					<DataPath>ОписанияАптечныхТоваров.ГруппаПКУ</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ОписанияАптечныхТоваровГруппаПКУКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ОписанияАптечныхТоваровГруппаПКУExtendedTooltip" id="29"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОписанияАптечныхТоваров" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описания аптечных товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>ОписанияАптечныхТоваров.ГруппаПКУ</Field>
+				<Field>ОписанияАптечныхТоваров.ДействующиеВеществаМНН</Field>
+				<Field>ОписанияАптечныхТоваров.Номенклатура</Field>
+				<Field>ОписанияАптечныхТоваров.ТорговоеНаименование</Field>
+				<Field>ОписанияАптечныхТоваров.ФормаВыпуска</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>	ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+		АналитикаОписанийОтборовНоменклатуры.Номенклатура,
+		ВЫБОР
+			КОГДА АналитикаОписанийОтборовНоменклатуры.Номенклатура = ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)
+				ТОГДА АналитикаОписанийОтборовНоменклатуры.ТорговоеНаименование
+			ИНАЧЕ ОписанияЛекарственныхСредств.ТорговоеНаименование
+		КОНЕЦ КАК ТорговоеНаименование,
+		ВЫБОР
+			КОГДА АналитикаОписанийОтборовНоменклатуры.Номенклатура = ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)
+				ТОГДА АналитикаОписанийОтборовНоменклатуры.ДействующиеВеществаМНН
+			ИНАЧЕ ОписанияЛекарственныхСредств.ДействующиеВеществаМНН
+		КОНЕЦ КАК ДействующиеВеществаМНН,
+		ОписанияЛекарственныхСредств.ФормаВыпуска КАК ФормаВыпуска,
+		ЕСТЬNULL(ОписанияЛекарственныхСредств.ГруппаПКУ, АналитикаОписанийОтборовНоменклатуры.Номенклатура.ГруппаПКУ) КАК ГруппаПКУ
+	ИЗ
+		(ВЫБРАТЬ
+			ПериодыДействияФормуляра.Номенклатура КАК Номенклатура,
+			ПериодыДействияФормуляра.Период КАК Период,
+			ПериодыДействияФормуляра.ПериодЗавершения КАК ПериодЗавершения
+		ИЗ
+			РегистрСведений.ПериодыДействияФормулярныхСписковЛекарственныхСредств.СрезПоследних(
+					&amp;ДатаПериода,
+					Организация = &amp;Организация И
+					(Отделение = ЗНАЧЕНИЕ(Справочник.ОтделенияОрганизаций.ПустаяСсылка)
+					ИЛИ	Отделение = &amp;Отделение
+					)
+			) КАК ПериодыДействияФормуляра
+		ГДЕ
+			ПериодыДействияФормуляра.СтатусДействия = ЗНАЧЕНИЕ(Перечисление.СтатусыДействияФормуляра.Действует)
+			И ПериодыДействияФормуляра.ПериодЗавершения &gt;= &amp;ДатаПериода
+		СГРУППИРОВАТЬ ПО
+			ПериодыДействияФормуляра.Номенклатура,
+			ПериодыДействияФормуляра.Период,
+			ПериодыДействияФормуляра.ПериодЗавершения
+		ИМЕЮЩИЕ
+			СУММА(ПериодыДействияФормуляра.ЗначениеДоступа) = 1 ИЛИ СУММА(ПериодыДействияФормуляра.ЗначениеДоступа) = 6
+			) КАК ПериодыДействияФормуляраСрезПоследних
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаОписанийОтборовНоменклатуры КАК АналитикаОписанийОтборовНоменклатуры
+				ЛЕВОЕ СОЕДИНЕНИЕ
+					(ВЫБРАТЬ
+						Препараты.Ссылка                  КАК Ссылка,
+						Препараты.ТорговоеНаименование    КАК ТорговоеНаименование,
+						Препараты.ДействующиеВеществаМНН  КАК ДействующиеВеществаМНН,
+						Препараты.ФормаВыпуска            КАК ФормаВыпуска,
+						Препараты.ГруппаПКУ               КАК ГруппаПКУ
+					ИЗ
+						Справочник.РегистрЛекарственныхСредств КАК Препараты
+					
+					ОБЪЕДИНИТЬ ВСЕ
+					
+					ВЫБРАТЬ
+						Препараты.Ссылка                  КАК Ссылка,
+						Препараты.ТорговоеНаименование    КАК ТорговоеНаименование,
+						Препараты.ДействующиеВеществаМНН  КАК ДействующиеВеществаМНН,
+						Препараты.ФормаВыпуска            КАК ФормаВыпуска,
+						Препараты.ГруппаПКУ               КАК ГруппаПКУ
+					ИЗ
+						Справочник.КЛП КАК Препараты
+					) КАК ОписанияЛекарственныхСредств
+				ПО (ВЫБОР
+						КОГДА АналитикаОписанийОтборовНоменклатуры.Номенклатура = ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)
+							ТОГДА ВЫБОР
+									КОГДА АналитикаОписанийОтборовНоменклатуры.ТорговоеНаименование = ЗНАЧЕНИЕ(Справочник.ТорговыеНаименования.ПустаяСсылка)
+										ТОГДА АналитикаОписанийОтборовНоменклатуры.ДействующиеВеществаМНН = ОписанияЛекарственныхСредств.ДействующиеВеществаМНН
+												И АналитикаОписанийОтборовНоменклатуры.ФормаВыпуска = ОписанияЛекарственныхСредств.ФормаВыпуска
+									ИНАЧЕ АналитикаОписанийОтборовНоменклатуры.ТорговоеНаименование = ОписанияЛекарственныхСредств.ТорговоеНаименование
+											И АналитикаОписанийОтборовНоменклатуры.ФормаВыпуска = ОписанияЛекарственныхСредств.ФормаВыпуска
+											И ВЫБОР
+												КОГДА АналитикаОписанийОтборовНоменклатуры.ДействующиеВеществаМНН &lt;&gt; ЗНАЧЕНИЕ(Справочник.ДействующиеВеществаМНН.ПустаяСсылка)
+													ТОГДА АналитикаОписанийОтборовНоменклатуры.ДействующиеВеществаМНН = ОписанияЛекарственныхСредств.ДействующиеВеществаМНН
+												ИНАЧЕ ИСТИНА
+											КОНЕЦ
+								КОНЕЦ
+						ИНАЧЕ АналитикаОписанийОтборовНоменклатуры.Номенклатура.ЭлементКАТ = ОписанияЛекарственныхСредств.Ссылка
+					КОНЕЦ)
+			ПО ПериодыДействияФормуляраСрезПоследних.Номенклатура = АналитикаОписанийОтборовНоменклатуры.КлючАналитики
+</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ТорговоеНаименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ГруппаПКУ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ПКУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГруппыПКУ</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Отделение">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОтделенияОрганизаций</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ПериодФормуляра">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

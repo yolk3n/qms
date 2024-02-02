@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="39"/>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="20"/>
+			<SearchStringAddition name="СписокSearchString" id="29">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchStringContextMenu" id="30"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокViewStatus" id="32">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокViewStatusContextMenu" id="33"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокSearchControl" id="35">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchControlContextMenu" id="36"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="37"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.НаименованиеПолное</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="21"/>
+				</LabelField>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="22"/>
+				</LabelField>
+				<LabelField name="СМНН" id="40">
+					<DataPath>Список.СМНН</DataPath>
+					<ContextMenu name="СМННКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СМННРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="ДействующиеВеществаМНН" id="8">
+					<DataPath>Список.ДействующиеВеществаМНН</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ДействующиеВеществаМННКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ДействующиеВеществаМННРасширеннаяПодсказка" id="23"/>
+				</LabelField>
+				<LabelField name="ТорговоеНаименование" id="10">
+					<DataPath>Список.ТорговоеНаименование</DataPath>
+					<ContextMenu name="ТорговоеНаименованиеКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТорговоеНаименованиеExtendedTooltip" id="24"/>
+				</LabelField>
+				<LabelField name="ФирмаПроизводитель" id="12">
+					<DataPath>Список.ФирмаПроизводитель</DataPath>
+					<ContextMenu name="ФирмаПроизводительКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ФирмаПроизводительExtendedTooltip" id="25"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="18">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СсылкаExtendedTooltip" id="26"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<CheckBoxField name="ОтборНеПривязанныеКЕСКЛП" id="14">
+			<DataPath>ОтборНеПривязанныеКЕСКЛП</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать только не привязанные к ЕСКЛП</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтборНеПривязанныеКЕСКЛПКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ОтборНеПривязанныеКЕСКЛПРасширеннаяПодсказка" id="27"/>
+			<Events>
+				<Event name="OnChange">ОтборНеПривязанныеКЕСКЛППриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CheckBoxField name="ОтборНеПривязанныеКНоменклатуре" id="16">
+			<DataPath>ОтборНеПривязанныеКНоменклатуре</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать только не привязанные к номенклатуре</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтборНеПривязанныеКНоменклатуреКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОтборНеПривязанныеКНоменклатуреExtendedTooltip" id="28"/>
+			<Events>
+				<Event name="OnChange">ОтборНеПривязанныеКНоменклатуреПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~Список.НомерРЛС</Field>
+				<Field>~Список.СсылкаНаОписаниеВБазеРЛС</Field>
+				<Field>Список.Ref</Field>
+				<Field>Список.ДействующиеВеществаМНН</Field>
+				<Field>Список.ТорговоеНаименование</Field>
+				<Field>Список.ФирмаПроизводитель</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	КлассификаторАптечныхТоваров.Ссылка,
+	КлассификаторАптечныхТоваров.ПометкаУдаления,
+	КлассификаторАптечныхТоваров.Предопределенный,
+	КлассификаторАптечныхТоваров.Код,
+	КлассификаторАптечныхТоваров.Наименование,
+	КлассификаторАптечныхТоваров.СМНН,
+	КлассификаторАптечныхТоваров.ДействующиеВеществаМНН,
+	КлассификаторАптечныхТоваров.ТорговоеНаименование,
+	КлассификаторАптечныхТоваров.ФормаВыпуска,
+	КлассификаторАптечныхТоваров.ФирмаПроизводитель,
+	КлассификаторАптечныхТоваров.СтранаПроизводителя,
+	КлассификаторАптечныхТоваров.ФирмаРегистратор,
+	КлассификаторАптечныхТоваров.СтранаРегистратора,
+	КлассификаторАптечныхТоваров.ВКомплекте,
+	КлассификаторАптечныхТоваров.Упаковка,
+	КлассификаторАптечныхТоваров.КодЕСКЛП,
+	КлассификаторАптечныхТоваров.ДатаПоследнегоИзменения,
+	ВЫРАЗИТЬ(КлассификаторАптечныхТоваров.НаименованиеПолное КАК СТРОКА(250)) КАК НаименованиеПолное,
+	КлассификаторАптечныхТоваров.БезрецептурныйОтпуск КАК БезрецептурныйОтпуск,
+	КлассификаторАптечныхТоваров.ЖНВЛП КАК ЖНВЛП,
+	КлассификаторАптечныхТоваров.ПринадлежностьК7ВЗН КАК ПринадлежностьК7ВЗН,
+	КлассификаторАптечныхТоваров.Наркотические КАК Наркотические,
+	КлассификаторАптечныхТоваров.СильнодействующиеИЯды КАК СильнодействующиеИЯды,
+	КлассификаторАптечныхТоваров.СтатусДействия КАК СтатусДействия,
+	КлассификаторАптечныхТоваров.ДатаОкончанияДействия КАК ДатаОкончанияДействия,
+	КлассификаторАптечныхТоваров.РегистрационныйНомер КАК РегистрационныйНомер,
+	КлассификаторАптечныхТоваров.ДатаРегистрации КАК ДатаРегистрации,
+	КлассификаторАптечныхТоваров.СрокГодности КАК СрокГодности,
+	ЕСТЬNULL(СпрНоменклатура.Ссылка, ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)) КАК Номенклатура
+ИЗ
+	Справочник.КЛП КАК КлассификаторАптечныхТоваров
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Номенклатура КАК СпрНоменклатура
+		ПО (СпрНоменклатура.ЭлементКАТ = КлассификаторАптечныхТоваров.Ссылка)}</QueryText>
+				<MainTable>Catalog.КЛП</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборНеПривязанныеКЕСКЛП" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор не привязанные к ЕСКЛП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборНеПривязанныеКНоменклатуре" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор не привязанные к номенклатуре</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ОтборНеПривязанныеКЕСКЛП">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ОтборНеПривязанныеКНоменклатуре">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<Index>1</Index>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<Index>2</Index>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<Index>3</Index>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

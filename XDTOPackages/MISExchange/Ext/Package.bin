@@ -1,0 +1,125 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="MISExchange">
+	<import namespace="urn:hl7-org:v3"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN201304UV02" type="d2p1:PRPA_IN201304UV02"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN302011UV02" type="d2p1:PRPA_IN302011UV02"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN302012UV02" type="d2p1:PRPA_IN302012UV02"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN402001UV02" type="d2p1:PRPA_IN402001UV02"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN402002UV02" type="d2p1:PRPA_IN402002UV02"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN402003UV02" type="d2p1:PRPA_IN402003UV02"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN402004UV02" type="d2p1:PRPA_IN402004UV02"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN402006UV02" type="d2p1:PRPA_IN402006UV02"/>
+	<property xmlns:d2p1="MISExchange" name="PRPA_IN402007UV02" type="d2p1:PRPA_IN402007UV02"/>
+	<property xmlns:d2p1="MISExchange" name="RCMR_IN000002UV02" type="d2p1:RCMR_IN000002UV02"/>
+	<valueType name="INNType" base="xs:string" variety="Atomic" minLength="10" maxLength="12"/>
+	<valueType name="KPPType" base="xs:string" variety="Atomic" length="9"/>
+	<valueType name="uuid" base="xs:string" variety="Atomic">
+		<pattern>[0-9a-zA-Z]{8}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{12}</pattern>
+	</valueType>
+	<valueType name="StorageType" base="xs:string" variety="Atomic">
+		<enumeration>БольничнаяАптека</enumeration>
+		<enumeration>Отделение</enumeration>
+		<enumeration>РецептурноПроизводственныйОтдел</enumeration>
+		<enumeration>РозничныйМагазин</enumeration>
+		<enumeration>Прочее</enumeration>
+	</valueType>
+	<valueType name="oid" base="xs:string" variety="Atomic">
+		<pattern>[0-2](\.(0|[1-9][0-9]*))*</pattern>
+	</valueType>
+	<valueType name="ruid" base="xs:string" variety="Atomic">
+		<pattern>[A-Za-z][A-Za-z0-9\-]*</pattern>
+	</valueType>
+	<valueType name="uid" variety="Union" memberTypes="{urn:hl7-org:v3}oid {urn:hl7-org:v3}uuid {urn:hl7-org:v3}ruid"/>
+	<objectType name="Organization">
+		<property xmlns:d3p1="MISExchange" name="Ref" type="d3p1:uuid"/>
+		<property name="Description" type="xs:string"/>
+		<property name="NameFull" type="xs:string" lowerBound="0"/>
+		<property name="NameShort" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="MISExchange" name="INN" type="d3p1:INNType" lowerBound="0"/>
+		<property xmlns:d3p1="MISExchange" name="KPP" type="d3p1:KPPType" lowerBound="0"/>
+	</objectType>
+	<objectType name="OrganizationList">
+		<property xmlns:d3p1="MISExchange" name="Organization" type="d3p1:Organization" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Storage">
+		<property xmlns:d3p1="MISExchange" name="Ref" type="d3p1:uuid"/>
+		<property name="Description" type="xs:string"/>
+		<property xmlns:d3p1="MISExchange" name="Type" type="d3p1:StorageType"/>
+	</objectType>
+	<objectType name="StorageList">
+		<property xmlns:d3p1="MISExchange" name="Storage" type="d3p1:Storage" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Department">
+		<property xmlns:d3p1="MISExchange" name="Ref" type="d3p1:uuid"/>
+		<property name="Description" type="xs:string"/>
+		<property xmlns:d3p1="MISExchange" name="Owner" type="d3p1:uuid"/>
+	</objectType>
+	<objectType name="DepartmentList">
+		<property xmlns:d3p1="MISExchange" name="Department" type="d3p1:Department" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="DrugList">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Drug" type="d3p1:POCD_MT000040.LabeledDrug" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="BalanceOfGoods">
+		<property name="Storage" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="MISExchange" name="Ref" type="d5p1:uuid" form="Attribute"/>
+				<property name="Description" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="Balance" lowerBound="0" upperBound="-1">
+					<typeDef xsi:type="ObjectType">
+						<property xmlns:d7p1="urn:hl7-org:v3" name="Drug" type="d7p1:POCD_MT000040.LabeledDrug" lowerBound="0"/>
+						<property name="Goods" lowerBound="0" upperBound="-1">
+							<typeDef xsi:type="ObjectType">
+								<property xmlns:d9p1="urn:hl7-org:v3" name="Drug" type="d9p1:POCD_MT000040.LabeledDrug"/>
+								<property xmlns:d9p1="urn:hl7-org:v3" name="Qty" type="d9p1:PQ"/>
+								<property xmlns:d9p1="urn:hl7-org:v3" name="BestBefore" type="d9p1:ts"/>
+								<property name="Place" type="xs:string" nillable="true"/>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Request" abstract="true"/>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN201304UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN201304UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN302011UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN302011UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN302012UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN302012UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN402001UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN402001UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN402002UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN402002UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN402003UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN402003UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN402004UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN402004UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN402006UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN402006UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="PRPA_IN402007UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:PRPA_IN402007UV02"/>
+	</objectType>
+	<objectType xmlns:d2p1="MISExchange" name="RCMR_IN000002UV02" base="d2p1:Request">
+		<property xmlns:d3p1="urn:hl7-org:v3" name="Message" type="d3p1:RCMR_IN000002UV02"/>
+	</objectType>
+	<objectType name="DICT">
+		<property name="VER" type="xs:string" lowerBound="0" fixed="true" default="1.0" form="Attribute"/>
+		<property name="name" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="id" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="MISExchange" name="ITEM" type="d3p1:DICT_ITEM" upperBound="-1"/>
+	</objectType>
+	<objectType name="DICT_ITEM">
+		<property name="id" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ITEMNAME" type="xs:string"/>
+		<property xmlns:d3p1="MISExchange" name="ITEM" type="d3p1:DICT_ITEM" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

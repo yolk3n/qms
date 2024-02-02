@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>История согласования</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<Page name="ГруппаИсторияЦиклов" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа история циклов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа история циклов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИсторияЦикловРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<LabelField name="ПредметИсторияЦиклов" id="33">
+							<DataPath>ПредметСтрокой</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ПредметИсторияЦикловКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ПредметИсторияЦикловРасширеннаяПодсказка" id="68"/>
+							<Events>
+								<Event name="Click">ПредметНажатие</Event>
+							</Events>
+						</LabelField>
+						<Table name="ИсторияЦиклов" id="4">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>false</SkipOnInput>
+							<DefaultItem>true</DefaultItem>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ИсторияЦиклов</DataPath>
+							<ContextMenu name="ИсторияЦикловКонтекстноеМеню" id="5"/>
+							<AutoCommandBar name="ИсторияЦикловКоманднаяПанель" id="6"/>
+							<ExtendedTooltip name="ИсторияЦикловРасширеннаяПодсказка" id="69"/>
+							<SearchStringAddition name="ИсторияЦикловСтрокаПоиска" id="70">
+								<AdditionSource>
+									<Item>ИсторияЦиклов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияЦикловСтрокаПоискаКонтекстноеМеню" id="71"/>
+								<ExtendedTooltip name="ИсторияЦикловСтрокаПоискаРасширеннаяПодсказка" id="72"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсторияЦикловСостояниеПросмотра" id="73">
+								<AdditionSource>
+									<Item>ИсторияЦиклов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияЦикловСостояниеПросмотраКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="ИсторияЦикловСостояниеПросмотраРасширеннаяПодсказка" id="75"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсторияЦикловУправлениеПоиском" id="76">
+								<AdditionSource>
+									<Item>ИсторияЦиклов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияЦикловУправлениеПоискомКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="ИсторияЦикловУправлениеПоискомРасширеннаяПодсказка" id="78"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ИсторияЦикловВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ИсторияЦикловИсполнитель" id="7">
+									<DataPath>ИсторияЦиклов.Исполнитель</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Согласующее лицо</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ИсторияЦикловИсполнительКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ИсторияЦикловИсполнительРасширеннаяПодсказка" id="79"/>
+								</LabelField>
+								<LabelField name="ИсторияЦикловРезультатСогласования" id="9">
+									<DataPath>ИсторияЦиклов.РезультатСогласования</DataPath>
+									<ContextMenu name="ИсторияЦикловРезультатСогласованияКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ИсторияЦикловРезультатСогласованияРасширеннаяПодсказка" id="80"/>
+								</LabelField>
+								<LabelField name="ИсторияЦикловРезультатВыполнения" id="11">
+									<DataPath>ИсторияЦиклов.РезультатВыполнения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Комментарий</v8:content>
+										</v8:item>
+									</Title>
+									<Height>1</Height>
+									<ContextMenu name="ИсторияЦикловРезультатВыполненияКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ИсторияЦикловРезультатВыполненияРасширеннаяПодсказка" id="81"/>
+								</LabelField>
+								<LabelField name="ИсторияЦикловДатаИсполнения" id="13">
+									<DataPath>ИсторияЦиклов.ДатаИсполнения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата согласования</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ИсторияЦикловДатаИсполненияКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ИсторияЦикловДатаИсполненияРасширеннаяПодсказка" id="82"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИсторияИсполнителя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа история исполнителя</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа история исполнителя</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИсторияИсполнителяРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<LabelField name="ПредметИсторияИсполнителя" id="35">
+							<DataPath>ПредметСтрокой</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ПредметИсторияИсполнителяКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ПредметИсторияИсполнителяРасширеннаяПодсказка" id="84"/>
+							<Events>
+								<Event name="Click">ПредметНажатие</Event>
+							</Events>
+						</LabelField>
+						<LabelField name="АвторСогласования" id="64">
+							<DataPath>АвторСогласования</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="АвторСогласованияКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="АвторСогласованияРасширеннаяПодсказка" id="85"/>
+						</LabelField>
+						<CommandBar name="ГруппаКомандыСписка" id="63">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды списка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды списка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаКомандыСпискаРасширеннаяПодсказка" id="86"/>
+							<ChildItems>
+								<Button name="ДобавитьСогласующего" id="37">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ДобавитьСогласующего</CommandName>
+									<ExtendedTooltip name="ДобавитьСогласующегоРасширеннаяПодсказка" id="87"/>
+								</Button>
+								<Button name="ПереместитьВверх" id="45">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПереместитьВверх</CommandName>
+									<ExtendedTooltip name="ПереместитьВверхРасширеннаяПодсказка" id="88"/>
+								</Button>
+								<Button name="ПереместитьВниз" id="46">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПереместитьВниз</CommandName>
+									<ExtendedTooltip name="ПереместитьВнизРасширеннаяПодсказка" id="89"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="ИсторияИсполнителя" id="15">
+							<Representation>Tree</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<DefaultItem>true</DefaultItem>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ИсторияИсполнителя</DataPath>
+							<ContextMenu name="ИсторияИсполнителяКонтекстноеМеню" id="16">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="КонтекстноеМенюДобавитьСогласующего" id="52">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДобавитьСогласующего</CommandName>
+										<ExtendedTooltip name="КонтекстноеМенюДобавитьСогласующегоРасширеннаяПодсказка" id="90"/>
+									</Button>
+									<Button name="КонтекстноеМенюПереместитьВверх" id="53">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПереместитьВверх</CommandName>
+										<ExtendedTooltip name="КонтекстноеМенюПереместитьВверхРасширеннаяПодсказка" id="91"/>
+									</Button>
+									<Button name="КонтекстноеМенюПереместитьВниз" id="54">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПереместитьВниз</CommandName>
+										<ExtendedTooltip name="КонтекстноеМенюПереместитьВнизРасширеннаяПодсказка" id="92"/>
+									</Button>
+									<Button name="КонтекстноеМенюУдалитьСогласующего" id="56">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ИсторияИсполнителя.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="КонтекстноеМенюУдалитьСогласующегоРасширеннаяПодсказка" id="93"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ИсторияИсполнителяКоманднаяПанель" id="17">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИсторияИсполнителяРасширеннаяПодсказка" id="94"/>
+							<SearchStringAddition name="ИсторияИсполнителяСтрокаПоиска" id="95">
+								<AdditionSource>
+									<Item>ИсторияИсполнителя</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИсполнителяСтрокаПоискаКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="ИсторияИсполнителяСтрокаПоискаРасширеннаяПодсказка" id="97"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсторияИсполнителяСостояниеПросмотра" id="98">
+								<AdditionSource>
+									<Item>ИсторияИсполнителя</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИсполнителяСостояниеПросмотраКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="ИсторияИсполнителяСостояниеПросмотраРасширеннаяПодсказка" id="100"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсторияИсполнителяУправлениеПоиском" id="101">
+								<AdditionSource>
+									<Item>ИсторияИсполнителя</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИсполнителяУправлениеПоискомКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="ИсторияИсполнителяУправлениеПоискомРасширеннаяПодсказка" id="103"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ИсторияИсполнителяВыбор</Event>
+								<Event name="BeforeAddRow">ИсторияИсполнителяПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ИсторияИсполнителяПередУдалением</Event>
+								<Event name="BeforeRowChange">ИсторияИсполнителяПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ИсторияИсполнителяГруппаИсполнитель" id="47">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>История исполнителя группа исполнитель</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ИсторияИсполнителяГруппаИсполнительРасширеннаяПодсказка" id="104"/>
+									<ChildItems>
+										<InputField name="ИсторияИсполнителяИсполнитель" id="42">
+											<DataPath>ИсторияИсполнителя.Исполнитель</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Согласующее лицо</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>15</Width>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ИсторияИсполнителяИсполнительКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ИсторияИсполнителяИсполнительРасширеннаяПодсказка" id="105"/>
+											<Events>
+												<Event name="OnChange">ИсторияИсполнителяИсполнительПриИзменении</Event>
+												<Event name="AutoComplete">ИсторияИсполнителяИсполнительАвтоПодбор</Event>
+												<Event name="StartChoice">ИсторияИсполнителяИсполнительНачалоВыбора</Event>
+												<Event name="TextEditEnd">ИсторияИсполнителяИсполнительОкончаниеВводаТекста</Event>
+												<Event name="ChoiceProcessing">ИсторияИсполнителяИсполнительОбработкаВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ИсторияИсполнителяОсновнойОбъектАдресации" id="48">
+											<DataPath>ИсторияИсполнителя.ОсновнойОбъектАдресации</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>10</Width>
+											<ContextMenu name="ИсторияИсполнителяОсновнойОбъектАдресацииКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ИсторияИсполнителяОсновнойОбъектАдресацииРасширеннаяПодсказка" id="106"/>
+										</InputField>
+										<InputField name="ИсторияИсполнителяДополнительныйОбъектАдресации" id="50">
+											<DataPath>ИсторияИсполнителя.ДополнительныйОбъектАдресации</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>10</Width>
+											<ContextMenu name="ИсторияИсполнителяДополнительныйОбъектАдресацииКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="ИсторияИсполнителяДополнительныйОбъектАдресацииРасширеннаяПодсказка" id="107"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="ИсторияИсполнителяРезультатСогласования" id="18">
+									<DataPath>ИсторияИсполнителя.РезультатСогласования</DataPath>
+									<ContextMenu name="ИсторияИсполнителяРезультатСогласованияКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ИсторияИсполнителяРезультатСогласованияРасширеннаяПодсказка" id="108"/>
+								</LabelField>
+								<LabelField name="ИсторияИсполнителяРезультатВыполнения" id="20">
+									<DataPath>ИсторияИсполнителя.РезультатВыполнения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Комментарий</v8:content>
+										</v8:item>
+									</Title>
+									<Height>1</Height>
+									<ContextMenu name="ИсторияИсполнителяРезультатВыполненияКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ИсторияИсполнителяРезультатВыполненияРасширеннаяПодсказка" id="109"/>
+								</LabelField>
+								<LabelField name="ИсторияИсполнителяДатаИсполнения" id="22">
+									<DataPath>ИсторияИсполнителя.ДатаИсполнения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата согласования</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ИсторияИсполнителяДатаИсполненияКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ИсторияИсполнителяДатаИсполненияРасширеннаяПодсказка" id="110"/>
+								</LabelField>
+								<InputField name="ИсторияИсполнителяПорядокСогласования" id="38">
+									<DataPath>ИсторияИсполнителя.ПорядокСогласования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсторияИсполнителяПорядокСогласованияКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ИсторияИсполнителяПорядокСогласованияРасширеннаяПодсказка" id="111"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ГруппаКоманднаяПанель" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="112"/>
+			<ChildItems>
+				<Button name="ОК" id="44">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ОК</CommandName>
+					<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="113"/>
+				</Button>
+				<Button name="Закрыть" id="29">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="114"/>
+				</Button>
+				<Button name="Справка" id="30">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="115"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИсторияЦиклов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История циклов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерИтерации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер итерации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РезультатСогласования" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат согласования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.РезультатыСогласования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РезультатВыполнения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат выполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаИсполнения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата исполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПорядокСогласования" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок согласования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗадачаИсполнителя" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача исполнителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:TaskRef.ЗадачаИсполнителя</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Исполнитель" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РолиИсполнителей</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсновнойОбъектАдресации" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основной объект адресации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ОбъектыАдресацииЗадач</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ДополнительныйОбъектАдресации" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительный объект адресации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ОбъектыАдресацииЗадач</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИсторияИсполнителя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История циклов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерИтерации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер итерации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РезультатСогласования" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат согласования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.РезультатыСогласования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РезультатВыполнения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат выполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаИсполнения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата исполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПорядокСогласования" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок согласования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ПорядокВыполненияЗадач</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗадачаИсполнителя" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача исполнителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:TaskRef.ЗадачаИсполнителя</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Исполнитель" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РолиИсполнителей</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсновнойОбъектАдресации" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основной объект адресации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ОбъектыАдресацииЗадач</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ДополнительныйОбъектАдресации" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительный объект адресации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ОбъектыАдресацииЗадач</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Пройдена" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пройдена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Добавлена" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавлена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПредметСтрокой" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Предмет" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантСогласования" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант согласования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="БизнесПроцесс" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бизнес процесс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:BusinessProcessRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗадачаСсылка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:TaskRef.ЗадачаИсполнителя</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвторСогласования" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автор согласования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользователиПустаяСсылка" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи пустая ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьСогласующего" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить согласующего</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить согласующего</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьСогласующего</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьВверх" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВверх</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьВниз" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВниз</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЗадачаСсылка">
+			<Type>
+				<v8:Type>cfg:TaskRef.ЗадачаИсполнителя</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

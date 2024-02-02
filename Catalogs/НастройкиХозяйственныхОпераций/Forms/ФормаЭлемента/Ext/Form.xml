@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="19">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаФормы" id="82">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФормыРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<LabelField name="Описание" id="16">
+					<DataPath>Объект.Описание</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ОписаниеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<InputField name="Родитель" id="4">
+					<DataPath>Объект.Parent</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<Pages name="ГруппаСтраницы" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<Page name="ГруппаПоказатели" id="21">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отражение в учете</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа показатели</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаПоказателиРасширеннаяПодсказка" id="22"/>
+							<ChildItems>
+								<InputField name="ПредставлениеИсточникаДанных" id="10">
+									<DataPath>Объект.ПредставлениеИсточникаДанных</DataPath>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="ПредставлениеИсточникаДанныхКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ПредставлениеИсточникаДанныхРасширеннаяПодсказка" id="12">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Позволяет получать данные об отражении операции в оперативном учете.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="StartChoice">ПредставлениеИсточникаДанныхНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">ПредставлениеИсточникаДанныхОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаОбъекты" id="23">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа объекты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа объекты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбъектыExtendedTooltip" id="24"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПриход" id="25">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа приход</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПриходExtendedTooltip" id="26"/>
+											<ChildItems>
+												<InputField name="Приход" id="27">
+													<DataPath>Объект.Приход</DataPath>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<ChoiceButton>false</ChoiceButton>
+													<ContextMenu name="ПриходКонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="ПриходExtendedTooltip" id="29">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Определяет тип данных, по которым формируется приход при отражении операции в оперативном учете.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРасход" id="38">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа расход</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРасходExtendedTooltip" id="39"/>
+											<ChildItems>
+												<InputField name="Расход" id="40">
+													<DataPath>Объект.Расход</DataPath>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<ChoiceButton>false</ChoiceButton>
+													<ContextMenu name="РасходКонтекстноеМеню" id="41"/>
+													<ExtendedTooltip name="РасходExtendedTooltip" id="42">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Определяет тип данных, по которым формируется расход при отражении операции в оперативном учете.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаДокументы" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Связанные документы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа документы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаДокументыExtendedTooltip" id="62"/>
+							<ChildItems>
+								<Table name="Документы" id="63">
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Документы</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ДокументыКонтекстноеМеню" id="64"/>
+									<AutoCommandBar name="ДокументыКоманднаяПанель" id="65">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДокументыРасширеннаяПодсказка" id="66"/>
+									<SearchStringAddition name="ДокументыСтрокаПоиска" id="67">
+										<AdditionSource>
+											<Item>Документы</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДокументыСтрокаПоискаКонтекстноеМеню" id="68"/>
+										<ExtendedTooltip name="ДокументыСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДокументыСостояниеПросмотра" id="70">
+										<AdditionSource>
+											<Item>Документы</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДокументыСостояниеПросмотраКонтекстноеМеню" id="71"/>
+										<ExtendedTooltip name="ДокументыСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДокументыУправлениеПоиском" id="73">
+										<AdditionSource>
+											<Item>Документы</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДокументыУправлениеПоискомКонтекстноеМеню" id="74"/>
+										<ExtendedTooltip name="ДокументыУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ДокументыНомерСтроки" id="76">
+											<DataPath>Объект.Документы.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДокументыНомерСтрокиКонтекстноеМеню" id="77"/>
+											<ExtendedTooltip name="ДокументыНомерСтрокиExtendedTooltip" id="78"/>
+										</LabelField>
+										<InputField name="ДокументыДокумент" id="84">
+											<DataPath>Объект.Документы.Документ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ContextMenu name="ДокументыДокументКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="ДокументыДокументРасширеннаяПодсказка" id="86"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаПоказателиДляОтраженияВУчете" id="87">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показатели для отражения в учете</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа показатели для отражения в учете</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаПоказателиДляОтраженияВУчетеРасширеннаяПодсказка" id="88"/>
+							<ChildItems>
+								<Table name="ПоказателиРегистра" id="89">
+									<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ПоказателиРегистра</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>OutputList</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ПоказателиРегистраКонтекстноеМеню" id="90"/>
+									<AutoCommandBar name="ПоказателиРегистраКоманднаяПанель" id="91"/>
+									<ExtendedTooltip name="ПоказателиРегистраРасширеннаяПодсказка" id="92"/>
+									<SearchStringAddition name="ПоказателиРегистраСтрокаПоиска" id="93">
+										<AdditionSource>
+											<Item>ПоказателиРегистра</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПоказателиРегистраСтрокаПоискаКонтекстноеМеню" id="94"/>
+										<ExtendedTooltip name="ПоказателиРегистраСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПоказателиРегистраСостояниеПросмотра" id="96">
+										<AdditionSource>
+											<Item>ПоказателиРегистра</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПоказателиРегистраСостояниеПросмотраКонтекстноеМеню" id="97"/>
+										<ExtendedTooltip name="ПоказателиРегистраСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПоказателиРегистраУправлениеПоиском" id="99">
+										<AdditionSource>
+											<Item>ПоказателиРегистра</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПоказателиРегистраУправлениеПоискомКонтекстноеМеню" id="100"/>
+										<ExtendedTooltip name="ПоказателиРегистраУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="ПоказателиРегистраИспользование" id="102">
+											<DataPath>Объект.ПоказателиРегистра.Использование</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПоказателиРегистраИспользованиеКонтекстноеМеню" id="103"/>
+											<ExtendedTooltip name="ПоказателиРегистраИспользованиеExtendedTooltip" id="104"/>
+										</CheckBoxField>
+										<InputField name="ПоказателиРегистраПоказатель" id="105">
+											<DataPath>Объект.ПоказателиРегистра.Показатель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПоказателиРегистраПоказательКонтекстноеМеню" id="106"/>
+											<ExtendedTooltip name="ПоказателиРегистраПоказательРасширеннаяПодсказка" id="107"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаФункциональныеОпции" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Функциональные опции</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа показатели для отражения в учете</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаФункциональныеОпцииРасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<Table name="ФункциональныеОпции" id="110">
+									<CommandBarLocation>None</CommandBarLocation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ФункциональныеОпции</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ФункциональныеОпцииКонтекстноеМеню" id="111"/>
+									<AutoCommandBar name="ФункциональныеОпцииКоманднаяПанель" id="112"/>
+									<ExtendedTooltip name="ФункциональныеОпцииРасширеннаяПодсказка" id="113"/>
+									<SearchStringAddition name="ФункциональныеОпцииСтрокаПоиска" id="114">
+										<AdditionSource>
+											<Item>ФункциональныеОпции</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ФункциональныеОпцииСтрокаПоискаКонтекстноеМеню" id="115"/>
+										<ExtendedTooltip name="ФункциональныеОпцииСтрокаПоискаРасширеннаяПодсказка" id="116"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ФункциональныеОпцииСостояниеПросмотра" id="117">
+										<AdditionSource>
+											<Item>ФункциональныеОпции</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ФункциональныеОпцииСостояниеПросмотраКонтекстноеМеню" id="118"/>
+										<ExtendedTooltip name="ФункциональныеОпцииСостояниеПросмотраРасширеннаяПодсказка" id="119"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ФункциональныеОпцииУправлениеПоиском" id="120">
+										<AdditionSource>
+											<Item>ФункциональныеОпции</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ФункциональныеОпцииУправлениеПоискомКонтекстноеМеню" id="121"/>
+										<ExtendedTooltip name="ФункциональныеОпцииУправлениеПоискомРасширеннаяПодсказка" id="122"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ФункциональныеОпцииНомерСтроки" id="123">
+											<DataPath>Объект.ФункциональныеОпции.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ФункциональныеОпцииНомерСтрокиКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="ФункциональныеОпцииНомерСтрокиРасширеннаяПодсказка" id="125"/>
+										</LabelField>
+										<InputField name="ФункциональныеОпцииИмяФункциональнойОпции" id="126">
+											<DataPath>Объект.ФункциональныеОпции.ИмяФункциональнойОпции</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ФункциональныеОпцииИмяФункциональнойОпцииКонтекстноеМеню" id="127"/>
+											<ExtendedTooltip name="ФункциональныеОпцииИмяФункциональнойОпцииРасширеннаяПодсказка" id="128"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиХозяйственныхОпераций</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

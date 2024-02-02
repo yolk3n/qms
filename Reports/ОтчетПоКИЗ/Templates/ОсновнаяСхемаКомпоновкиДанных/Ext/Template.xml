@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипДокумента</dataPath>
+			<field>ТипДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>"№"+строка(Документ.Номер)</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковкиСтатус</dataPath>
+			<field>УпаковкиСтатус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковки МДЛП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыбытиеУпаковокСтатус</dataPath>
+			<field>ВыбытиеУпаковокСтатус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр выбития</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументДата</dataPath>
+			<field>ДокументДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd.MM.yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	УведомлениеВладельцаОбОприходованииМДЛПНомераУпаковок.Ссылка КАК Документ,
+	УведомлениеВладельцаОбОприходованииМДЛПНомераУпаковок.НомерКИЗ КАК НомерКИЗ
+ПОМЕСТИТЬ втДокументы
+ИЗ
+	Документ.УведомлениеВладельцаОбОприходованииМДЛП.НомераУпаковок КАК УведомлениеВладельцаОбОприходованииМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеВладельцаОбОприходованииМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОбАгрегированииИТрансформацииУпаковокМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОбАгрегированииИТрансформацииУпаковокМДЛПНомераУпаковок.НомерКиЗ
+ИЗ
+	Документ.УведомлениеОбАгрегированииИТрансформацииУпаковокМДЛП.НомераУпаковок КАК УведомлениеОбАгрегированииИТрансформацииУпаковокМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОбАгрегированииИТрансформацииУпаковокМДЛПНомераУпаковок.НомерКиЗ = &amp;НомерКиЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОбОприходованииМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОбОприходованииМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОбОприходованииМДЛП.НомераУпаковок КАК УведомлениеОбОприходованииМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОбОприходованииМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОбОтгрузкеМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОбОтгрузкеМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОбОтгрузкеМДЛП.НомераУпаковок КАК УведомлениеОбОтгрузкеМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОбОтгрузкеМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОбОтпускеЛППоДокументамОтличнымОтЧекаМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОбОтпускеЛППоДокументамОтличнымОтЧекаМДЛПНомераУпаковок.НомерКиЗ
+ИЗ
+	Документ.УведомлениеОбОтпускеЛППоДокументамОтличнымОтЧекаМДЛП.НомераУпаковок КАК УведомлениеОбОтпускеЛППоДокументамОтличнымОтЧекаМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОбОтпускеЛППоДокументамОтличнымОтЧекаМДЛПНомераУпаковок.НомерКиЗ = &amp;НомерКиЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОбОтпускеПоЛьготномуРецептуМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОбОтпускеПоЛьготномуРецептуМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОбОтпускеПоЛьготномуРецептуМДЛП.НомераУпаковок КАК УведомлениеОбОтпускеПоЛьготномуРецептуМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОбОтпускеПоЛьготномуРецептуМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОВыбытииМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОВыбытииМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОВыбытииМДЛП.НомераУпаковок КАК УведомлениеОВыбытииМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОВыбытииМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОВыдачеВОтделенияМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОВыдачеВОтделенияМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОВыдачеВОтделенияМДЛП.НомераУпаковок КАК УведомлениеОВыдачеВОтделенияМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОВыдачеВОтделенияМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОПередачеНаУничтожениеМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОПередачеНаУничтожениеМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОПередачеНаУничтожениеМДЛП.НомераУпаковок КАК УведомлениеОПередачеНаУничтожениеМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОПередачеНаУничтожениеМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОПеремещенииГЛОМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОПеремещенииГЛОМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОПеремещенииГЛОМДЛП.НомераУпаковок КАК УведомлениеОПеремещенииГЛОМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОПеремещенииГЛОМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОПеремещенииМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОПеремещенииМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОПеремещенииМДЛП.НомераУпаковок КАК УведомлениеОПеремещенииМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОПеремещенииМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОПовторномВводеВОборотМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОПовторномВводеВОборотМДЛПНомераУпаковок.НомерКиЗ
+ИЗ
+	Документ.УведомлениеОПовторномВводеВОборотМДЛП.НомераУпаковок КАК УведомлениеОПовторномВводеВОборотМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОПовторномВводеВОборотМДЛПНомераУпаковок.НомерКиЗ = &amp;НомерКиЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОПриемкеМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОПриемкеМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОПриемкеМДЛП.НомераУпаковок КАК УведомлениеОПриемкеМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОПриемкеМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОРозничнойПродажеМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОРозничнойПродажеМДЛПНомераУпаковок.НомерКиЗ
+ИЗ
+	Документ.УведомлениеОРозничнойПродажеМДЛП.НомераУпаковок КАК УведомлениеОРозничнойПродажеМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОРозничнойПродажеМДЛПНомераУпаковок.НомерКиЗ = &amp;НомерКиЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УведомлениеОФактеУничтоженияМДЛПНомераУпаковок.Ссылка,
+	УведомлениеОФактеУничтоженияМДЛПНомераУпаковок.НомерКИЗ
+ИЗ
+	Документ.УведомлениеОФактеУничтоженияМДЛП.НомераУпаковок КАК УведомлениеОФактеУничтоженияМДЛПНомераУпаковок
+ГДЕ
+	УведомлениеОФактеУничтоженияМДЛПНомераУпаковок.НомерКИЗ = &amp;НомерКИЗ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УдалитьЗапросСоставаУпаковкиМДЛПНомераУпаковок.Ссылка,
+	УдалитьЗапросСоставаУпаковкиМДЛПНомераУпаковок.НомерКиЗ
+ИЗ
+	Документ.УдалитьЗапросСоставаУпаковкиМДЛП.НомераУпаковок КАК УдалитьЗапросСоставаУпаковкиМДЛПНомераУпаковок
+ГДЕ
+	УдалитьЗапросСоставаУпаковкиМДЛПНомераУпаковок.НомерКиЗ = &amp;НомерКиЗ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	УпаковкиМДЛП.НомерУпаковки КАК НомерУпаковки,
+	УпаковкиМДЛП.Статус КАК Статус
+ПОМЕСТИТЬ втУпаковкиМДЛП
+ИЗ
+	РегистрСведений.УпаковкиМДЛП КАК УпаковкиМДЛП
+ГДЕ
+	УпаковкиМДЛП.НомерУпаковки = &amp;НомерКИЗ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	РеестрВыбытияУпаковокМДЛП.НомерУпаковки КАК НомерУпаковки,
+	РеестрВыбытияУпаковокМДЛП.СтатусВыбытия КАК СтатусВыбытия
+ПОМЕСТИТЬ втВыбитеУпаковокМДЛП
+ИЗ
+	РегистрСведений.РеестрВыбытияУпаковокМДЛП КАК РеестрВыбытияУпаковокМДЛП
+ГДЕ
+	РеестрВыбытияУпаковокМДЛП.НомерУпаковки = &amp;НомерКИЗ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТИПЗНАЧЕНИЯ(втДокументы.Документ) КАК ТипДокумента,
+	втДокументы.Документ КАК Документ,
+	втВыбитеУпаковокМДЛП.СтатусВыбытия КАК ВыбытиеУпаковокСтатус,
+	втУпаковкиМДЛП.Статус КАК УпаковкиСтатус,
+	втДокументы.Документ.Дата КАК ДокументДата
+ИЗ
+	втДокументы КАК втДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ втУпаковкиМДЛП КАК втУпаковкиМДЛП
+		ПО втДокументы.НомерКИЗ = втУпаковкиМДЛП.НомерУпаковки
+		ЛЕВОЕ СОЕДИНЕНИЕ втВыбитеУпаковокМДЛП КАК втВыбитеУпаковокМДЛП
+		ПО втДокументы.НомерКИЗ = втВыбитеУпаковокМДЛП.НомерУпаковки
+
+УПОРЯДОЧИТЬ ПО
+	втДокументы.Документ.Дата УБЫВ</query>
+	</dataSet>
+	<parameter>
+		<name>НомерКИЗ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Номер КИЗ</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по КИЗ (БИТ)</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УпаковкиСтатус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВыбытиеУпаковокСтатус</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НомерКИЗ</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>7a14d450-bae2-4df9-b3b6-b4979b9bc77e</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ТипДокумента</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Документ</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Статус</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ДокументДата</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Документ</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ТипДокумента</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДокументДата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Документ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТипДокумента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>УпаковкиСтатус</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ВыбытиеУпаковокСтатус</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>УпаковкиСтатус</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВыбытиеУпаковокСтатус</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УпаковкиСтатус</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВыбытиеУпаковокСтатус</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

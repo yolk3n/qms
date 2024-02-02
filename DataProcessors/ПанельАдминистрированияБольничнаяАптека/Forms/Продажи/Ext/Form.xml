@@ -1,0 +1,857 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="1772">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="1773"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="1716">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление параметрами отражения операций продаж.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="1717"/>
+					<ExtendedTooltip name="ОписаниеРазделаExtendedTooltip" id="1751"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="1774">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСправкаРасширеннаяПодсказка" id="1775"/>
+					<ChildItems>
+						<Button name="Справка" id="1776">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="1777"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЦенообразование" id="1802">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ценообразование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ценообразование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаЦенообразованиеРасширеннаяПодсказка" id="1803"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПродажи3" id="1746">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа продажи3</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа продажи3</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПродажи3ExtendedTooltip" id="1752">
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При вводе цен номенклатуры на основании документов поступления будет указываться данный вид цены.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<InputField name="ВидЦенПоступления" id="1747">
+							<DataPath>НаборКонстант.ВидЦенПоступления</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Закупочный вид цены</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При вводе цен номенклатуры на основании документов поступления будет указываться данный вид цены.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>19</MaxWidth>
+							<CreateButton>true</CreateButton>
+							<ContextMenu name="ВидЦенПоступленияКонтекстноеМеню" id="1748"/>
+							<ExtendedTooltip name="ВидЦенПоступленияExtendedTooltip" id="1753"/>
+							<Events>
+								<Event name="OnChange">ВидЦенПоступленияПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ИспользоватьЦеновыеГруппы" id="1799">
+					<DataPath>НаборКонстант.ИспользоватьЦеновыеГруппы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ценовые группы</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьЦеновыеГруппыКонтекстноеМеню" id="1800"/>
+					<ExtendedTooltip name="ИспользоватьЦеновыеГруппыExtendedTooltip" id="1801">
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content> Ведение перечня групп номенклатуры, объединяющих товарные позиции, для которых применяются одинаковые правила расчета цены.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">ИспользоватьЦеновыеГруппыПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеРозничнымиПродажами" id="1718">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Розничные продажи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление розничным продажами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаУправлениеРозничнымиПродажамиExtendedTooltip" id="1755"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРозничныеПродажи" id="1829">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа розничные продажи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа розничные продажи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРозничныеПродажиРасширеннаяПодсказка" id="1830"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУправлениеРозничнымиПродажами1" id="1719">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление розничными продажами1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление розничными продажами1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеРозничнымиПродажами1ExtendedTooltip" id="1756"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьРозничныеПродажи" id="1721">
+									<DataPath>НаборКонстант.ИспользоватьРозничныеПродажи</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Розничные продажи</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьРозничныеПродажиКонтекстноеМеню" id="1722"/>
+									<ExtendedTooltip name="ИспользоватьРозничныеПродажиExtendedTooltip" id="1758">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Учет розничных продаж (в том числе с применением торгового оборудования).</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьРозничныеПродажиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаКоличествоДнейХраненияОтложенныхЧеков" id="1725">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа количество дней хранения отложенных чеков</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа количество дней хранения отложенных чеков</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКоличествоДнейХраненияОтложенныхЧековExtendedTooltip" id="1764">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Хранение отложенных чеков в течение указанного количества дней после истечения срока ожидания покупки.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<ChildItems>
+										<UsualGroup name="Группа8" id="1726">
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа8ExtendedTooltip" id="1765"/>
+											<ChildItems>
+												<InputField name="КоличествоДнейХраненияОтложенныхЧеков" id="1727">
+													<DataPath>НаборКонстант.КоличествоДнейХраненияОтложенныхЧеков</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Хранить отложенные чеки</v8:content>
+														</v8:item>
+													</Title>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="КоличествоДнейХраненияОтложенныхЧековКонтекстноеМеню" id="1728"/>
+													<ExtendedTooltip name="КоличествоДнейХраненияОтложенныхЧековExtendedTooltip" id="1766"/>
+													<Events>
+														<Event name="OnChange">КоличествоДнейХраненияОтложенныхЧековПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelDecoration name="НадписьДней" id="1729">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>дн.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьДнейКонтекстноеМеню" id="1730"/>
+													<ExtendedTooltip name="НадписьДнейExtendedTooltip" id="1767"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКоличествоДнейХраненияЗаархивированныхЧеков" id="1784">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа количество дней хранения заархивированных чеков</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа количество дней хранения отложенных чеков</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКоличествоДнейХраненияЗаархивированныхЧековExtendedTooltip" id="1785">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Хранение заархивированных чеков в течение указанного количества дней. После истечения срока чеки удаляются.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<ChildItems>
+										<UsualGroup name="Группа9" id="1786">
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа9ExtendedTooltip" id="1787"/>
+											<ChildItems>
+												<InputField name="КоличествоДнейХраненияЗаархивированныхЧеков" id="1788">
+													<DataPath>НаборКонстант.КоличествоДнейХраненияЗаархивированныхЧеков</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Хранить заархивированные чеки</v8:content>
+														</v8:item>
+													</Title>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="КоличествоДнейХраненияЗаархивированныхЧековКонтекстноеМеню" id="1789"/>
+													<ExtendedTooltip name="КоличествоДнейХраненияЗаархивированныхЧековExtendedTooltip" id="1790"/>
+													<Events>
+														<Event name="OnChange">КоличествоДнейХраненияЗаархивированныхЧековПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelDecoration name="НадписьДней1" id="1791">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>дн.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьДней1КонтекстноеМеню" id="1792"/>
+													<ExtendedTooltip name="НадписьДней1ExtendedTooltip" id="1793"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеРозничнымиПродажами2" id="1733">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление розничным продажами1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление розничным продажами1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеРозничнымиПродажами2ExtendedTooltip" id="1763"/>
+							<ChildItems>
+								<CheckBoxField name="КонтролироватьОстаткиПриПробитииЧековККМ" id="1744">
+									<DataPath>НаборКонстант.КонтролироватьОстаткиПриПробитииЧековККМ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контроль остатков</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КонтролироватьОстаткиПриПробитииЧековККМКонтекстноеМеню" id="1745"/>
+									<ExtendedTooltip name="КонтролироватьОстаткиПриПробитииЧековККМExtendedTooltip" id="1761">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Контролировать остатки товаров при пробитии чека. </v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">КонтролироватьОстаткиПриПробитииЧековККМПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаОперацияПриЗакрытииКассовойСмены" id="1739">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа операция при закрытии кассовой смены</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа операция при закрытии кассовой смены</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОперацияПриЗакрытииКассовойСменыРасширеннаяПодсказка" id="1769">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>При архивации и удалении чеков ККМ вся информация о розничных продажах агрегируется в отчетах о розничных продажах. При архивации чеков остается возможность выбирать чеки ККМ при возврате товаров от клиента.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<ChildItems>
+										<InputField name="ОперацияПриЗакрытииКассовойСмены" id="1778">
+											<DataPath>НаборКонстант.ОперацияПриЗакрытииКассовойСмены</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ОперацияПриЗакрытииКассовойСменыКонтекстноеМеню" id="1779"/>
+											<ExtendedTooltip name="ОперацияПриЗакрытииКассовойСменыРасширеннаяПодсказка" id="1780"/>
+											<Events>
+												<Event name="OnChange">ОперацияПриЗакрытииКассовойСменыПриИзменении</Event>
+												<Event name="Clearing">ОперацияПриЗакрытииКассовойСменыОчистка</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаАвторизация" id="1835">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа авторизация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа авторизация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаАвторизацияExtendedTooltip" id="1836">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Включите этот флаг, если требуется авторизация пользователей по штриховым или магнитным картам.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьАвторизациюРМК" id="1837">
+							<DataPath>НаборКонстант.ИспользоватьАвторизациюРМК</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать авторизацию</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьАвторизациюРМККонтекстноеМеню" id="1838"/>
+							<ExtendedTooltip name="ИспользоватьАвторизациюРМКРасширеннаяПодсказка" id="1839"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьАвторизациюРМКПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<Button name="ИдентификационныеДанныеПользователей" id="1840">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ИдентификационныеДанныеПользователей</CommandName>
+							<ExtendedTooltip name="ИдентификационныеДанныеПользователейExtendedTooltip" id="1841"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="НастройкиПродавцов" id="1831">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog.НастройкиПродажДляПользователей.Command.НастройкиПродажДляПользователей</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки продавцов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="НастройкиПродавцовРасширеннаяПодсказка" id="1832">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Настройка прав РМК.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<UsualGroup name="ГруппаФЗ54" id="1804">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФЗ-54</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа розничные продажи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаФЗ54РасширеннаяПодсказка" id="1805"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУправлениеРозничнымиПродажамиФЗ54ОтправкаЧерезОФД" id="1806">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеРозничнымиПродажамиФЗ54ОтправкаЧерезОФДРасширеннаяПодсказка" id="1807"/>
+							<ChildItems>
+								<CheckBoxField name="ОтправлятьЭлектронныеЧекиПоSMSЧерезОФД" id="1811">
+									<DataPath>НаборКонстант.ОтправлятьЭлектронныеЧекиПоSMSЧерезОФД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправлять электронные чеки по SMS
+через оператора фискальных данных</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтправлятьЭлектронныеЧекиПоSMSЧерезОФДКонтекстноеМеню" id="1812"/>
+									<ExtendedTooltip name="ОтправлятьЭлектронныеЧекиПоSMSЧерезОФДРасширеннаяПодсказка" id="1813">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отправка SMS оператором фискальных данных может требовать дополнительной оплаты.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ОтправлятьЭлектронныеЧекиПоSMSЧерезОФДПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ОтправлятьЭлектронныеЧекиПоEmailЧерезОФД" id="1821">
+									<DataPath>НаборКонстант.ОтправлятьЭлектронныеЧекиПоEmailЧерезОФД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправлять электронные чеки по E-mail
+через оператора фискальных данных</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтправлятьЭлектронныеЧекиПоEmailЧерезОФДКонтекстноеМеню" id="1822"/>
+									<ExtendedTooltip name="ОтправлятьЭлектронныеЧекиПоEmailЧерезОФДРасширеннаяПодсказка" id="1823">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отправка E-mail оператором фискальных данных может требовать дополнительной оплаты.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ОтправлятьЭлектронныеЧекиПоEmailЧерезОФДПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеРозничнымиПродажамиФЗ54ОтправкаЭлектронныхЧековРасписание" id="1842">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеРозничнымиПродажамиФЗ54ОтправкаЭлектронныхЧековРасписаниеРасширеннаяПодсказка" id="1843"/>
+							<ChildItems>
+								<CheckBoxField name="ОтправкаЭлектронныхЧековПослеПробитияЧека" id="1808">
+									<DataPath>НаборКонстант.ОтправкаЭлектронныхЧековПослеПробитияЧека</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправлять электронные чеки после пробития на ККТ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтправкаЭлектронныхЧековПослеПробитияЧекаКонтекстноеМеню" id="1809"/>
+									<ExtendedTooltip name="ОтправкаЭлектронныхЧековПослеПробитияЧекаРасширеннаяПодсказка" id="1810">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отправка электронных чеков покупателю после пробития чека на фискальном устройстве либо по расписанию в регламентном задании.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ОтправкаЭлектронныхЧековПослеПробитияЧекаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<Button name="РассылкаЭлектронныхЧеков" id="1819">
+									<Type>Hyperlink</Type>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>1</Height>
+									<CommandName>Form.Command.НастроитьОтправкуЭлектронныхЧековПоРасписанию</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настроить расписание</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="РассылкаЭлектронныхЧековРасширеннаяПодсказка" id="1820">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настроить расписание отправки электронных чеков</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ОткрытьОчередьЭлектронныхЧеков" id="1844">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьОчередьЭлектронныхЧеков</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очередь электронных чеков</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьОчередьЭлектронныхЧековРасширеннаяПодсказка" id="1845">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Открыть очередь неотправленных электронных чеков.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<CheckBoxField name="НеПечататьФискальныйЧекПриОтправкеЭлектронногоЧекаПокупателю" id="1826">
+							<DataPath>НаборКонстант.НеПечататьФискальныйЧекПриОтправкеЭлектронногоЧекаПокупателю</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не печать чек на ККТ при отправке электронного чека</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеПечататьФискальныйЧекПриОтправкеЭлектронногоЧекаПокупателюКонтекстноеМеню" id="1827"/>
+							<ExtendedTooltip name="НеПечататьФискальныйЧекПриОтправкеЭлектронногоЧекаПокупателюРасширеннаяПодсказка" id="1828">
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Фискальный чек не печатается на ККТ, если покупатель требует отправки электронного чека на телефон или электронную почту.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">НеПечататьФискальныйЧекПриОтправкеЭлектронногоЧекаПокупателюПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ВидЦенПоступления</Field>
+				<Field>НаборКонстант.ИспользоватьРозничныеПродажи</Field>
+				<Field>НаборКонстант.ИспользоватьЦеновыеГруппы</Field>
+				<Field>НаборКонстант.КоличествоДнейХраненияЗаархивированныхЧеков</Field>
+				<Field>НаборКонстант.КоличествоДнейХраненияОтложенныхЧеков</Field>
+				<Field>НаборКонстант.КонтролироватьОстаткиПриПробитииЧековККМ</Field>
+				<Field>НаборКонстант.НеПечататьФискальныйЧекПриОтправкеЭлектронногоЧекаПокупателю</Field>
+				<Field>НаборКонстант.ОперацияПриЗакрытииКассовойСмены</Field>
+				<Field>НаборКонстант.ОтправкаЭлектронныхЧековПослеПробитияЧека</Field>
+				<Field>НаборКонстант.ОтправлятьЭлектронныеЧекиПоEmailЧерезОФД</Field>
+				<Field>НаборКонстант.ОтправлятьЭлектронныеЧекиПоSMSЧерезОФД</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ОбновитьИнтерфейс" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить интерфейс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РассылкаЭлектронныхЧековИдентификатор" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассылка электронных чеков идентификатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РассылкаЭлектронныхЧековИспользование" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассылка электронных чеков использование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РассылкаЭлектронныхЧековРасписание" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассылка электронных чеков расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьОтправкуЭлектронныхЧековПоРасписанию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить отправку электронных чеков по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить отправку электронных чеков по расписанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьОтправкуЭлектронныхЧековПоРасписанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИдентификационныеДанныеПользователей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общий список идентификационных данных пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список "Идентификационные данные пользователей"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСписокИдентификационныеДанныеПользователей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьОчередьЭлектронныхЧеков" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть очередь электронных чеков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть очередь электронных писем</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОчередьЭлектронныхЧеков</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

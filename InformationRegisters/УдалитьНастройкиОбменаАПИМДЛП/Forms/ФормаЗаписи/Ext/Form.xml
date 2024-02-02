@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ИдентификаторКлиента" id="4">
+			<DataPath>Запись.ИдентификаторКлиента</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="ИдентификаторКлиентаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИдентификаторКлиентаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="СекретКлиента" id="7">
+			<DataPath>Запись.СекретКлиента</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="СекретКлиентаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СекретКлиентаРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаАдресСервера" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа адрес сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАдресСервераРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="Адрес" id="10">
+					<DataPath>Запись.Адрес</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="АдресКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">АдресПриИзменении</Event>
+						<Event name="StartChoice">АдресНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">АдресОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Порт" id="76">
+					<DataPath>Запись.Порт</DataPath>
+					<ContextMenu name="ПортКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ПортРасширеннаяПодсказка" id="78"/>
+					<Events>
+						<Event name="OnChange">ПортПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Таймаут" id="13">
+					<DataPath>Запись.Таймаут</DataPath>
+					<ContextMenu name="ТаймаутКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ТаймаутРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">ТаймаутПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ЗащищенноеСоединение" id="18">
+					<DataPath>Запись.ЗащищенноеСоединение</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗащищенноеСоединениеКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ЗащищенноеСоединениеРасширеннаяПодсказка" id="20"/>
+					<Events>
+						<Event name="OnChange">ЗащищенноеСоединениеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДатаНачалаИспользования" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата начала использования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНачалаИспользованияРасширеннаяПодсказка" id="95">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Начиная с этой даты будут загружаться входящие документы из ИС "Маркировка"</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+			<ChildItems>
+				<InputField name="ДатаНачалаИспользования" id="21">
+					<DataPath>Запись.ДатаНачалаИспользования</DataPath>
+					<ContextMenu name="ДатаНачалаИспользованияКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ДатаНачалаИспользованияРасширеннаяПодсказка" id="23"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДанныеОрганизации" id="96">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа данные организации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДанныеОрганизацииРасширеннаяПодсказка" id="97"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИдентификаторОрганизации" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа идентификатор организации</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИдентификаторОрганизацииРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<InputField name="ИдентификаторОрганизации" id="1">
+							<DataPath>Запись.ИдентификаторОрганизации</DataPath>
+							<ContextMenu name="ИдентификаторОрганизацииКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ИдентификаторОрганизацииРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<Button name="ПолучитьДанныеОрганизации" id="100">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ПолучитьДанныеОрганизации</CommandName>
+							<ExtendedTooltip name="ПолучитьДанныеОрганизацииРасширеннаяПодсказка" id="101"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбменПоРасписанию" id="79">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обмен по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбменПоРасписаниюРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<CheckBoxField name="ОбменПоРасписанию" id="81">
+					<DataPath>ОбменПоРасписанию</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По расписанию</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбменПоРасписаниюКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ОбменПоРасписаниюРасширеннаяПодсказка" id="83"/>
+					<Events>
+						<Event name="OnChange">ОбменПоРасписаниюПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelField name="ПредставлениеРасписания" id="84">
+					<DataPath>ПредставлениеРасписания</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПредставлениеРасписанияКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ПредставлениеРасписанияРасширеннаяПодсказка" id="86"/>
+					<Events>
+						<Event name="URLProcessing">ПредставлениеРасписанияОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодключитьОтключитьАвтоматическийОбмен" id="89">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключить отключить автоматический обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодключитьОтключитьАвтоматическийОбменРасширеннаяПодсказка" id="90">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>При отключении логин и пароль для подключения к API будут удалены из программы.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+			<ChildItems>
+				<Button name="ПодключитьОтключитьАвтоматическийОбмен" id="87">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПодключитьОтключитьАвтоматическийОбмен</CommandName>
+					<ExtendedTooltip name="ПодключитьОтключитьАвтоматическийОбменРасширеннаяПодсказка" id="88">
+						<HorizontalStretch>false</HorizontalStretch>
+					</ExtendedTooltip>
+				</Button>
+				<LabelDecoration name="ДекорацияЛогин" id="91">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение автоматической загрузки не выполнено.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЛогинКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ДекорацияЛогинРасширеннаяПодсказка" id="93"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыПроверкаПодключения" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы проверка подключения</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыПроверкаПодключенияРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<Page name="ВыполняетсяПроверкаПодключения" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполняется проверка подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВыполняетсяПроверкаПодключенияРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВыполняетсяПроверкаПодключения" id="28">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполняется проверка подключения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВыполняетсяПроверкаПодключенияРасширеннаяПодсказка" id="29"/>
+							<ChildItems>
+								<PictureDecoration name="ГруппаВыполняетсяПроверкаПодключенияДекорация" id="30">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.НезавершившаясяПроверка</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ГруппаВыполняетсяПроверкаПодключенияДекорацияКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ГруппаВыполняетсяПроверкаПодключенияДекорацияРасширеннаяПодсказка" id="32"/>
+								</PictureDecoration>
+								<LabelDecoration name="ГруппаВыполняетсяПроверкаПодключенияНадпись" id="33">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполняется проверка подключения</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГруппаВыполняетсяПроверкаПодключенияНадписьКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ГруппаВыполняетсяПроверкаПодключенияНадписьРасширеннаяПодсказка" id="35"/>
+									<Events>
+										<Event name="URLProcessing">ГруппаВыполняетсяПроверкаПодключенияНадписьОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ПроверкаПодключенияНеВыполнялась" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка подключения не выполнялась</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка подключения не выполнялась</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПроверкаПодключенияНеВыполняласьРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПроверкаПодключенияНеВыполнялась" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения не выполнялась</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверка подключения не выполнялась</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроверкаПодключенияНеВыполняласьРасширеннаяПодсказка" id="39"/>
+							<ChildItems>
+								<PictureDecoration name="ГруппаГруппаПроверкаПодключенияНеВыполняласьДекорация" id="40">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ГруппаГруппаПроверкаПодключенияНеВыполняласьДекорацияКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ГруппаГруппаПроверкаПодключенияНеВыполняласьДекорацияРасширеннаяПодсказка" id="42"/>
+								</PictureDecoration>
+								<LabelDecoration name="ГруппаГруппаПроверкаПодключенияНеВыполняласьНадпись" id="43">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверка подключения не выполнена. &lt;link ПроверитьПодключение&gt;Проверить&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГруппаГруппаПроверкаПодключенияНеВыполняласьНадписьКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ГруппаГруппаПроверкаПодключенияНеВыполняласьНадписьРасширеннаяПодсказка" id="45"/>
+									<Events>
+										<Event name="URLProcessing">ГруппаГруппаПроверкаПодключенияНеВыполняласьНадписьОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ПроверкаПодключенияКорректно" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение настроено корректно</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПроверкаПодключенияКорректноРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПодключениеНастроеноКорректно" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключение настроено корректно</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодключениеНастроеноКорректноРасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<PictureDecoration name="ГруппаПодключениеНастроеноКорректноДекорация" id="50">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Успешно</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ГруппаПодключениеНастроеноКорректноДекорацияКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ГруппаПодключениеНастроеноКорректноДекорацияРасширеннаяПодсказка" id="52"/>
+								</PictureDecoration>
+								<LabelDecoration name="ГруппаПодключениеНастроеноКорректноНадпись" id="53">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подключение настроено корректно.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГруппаПодключениеНастроеноКорректноНадписьКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ГруппаПодключениеНастроеноКорректноНадписьРасширеннаяПодсказка" id="55"/>
+									<Events>
+										<Event name="URLProcessing">ГруппаПодключениеНастроеноКорректноНадписьОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="НетСвязи" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нет связи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НетСвязиРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНетСвязи" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нет связи</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНетСвязиРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<PictureDecoration name="ГруппаНетСвязиДекорация" id="60">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка</v8:content>
+										</v8:item>
+									</Title>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ГруппаНетСвязиДекорацияКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ГруппаНетСвязиДекорацияРасширеннаяПодсказка" id="62"/>
+								</PictureDecoration>
+								<LabelDecoration name="ГруппаНетСвязиНадпись" id="63">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нет связи. &lt;link Повторить&gt;Повторить&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГруппаНетСвязиНадписьКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ГруппаНетСвязиНадписьРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="URLProcessing">ГруппаНетСвязиНадписьОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ПереданНеверныйИдентификатор" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Передан неверный идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПереданНеверныйИдентификаторРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПереданНеверныйИдентификатор" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа передан неверный идентификатор</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПереданНеверныйИдентификаторРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<PictureDecoration name="ГруппаПереданНеверныйИдентификаторДекорация" id="70">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка</v8:content>
+										</v8:item>
+									</Title>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ГруппаПереданНеверныйИдентификаторДекорацияКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ГруппаПереданНеверныйИдентификаторДекорацияРасширеннаяПодсказка" id="72"/>
+								</PictureDecoration>
+								<LabelDecoration name="ГруппаПереданНеверныйИдентификаторНадпись" id="73">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не удалось авторизоваться на сервере. &lt;link Повторить&gt;Повторить&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГруппаПереданНеверныйИдентификаторНадписьКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ГруппаПереданНеверныйИдентификаторНадписьРасширеннаяПодсказка" id="75"/>
+									<Events>
+										<Event name="URLProcessing">ГруппаПереданНеверныйИдентификаторНадписьОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УдалитьНастройкиОбменаАПИМДЛП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОбменПоРасписанию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РасписаниеОбмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПредставлениеРасписания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление расписания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеАутентификации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные аутентификации</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодключитьОтключитьАвтоматическийОбмен" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить отключить автоматический обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодключитьОтключитьАвтоматическийОбмен</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПолучитьДанныеОрганизации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить данные организации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить данные организации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучитьДанныеОрганизации</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

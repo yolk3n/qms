@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличииОстаток9мес</dataPath>
+			<field>ВНаличииОстаток9мес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>9 мес.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличииОстатокБольше</dataPath>
+			<field>ВНаличииОстатокБольше</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>больше</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличииОстаток1мес</dataPath>
+			<field>ВНаличииОстаток1мес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>1 мес.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличииОстатокИстек</dataPath>
+			<field>ВНаличииОстатокИстек</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Истек</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличииОстаток3мес</dataPath>
+			<field>ВНаличииОстаток3мес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>3  мес.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличииОстаток6мес</dataPath>
+			<field>ВНаличииОстаток6мес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>6 мес.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсточникФинансирования</dataPath>
+			<field>ИсточникФинансирования</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МНН</dataPath>
+			<field>МНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Коэффициент</dataPath>
+			<field>Коэффициент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличииОстатокИтог</dataPath>
+			<field>ВНаличииОстатокИтог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В наличии остаток итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговоеНаименование</dataPath>
+			<field>ТорговоеНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговое наименование</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад1</dataPath>
+			<field>Склад1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад1</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличииОстаток</dataPath>
+			<field>ВНаличииОстаток</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СвободныеОстаткиОстатки.Номенклатура КАК Номенклатура,
+	СвободныеОстаткиОстатки.Склад КАК Склад,
+	СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= &amp;Период
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) КАК ВНаличииОстатокИстек,
+	СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+					И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 1)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) КАК ВНаличииОстаток1мес,
+	СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+					И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 3)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) КАК ВНаличииОстаток3мес,
+	СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+					И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 6)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) КАК ВНаличииОстаток6мес,
+	СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+					И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) КАК ВНаличииОстаток9мес,
+	СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) КАК ВНаличииОстатокБольше,
+	СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= &amp;Период
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+					И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 1)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+					И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 3)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+					И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 6)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+					И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+				ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+			ИНАЧЕ 0
+		КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) КАК ВНаличииОстатокИтог,
+	СвободныеОстаткиОстатки.Номенклатура.Артикул КАК Артикул,
+	СвободныеОстаткиОстатки.Номенклатура.ЭлементКАТ КАК МНН,
+	ЕдиницыИзмеренияНоменклатуры.Коэффициент КАК Коэффициент,
+	СвободныеОстаткиОстатки.Номенклатура.ОсновнаяЕдиницаУчета КАК ЕдиницаИзмерения,
+	СвободныеОстаткиОстатки.СерияНоменклатуры КАК СерияНоменклатуры,
+	СвободныеОстаткиОстатки.ИсточникФинансирования КАК ИсточникФинансирования,
+	СвободныеОстаткиОстатки.Организация КАК Организация,
+	СвободныеОстаткиОстатки.Партия КАК Партия,
+	СвободныеОстаткиОстатки.МестоХранения КАК МестоХранения,
+	СвободныеОстаткиОстатки.Номенклатура.ЭлементКАТ.ТорговоеНаименование КАК ТорговоеНаименование,
+	СвободныеОстаткиОстатки.Склад КАК Склад1,
+	ПоступлениеТоваровТовары.Цена КАК Цена,
+	ПоступлениеТоваровТовары.Цена * СвободныеОстаткиОстатки.ВНаличииОстаток / ЕдиницыИзмеренияНоменклатуры.Коэффициент КАК Сумма,
+	СвободныеОстаткиОстатки.ВНаличииОстаток / ЕдиницыИзмеренияНоменклатуры.Коэффициент КАК ВНаличииОстаток
+ИЗ
+	РегистрНакопления.СвободныеОстатки.Остатки(&amp;Период, ) КАК СвободныеОстаткиОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЕдиницыИзмеренияНоменклатуры КАК ЕдиницыИзмеренияНоменклатуры
+		ПО СвободныеОстаткиОстатки.Номенклатура = ЕдиницыИзмеренияНоменклатуры.Номенклатура
+			И СвободныеОстаткиОстатки.Номенклатура.ОсновнаяЕдиницаУчета = ЕдиницыИзмеренияНоменклатуры.ЕдиницаИзмерения
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПоступлениеТоваров.Товары КАК ПоступлениеТоваровТовары
+		ПО СвободныеОстаткиОстатки.Номенклатура = ПоступлениеТоваровТовары.Номенклатура
+			И СвободныеОстаткиОстатки.СерияНоменклатуры = ПоступлениеТоваровТовары.СерияНоменклатуры
+			И СвободныеОстаткиОстатки.Партия.ДокументОприходования = ПоступлениеТоваровТовары.Ссылка
+ГДЕ
+	НЕ СвободныеОстаткиОстатки.ВНаличииОстаток = 0
+
+СГРУППИРОВАТЬ ПО
+	СвободныеОстаткиОстатки.Номенклатура,
+	СвободныеОстаткиОстатки.Склад,
+	СвободныеОстаткиОстатки.Номенклатура.Артикул,
+	СвободныеОстаткиОстатки.Номенклатура.ЭлементКАТ,
+	ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	СвободныеОстаткиОстатки.Номенклатура.ОсновнаяЕдиницаУчета,
+	СвободныеОстаткиОстатки.СерияНоменклатуры,
+	СвободныеОстаткиОстатки.ИсточникФинансирования,
+	СвободныеОстаткиОстатки.Организация,
+	СвободныеОстаткиОстатки.Партия,
+	СвободныеОстаткиОстатки.МестоХранения,
+	ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+				И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 1)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+				И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 3)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+				И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 6)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+				И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= &amp;Период
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент + ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+				И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 1)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент + ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+				И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 3)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент + ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+				И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 6)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент + ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+				И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент + ВЫБОР
+		КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+			ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+		ИНАЧЕ 0
+	КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	СвободныеОстаткиОстатки.Номенклатура.ЭлементКАТ.ТорговоеНаименование,
+	ПоступлениеТоваровТовары.Цена,
+	ПоступлениеТоваровТовары.Цена * СвободныеОстаткиОстатки.ВНаличииОстаток / ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	СвободныеОстаткиОстатки.ВНаличииОстаток / ЕдиницыИзмеренияНоменклатуры.Коэффициент,
+	СвободныеОстаткиОстатки.Склад
+
+ИМЕЮЩИЕ
+	НЕ СУММА(ВЫБОР
+				КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= &amp;Период
+					ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+				ИНАЧЕ 0
+			КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+				КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+						И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 1)
+					ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+				ИНАЧЕ 0
+			КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+				КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+						И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 3)
+					ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+				ИНАЧЕ 0
+			КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+				КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+						И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 6)
+					ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+				ИНАЧЕ 0
+			КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) + СУММА(ВЫБОР
+				КОГДА СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &gt; &amp;Период
+						И СвободныеОстаткиОстатки.СерияНоменклатуры.ГоденДо &lt;= ДОБАВИТЬКДАТЕ(&amp;Период, МЕСЯЦ, 9)
+					ТОГДА СвободныеОстаткиОстатки.ВНаличииОстаток
+				ИНАЧЕ 0
+			КОНЕЦ / ЕдиницыИзмеренияНоменклатуры.Коэффициент) = 0</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ВНаличииОстатокИстек</dataPath>
+		<expression>Сумма(ВНаличииОстатокИстек)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВНаличииОстаток1мес</dataPath>
+		<expression>Сумма(ВНаличииОстаток1мес)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВНаличииОстаток3мес</dataPath>
+		<expression>Сумма(ВНаличииОстаток3мес)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВНаличииОстаток6мес</dataPath>
+		<expression>Сумма(ВНаличииОстаток6мес)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВНаличииОстаток9мес</dataPath>
+		<expression>Сумма(ВНаличииОстаток9мес)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВНаличииОстатокБольше</dataPath>
+		<expression>Сумма(ВНаличииОстатокБольше)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВНаличииОстатокИтог</dataPath>
+		<expression>Сумма(ВНаличииОстатокИтог)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>Цена</dataPath>
+		<expression>Сумма(Сумма)/Сумма(ВНаличииОстаток)</expression>
+		<group>Номенклатура</group>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВНаличииОстаток</dataPath>
+		<expression>Сумма(ВНаличииОстаток)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по срокам годности</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличииОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличииОстатокИстек</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличииОстаток1мес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличииОстаток3мес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличииОстаток6мес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличииОстаток9мес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличииОстатокБольше</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличииОстатокИтог</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Склад</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>12e3b67b-69e4-4771-ac91-f24638298074</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>351d3b96-ff34-4215-8406-3d1b9bfe609b</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Цена</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>МНН</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Артикул</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЕдиницаИзмерения</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

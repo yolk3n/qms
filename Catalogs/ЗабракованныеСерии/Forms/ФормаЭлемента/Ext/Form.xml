@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСерияСтатус" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа серия статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа серия статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСерияСтатусExtendedTooltip" id="97"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСтатус" id="95">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа статус</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа статус</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтатусExtendedTooltip" id="98"/>
+					<ChildItems>
+						<InputField name="Статус" id="41">
+							<DataPath>Объект.Статус</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="СтатусExtendedTooltip" id="99"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСерия" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа серия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа серия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСерияExtendedTooltip" id="100"/>
+			<ChildItems>
+				<InputField name="НомерСерии" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерСерииКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерСерииExtendedTooltip" id="101"/>
+				</InputField>
+				<CheckBoxField name="ВсеСерии" id="73">
+					<DataPath>Объект.ВсеСерии</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВсеСерииКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ВсеСерииExtendedTooltip" id="102"/>
+					<Events>
+						<Event name="OnChange">ВсеСерииПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Номенклатура" id="84">
+			<DataPath>Объект.Номенклатура</DataPath>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="85"/>
+			<ExtendedTooltip name="НоменклатураExtendedTooltip" id="103"/>
+			<Events>
+				<Event name="OnChange">НоменклатураПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Препарат" id="3">
+			<DataPath>Объект.Препарат</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ПрепаратКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ПрепаратExtendedTooltip" id="104"/>
+		</InputField>
+		<InputField name="Производитель" id="5">
+			<DataPath>Объект.Производитель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПроизводительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПроизводительExtendedTooltip" id="105"/>
+		</InputField>
+		<UsualGroup name="ГруппаПриказы" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приказы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа приказы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаПриказыExtendedTooltip" id="108"/>
+			<ChildItems>
+				<Table name="Приказы" id="57">
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.Приказы</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПриказыКонтекстноеМеню" id="58"/>
+					<AutoCommandBar name="ПриказыКоманднаяПанель" id="59"/>
+					<ExtendedTooltip name="ПриказыExtendedTooltip" id="109"/>
+					<SearchStringAddition name="ПриказыСтрокаПоиска" id="116">
+						<AdditionSource>
+							<Item>Приказы</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПриказыСтрокаПоискаКонтекстноеМеню" id="117"/>
+						<ExtendedTooltip name="ПриказыСтрокаПоискаРасширеннаяПодсказка" id="118"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПриказыСостояниеПросмотра" id="119">
+						<AdditionSource>
+							<Item>Приказы</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПриказыСостояниеПросмотраКонтекстноеМеню" id="120"/>
+						<ExtendedTooltip name="ПриказыСостояниеПросмотраРасширеннаяПодсказка" id="121"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПриказыУправлениеПоиском" id="122">
+						<AdditionSource>
+							<Item>Приказы</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПриказыУправлениеПоискомКонтекстноеМеню" id="123"/>
+						<ExtendedTooltip name="ПриказыУправлениеПоискомРасширеннаяПодсказка" id="124"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnEditEnd">ПриказыПриОкончанииРедактирования</Event>
+						<Event name="AfterDeleteRow">ПриказыПослеУдаления</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ПриказыНомерСтроки" id="60">
+							<DataPath>Объект.Приказы.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>2</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ПриказыНомерСтрокиКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ПриказыНомерСтрокиExtendedTooltip" id="110"/>
+						</LabelField>
+						<InputField name="ПриказыОтмененаЗабраковки" id="66">
+							<DataPath>Объект.Приказы.ОтменаЗабраковки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документ</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>14</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Забраковка</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:boolean">false</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отмена забраковки</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:boolean">true</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПриказыОтмененаЗабраковкиКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="ПриказыОтмененаЗабраковкиExtendedTooltip" id="111"/>
+						</InputField>
+						<InputField name="ПриказыДатаДокумента" id="62">
+							<DataPath>Объект.Приказы.ДатаДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ПриказыДатаДокументаКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ПриказыДатаДокументаExtendedTooltip" id="112"/>
+						</InputField>
+						<InputField name="ПриказыНомерДокумента" id="64">
+							<DataPath>Объект.Приказы.НомерДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ПриказыНомерДокументаКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ПриказыНомерДокументаExtendedTooltip" id="113"/>
+						</InputField>
+						<InputField name="ПриказыПричинаЗабраковки" id="70">
+							<DataPath>Объект.Приказы.Примечание</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПриказыПричинаЗабраковкиКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ПриказыПричинаЗабраковкиExtendedTooltip" id="114"/>
+						</InputField>
+						<InputField name="ПриказыЛаборатория" id="68">
+							<DataPath>Объект.Приказы.Лаборатория</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>16</Width>
+							<ContextMenu name="ПриказыЛабораторияКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ПриказыЛабораторияExtendedTooltip" id="115"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЗабракованныеСерии</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

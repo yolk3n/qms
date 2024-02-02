@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Действующий справочник лекарственных средств</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>false</VerticalStretch>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="59"/>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="32"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="33">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="36">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="39">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="DrugID" id="30">
+					<DataPath>Список.DrugID</DataPath>
+					<ContextMenu name="DrugIDКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="DrugIDРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="PackNx" id="8">
+					<DataPath>Список.PackNX</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>PackNx</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="PackNxКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="PackNxРасширеннаяПодсказка" id="44"/>
+				</LabelField>
+				<LabelField name="Штрихкод" id="28">
+					<DataPath>Список.Штрихкод</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ШтрихкодКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ШтрихкодРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="ТорговоеНаименование" id="60">
+					<DataPath>Список.ТорговоеНаименование</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ТорговоеНаименованиеКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ТорговоеНаименованиеРасширеннаяПодсказка" id="62"/>
+				</LabelField>
+				<LabelField name="ДействующиеВеществаМНН" id="63">
+					<DataPath>Список.ДействующиеВеществаМНН</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ДействующиеВеществаМННКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ДействующиеВеществаМННРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+				<LabelField name="ЛекарственнаяФорма" id="10">
+					<DataPath>Список.ЛекарственнаяФорма</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ЛекарственнаяФормаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЛекарственнаяФормаРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="Доза" id="12">
+					<DataPath>Список.Доза</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ДозаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ДозаРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="Упаковка" id="14">
+					<DataPath>Список.Упаковка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="УпаковкаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="УпаковкаРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<LabelField name="Производитель" id="16">
+					<DataPath>Список.Производитель</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ПроизводительКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПроизводительРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="Упаковщик" id="18">
+					<DataPath>Список.Упаковщик</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="УпаковщикКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="УпаковщикРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="МаксимальнаяЦена" id="20">
+					<DataPath>Список.МаксимальнаяЦена</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="МаксимальнаяЦенаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="МаксимальнаяЦенаРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<LabelField name="Номенклатура" id="24">
+					<DataPath>Список.Номенклатура</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+				<LabelField name="ЕдиницаИзмерения" id="26">
+					<DataPath>Список.ЕдиницаИзмерения</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="55">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникНоменклатураПоставщиков.Ссылка,
+	СправочникНоменклатураПоставщиков.ПометкаУдаления,
+	СправочникНоменклатураПоставщиков.Предопределенный,
+	СправочникНоменклатураПоставщиков.Владелец,
+	СправочникНоменклатураПоставщиков.Родитель,
+	СправочникНоменклатураПоставщиков.ЭтоГруппа,
+	СправочникНоменклатураПоставщиков.Код,
+	СправочникНоменклатураПоставщиков.Наименование,
+	СправочникНоменклатураПоставщиков.Номенклатура,
+	СправочникНоменклатураПоставщиков.ЕдиницаИзмерения,
+	ДанныеДействующегоСправочникаЛС.DrugID КАК DrugID,
+	ДанныеДействующегоСправочникаЛС.PackNX КАК PackNX,
+	ДанныеДействующегоСправочникаЛС.ТорговоеНаименование КАК ТорговоеНаименование,
+	ДанныеДействующегоСправочникаЛС.ДействующиеВеществаМНН КАК ДействующиеВеществаМНН,
+	ДанныеДействующегоСправочникаЛС.Производитель КАК Производитель,
+	ДанныеДействующегоСправочникаЛС.Упаковщик КАК Упаковщик,
+	ДанныеДействующегоСправочникаЛС.ЛекарственнаяФорма КАК ЛекарственнаяФорма,
+	ДанныеДействующегоСправочникаЛС.Дозировка КАК Доза,
+	ДанныеДействующегоСправочникаЛС.Упаковка КАК Упаковка,
+	ДанныеДействующегоСправочникаЛС.Штрихкод КАК Штрихкод,
+	ДанныеДействующегоСправочникаЛС.МаксимальнаяЦенаПроизводителя КАК МаксимальнаяЦена
+ИЗ
+	Справочник.НоменклатураКонтрагентов КАК СправочникНоменклатураПоставщиков
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеДействующегоСправочникаЛС КАК ДанныеДействующегоСправочникаЛС
+		ПО СправочникНоменклатураПоставщиков.Ссылка = ДанныеДействующегоСправочникаЛС.Номенклатура}</QueryText>
+				<MainTable>Catalog.НоменклатураКонтрагентов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ИнтеграцияС1СДокументооборотСоздатьПисьмо</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИнтеграцияС1СДокументооборотСоздатьБизнесПроцесс</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>BusinessProcess.Задание.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СозданиеСвязанныхОбъектов</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Упаковка номенклатуры</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номенклатура" id="49">
+			<DataPath>Объект.Номенклатура</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="НоменклатураExtendedTooltip" id="59"/>
+		</InputField>
+		<UsualGroup name="ГруппаКодИНаименование" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код и наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код и наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="52"/>
+			<ChildItems>
+				<InputField name="Упаковка" id="60">
+					<DataPath>Объект.Упаковка</DataPath>
+					<Width>14</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ContextMenu name="УпаковкаКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="УпаковкаРасширеннаяПодсказка" id="62"/>
+					<Events>
+						<Event name="OnChange">УпаковкаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КодОКЕИ" id="15">
+					<DataPath>Объект.КодОКЕИ</DataPath>
+					<Width>6</Width>
+					<ContextMenu name="КодОКЕИКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="КодОКЕИExtendedTooltip" id="57"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<RadioButtonField name="СостоитИзДругихУпаковокПереключатель" id="63">
+			<DataPath>СостоитИзДругихУпаковок</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Первичная упаковка</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Состоит из других упаковок</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СостоитИзДругихУпаковокПереключательКонтекстноеМеню" id="64"/>
+			<ExtendedTooltip name="СостоитИзДругихУпаковокПереключательExtendedTooltip" id="65"/>
+			<Events>
+				<Event name="OnChange">СостоитИзДругихУпаковокПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<Pages name="ГруппаСтраницыКоэффициенты" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы коэффициенты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы коэффициенты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыКоэффициентыExtendedTooltip" id="67"/>
+			<ChildItems>
+				<Page name="ГруппаКоэффициентЕдиницаИзмерения" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа коэффициент единица измерения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа коэффициент единица измерения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаКоэффициентЕдиницаИзмеренияExtendedTooltip" id="69"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="70">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="Декорация1ExtendedTooltip" id="72"/>
+						</LabelDecoration>
+						<InputField name="КоличествоВУпаковке" id="73">
+							<DataPath>Объект.Коэффициент</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>в этой упаковке</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ChoiceButton>false</ChoiceButton>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=3</v8:content>
+								</v8:item>
+							</EditFormat>
+							<MinValue xsi:type="xs:decimal">0.001</MinValue>
+							<ContextMenu name="КоличествоВУпаковкеКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="КоличествоВУпаковкеРасширеннаяПодсказка" id="75"/>
+							<Events>
+								<Event name="OnChange">КоличествоВУпаковкеПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelField name="БазоваяЕдиницаИзмерения" id="97">
+							<DataPath>Объект.БазоваяЕдиницаИзмерения</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="БазоваяЕдиницаИзмеренияКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="БазоваяЕдиницаИзмеренияРасширеннаяПодсказка" id="99"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКоличествоУпаковокУпаковка" id="79">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа количество упаковок упаковка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа количество упаковок упаковка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаКоличествоУпаковокУпаковкаExtendedTooltip" id="80"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация2" id="81">
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="Декорация2ExtendedTooltip" id="83"/>
+						</LabelDecoration>
+						<InputField name="КоличествоУпаковок" id="84">
+							<DataPath>Объект.КоличествоВУпаковке</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>в этой упаковке</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="КоличествоУпаковокКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="КоличествоУпаковокExtendedTooltip" id="86"/>
+							<Events>
+								<Event name="OnChange">КоличествоУпаковокПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Родитель" id="87">
+							<DataPath>Объект.Parent</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>15</MaxWidth>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Номенклатура</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Объект.Номенклатура</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+								<xr:Link>
+									<xr:Name>Отбор.ТекущаяУпаковка</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Объект.Ref</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ChoiceParameters>
+								<app:item name="ВыборУпаковкиНоменклатуры">
+									<app:value xsi:nil="true"/>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="РодительКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="РодительExtendedTooltip" id="89"/>
+							<Events>
+								<Event name="OnChange">РодительПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>20</Width>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="53"/>
+		</InputField>
+		<InputField name="НаименованиеПолное" id="5">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>20</Width>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НаименованиеПолноеExtendedTooltip" id="56"/>
+		</InputField>
+		<InputField name="НаименованиеСокращенное" id="94">
+			<DataPath>Объект.НаименованиеСокращенное</DataPath>
+			<ContextMenu name="НаименованиеСокращенноеКонтекстноеМеню" id="95"/>
+			<ExtendedTooltip name="НаименованиеСокращенноеРасширеннаяПодсказка" id="96"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЕдиницыИзмерения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СостоитИзДругихУпаковок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состоит из других упаковок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

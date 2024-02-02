@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>CreateFolder</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+		<ExcludedCommand>HierarchicalList</ExcludedCommand>
+		<ExcludedCommand>LevelDown</ExcludedCommand>
+		<ExcludedCommand>LevelUp</ExcludedCommand>
+		<ExcludedCommand>List</ExcludedCommand>
+		<ExcludedCommand>Tree</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПоискКоманднаяПанельФормы" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поиск командная панель формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поиск командная панель формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоискКоманднаяПанельФормыExtendedTooltip" id="71"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаФормаТаблицы" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа форма таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа форма таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФормаТаблицыExtendedTooltip" id="72"/>
+			<ChildItems>
+				<Pages name="СтраницыСписокТоваров" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы список товаров</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы список товаров</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыСписокТоваровРасширеннаяПодсказка" id="109"/>
+					<ChildItems>
+						<Page name="ГруппаСписокТоваровРасширенныйПоиск" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список товаров расширенный поиск</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список товаров расширенный поиск</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="73"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРасширенныйПоиск" id="41">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа расширенный поиск</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа расширенный поиск</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРасширенныйПоискРасширеннаяПодсказка" id="74"/>
+								</UsualGroup>
+								<CommandBar name="КоманднаяПанельСписокТоваровРасширенныйПоиск" id="39">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель список товаров расширенный поиск</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель список товаров расширенный поиск</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="КоманднаяПанельСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="79"/>
+									<ChildItems>
+										<ButtonGroup name="ГруппаКоманднаяПанельСписокТоваровРасширенныйПоиск" id="68">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа командная панель список товаров расширенный поиск</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа командная панель список товаров расширенный поиск</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CommandSource>Item.СписокТоваровРасширенныйПоиск</CommandSource>
+											<ExtendedTooltip name="ГруппаКоманднаяПанельСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="80"/>
+										</ButtonGroup>
+										<ButtonGroup name="ФормаГруппаГлобальныеКомандыСписокТоваровРасширенныйПоиск" id="67">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Форма группа глобальные команды список товаров расширенный поиск</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Форма группа глобальные команды список товаров расширенный поиск</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+											<ExtendedTooltip name="ФормаГруппаГлобальныеКомандыСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="83"/>
+										</ButtonGroup>
+										<Button name="ФормаПоискПоШтрихкодуСписокТоваровРасширенныйПоиск" id="37">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПоискПоШтрихкоду</CommandName>
+											<ExtendedTooltip name="ФормаПоискПоШтрихкодуСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="84"/>
+										</Button>
+										<Button name="ФормаИзменитьВыделенныеСписокТоваровРасширенныйПоиск" id="36">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+											<ExtendedTooltip name="ФормаИзменитьВыделенныеСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="85"/>
+										</Button>
+										<Popup name="ФормаГруппаНастройкиСписокТоваровРасширенныйПоиск" id="104">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Форма группа настройки список товаров расширенный поиск</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ФормаГруппаНастройкиСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="105"/>
+											<ChildItems>
+												<Button name="ФормаНастроитьПоискСписокТоваровРасширенныйПоиск" id="106">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.НастроитьПоиск</CommandName>
+													<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+													<ExtendedTooltip name="ФормаНастроитьПоискСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="107"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+										<Button name="ИзменитьФормуСписокТоваровРасширенныйПоиск" id="65">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+											<ExtendedTooltip name="ИзменитьФормуСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="102"/>
+										</Button>
+										<Button name="СправкаСписокТоваровРасширенныйПоиск" id="66">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="СправкаСписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="103"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<Table name="СписокТоваровРасширенныйПоиск" id="1">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<SkipOnInput>false</SkipOnInput>
+									<DefaultItem>true</DefaultItem>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>СписокТоваров</DataPath>
+									<RowPictureDataPath>СписокТоваров.DefaultPicture</RowPictureDataPath>
+									<CommandSet>
+										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>CreateFolder</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>LevelDown</ExcludedCommand>
+										<ExcludedCommand>LevelUp</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>SearchHistory</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+									</CommandSet>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="СписокТоваровРасширенныйПоискКонтекстноеМеню" id="2">
+										<ChildItems>
+											<Button name="СписокТоваровРасширенныйПоискКонтекстноеМенюГрупповоеИзменениеОбъектов" id="32">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+												<ExtendedTooltip name="СписокТоваровРасширенныйПоискКонтекстноеМенюГрупповоеИзменениеОбъектовРасширеннаяПодсказка" id="86"/>
+											</Button>
+											<Button name="СписокТоваровРасширенныйПоискКонтекстноеМенюЗаполнитьКлассификаторыИзКАТ" id="35">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьКлассификаторыИзКАТ</CommandName>
+												<ExtendedTooltip name="СписокТоваровРасширенныйПоискКонтекстноеМенюЗаполнитьКлассификаторыИзКАТРасширеннаяПодсказка" id="87"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="СписокТоваровРасширенныйПоискКоманднаяПанель" id="3">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокТоваровРасширенныйПоискРасширеннаяПодсказка" id="88"/>
+									<SearchStringAddition name="СписокТоваровРасширенныйПоискСтрокаПоиска" id="155">
+										<AdditionSource>
+											<Item>СписокТоваровРасширенныйПоиск</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокТоваровРасширенныйПоискСтрокаПоискаКонтекстноеМеню" id="156"/>
+										<ExtendedTooltip name="СписокТоваровРасширенныйПоискСтрокаПоискаРасширеннаяПодсказка" id="157"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокТоваровРасширенныйПоискСостояниеПросмотра" id="158">
+										<AdditionSource>
+											<Item>СписокТоваровРасширенныйПоиск</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокТоваровРасширенныйПоискСостояниеПросмотраКонтекстноеМеню" id="159"/>
+										<ExtendedTooltip name="СписокТоваровРасширенныйПоискСостояниеПросмотраРасширеннаяПодсказка" id="160"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокТоваровРасширенныйПоискУправлениеПоиском" id="161">
+										<AdditionSource>
+											<Item>СписокТоваровРасширенныйПоиск</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокТоваровРасширенныйПоискУправлениеПоискомКонтекстноеМеню" id="162"/>
+										<ExtendedTooltip name="СписокТоваровРасширенныйПоискУправлениеПоискомРасширеннаяПодсказка" id="163"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">СписокТоваровПриАктивизацииСтроки</Event>
+										<Event name="OnUpdateUserSettingSetAtServer">СписокТоваровПриОбновленииСоставаПользовательскихНастроекНаСервере</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокТоваровРасширенныйПоискНаименование" id="4">
+											<DataPath>СписокТоваров.Description</DataPath>
+											<DefaultItem>true</DefaultItem>
+											<ContextMenu name="СписокТоваровРасширенныйПоискНаименованиеКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="СписокТоваровРасширенныйПоискНаименованиеРасширеннаяПодсказка" id="94"/>
+										</LabelField>
+										<LabelField name="СписокТоваровРасширенныйПоискАртикул" id="8">
+											<DataPath>СписокТоваров.Артикул</DataPath>
+											<Width>16</Width>
+											<ContextMenu name="СписокТоваровРасширенныйПоискАртикулКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="СписокТоваровРасширенныйПоискАртикулРасширеннаяПодсказка" id="93"/>
+										</LabelField>
+										<LabelField name="СписокТоваровРасширенныйПоискСсылка" id="33">
+											<DataPath>СписокТоваров.Ref</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номенклатура(Ссылка)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокТоваровРасширенныйПоискСсылкаКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="СписокТоваровРасширенныйПоискСсылкаРасширеннаяПодсказка" id="97"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаСписокТоваровСтандартныйПоиск" id="110">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список товаров стандартный поиск</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница расширенный поиск номенклатура</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="111"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСтандартныйПоиск" id="179">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа стандартный поиск</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа расширенный поиск</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСтандартныйПоискРасширеннаяПодсказка" id="180"/>
+									<ChildItems>
+										<SearchStringAddition name="СтандартныйПоискВСпискахСтрокаПоиска" id="173">
+											<AdditionSource>
+												<Item>СписокТоваровСтандартныйПоиск</Item>
+												<Type>SearchStringRepresentation</Type>
+											</AdditionSource>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Строка поиска</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>33</MaxWidth>
+											<ContextMenu name="СтандартныйПоискВСпискахСтрокаПоискаКонтекстноеМеню" id="174"/>
+											<ExtendedTooltip name="СтандартныйПоискВСпискахСтрокаПоискаРасширеннаяПодсказка" id="175"/>
+										</SearchStringAddition>
+										<SearchControlAddition name="СтандартныйПоискВСпискахУправлениеПоиском" id="176">
+											<AdditionSource>
+												<Item>СписокТоваровСтандартныйПоиск</Item>
+												<Type>SearchControl</Type>
+											</AdditionSource>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Управление поиском</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СтандартныйПоискВСпискахУправлениеПоискомКонтекстноеМеню" id="177"/>
+											<ExtendedTooltip name="СтандартныйПоискВСпискахУправлениеПоискомРасширеннаяПодсказка" id="178"/>
+										</SearchControlAddition>
+									</ChildItems>
+								</UsualGroup>
+								<CommandBar name="КоманднаяПанельСписокТоваровСтандартныйПоиск" id="116">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель список товаров стандартный поиск</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель список товаров расширенный поиск</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="КоманднаяПанельСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="117"/>
+									<ChildItems>
+										<ButtonGroup name="ГруппаКоманднаяПанельСписокТоваровСтандартныйПоиск" id="118">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа командная панель список товаров стандартный поиск</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа командная панель список товаров расширенный поиск</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CommandSource>Item.СписокТоваровСтандартныйПоиск</CommandSource>
+											<ExtendedTooltip name="ГруппаКоманднаяПанельСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="119"/>
+										</ButtonGroup>
+										<ButtonGroup name="ФормаГруппаГлобальныеКомандыСписокТоваровСтандартныйПоиск" id="120">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Форма группа глобальные команды список товаров стандартный поиск</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Форма группа глобальные команды список товаров расширенный поиск</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+											<ExtendedTooltip name="ФормаГруппаГлобальныеКомандыСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="121"/>
+										</ButtonGroup>
+										<Button name="ФормаПоискПоШтрихкодуСписокТоваровСтандартныйПоиск" id="122">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПоискПоШтрихкоду</CommandName>
+											<ExtendedTooltip name="ФормаПоискПоШтрихкодуСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="123"/>
+										</Button>
+										<Button name="ФормаИзменитьВыделенныеСписокТоваровСтандартныйПоиск" id="124">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+											<ExtendedTooltip name="ФормаИзменитьВыделенныеСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="125"/>
+										</Button>
+										<Popup name="ФормаГруппаНастройкиСписокТоваровСтандартныйПоиск" id="126">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Форма группа настройки список товаров расширенный поиск</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ФормаГруппаНастройкиСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="127"/>
+											<ChildItems>
+												<Button name="ФормаНастроитьПоискСписокТоваровСтандартныйПоиск" id="128">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.НастроитьПоиск</CommandName>
+													<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+													<ExtendedTooltip name="ФормаНастроитьПоискСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="129"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+										<Button name="ИзменитьФормуСписокТоваровСтандартныйПоиск" id="130">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+											<ExtendedTooltip name="ИзменитьФормуСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="131"/>
+										</Button>
+										<Button name="СправкаСписокТоваровСтандартныйПоиск" id="132">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="СправкаСписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="133"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<Table name="СписокТоваровСтандартныйПоиск" id="134">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<SkipOnInput>false</SkipOnInput>
+									<DefaultItem>true</DefaultItem>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>СписокТоваров</DataPath>
+									<RowPictureDataPath>СписокТоваров.DefaultPicture</RowPictureDataPath>
+									<CommandSet>
+										<ExcludedCommand>CreateFolder</ExcludedCommand>
+										<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>LevelDown</ExcludedCommand>
+										<ExcludedCommand>LevelUp</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+									</CommandSet>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="СписокТоваровСтандартныйПоискКонтекстноеМеню" id="135">
+										<ChildItems>
+											<Button name="СписокТоваровСтандартныйПоискКонтекстноеМенюГрупповоеИзменениеОбъектов" id="147">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+												<ExtendedTooltip name="СписокТоваровСтандартныйПоискКонтекстноеМенюГрупповоеИзменениеОбъектовРасширеннаяПодсказка" id="148"/>
+											</Button>
+											<Button name="СписокТоваровСтандартныйПоискКонтекстноеМенюЗаполнитьКлассификаторыИзКАТ" id="149">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьКлассификаторыИзКАТ</CommandName>
+												<ExtendedTooltip name="СписокТоваровСтандартныйПоискКонтекстноеМенюЗаполнитьКлассификаторыИзКАТРасширеннаяПодсказка" id="150"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="СписокТоваровСтандартныйПоискКоманднаяПанель" id="136">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокТоваровСтандартныйПоискРасширеннаяПодсказка" id="137"/>
+									<SearchStringAddition name="СписокТоваровСтандартныйПоискСтрокаПоиска" id="164">
+										<AdditionSource>
+											<Item>СписокТоваровСтандартныйПоиск</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокТоваровСтандартныйПоискСтрокаПоискаКонтекстноеМеню" id="165"/>
+										<ExtendedTooltip name="СписокТоваровСтандартныйПоискСтрокаПоискаРасширеннаяПодсказка" id="166"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокТоваровСтандартныйПоискСостояниеПросмотра" id="167">
+										<AdditionSource>
+											<Item>СписокТоваровСтандартныйПоиск</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокТоваровСтандартныйПоискСостояниеПросмотраКонтекстноеМеню" id="168"/>
+										<ExtendedTooltip name="СписокТоваровСтандартныйПоискСостояниеПросмотраРасширеннаяПодсказка" id="169"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокТоваровСтандартныйПоискУправлениеПоиском" id="170">
+										<AdditionSource>
+											<Item>СписокТоваровСтандартныйПоиск</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокТоваровСтандартныйПоискУправлениеПоискомКонтекстноеМеню" id="171"/>
+										<ExtendedTooltip name="СписокТоваровСтандартныйПоискУправлениеПоискомРасширеннаяПодсказка" id="172"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">СписокТоваровПриАктивизацииСтроки</Event>
+										<Event name="OnUpdateUserSettingSetAtServer">СписокТоваровПриОбновленииСоставаПользовательскихНастроекНаСервере</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокТоваровСтандартныйПоискНаименование" id="138">
+											<DataPath>СписокТоваров.Description</DataPath>
+											<DefaultItem>true</DefaultItem>
+											<ContextMenu name="СписокТоваровСтандартныйПоискНаименованиеКонтекстноеМеню" id="139"/>
+											<ExtendedTooltip name="СписокТоваровСтандартныйПоискНаименованиеРасширеннаяПодсказка" id="140"/>
+										</LabelField>
+										<LabelField name="СписокТоваровСтандартныйПоискАртикул" id="141">
+											<DataPath>СписокТоваров.Артикул</DataPath>
+											<Width>16</Width>
+											<ContextMenu name="СписокТоваровСтандартныйПоискАртикулКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="СписокТоваровСтандартныйПоискАртикулРасширеннаяПодсказка" id="143"/>
+										</LabelField>
+										<LabelField name="СписокТоваровСтандартныйПоискСсылка" id="144">
+											<DataPath>СписокТоваров.Ref</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номенклатура(Ссылка)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокТоваровСтандартныйПоискСсылкаКонтекстноеМеню" id="145"/>
+											<ExtendedTooltip name="СписокТоваровСтандартныйПоискСсылкаРасширеннаяПодсказка" id="146"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<UsualGroup name="ГруппаПанельФильтров" id="151">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа панель фильтров</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа панель фильтров</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>28</Width>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПанельФильтровРасширеннаяПодсказка" id="152"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаФильтрыНоменклатуры" id="47">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа фильтры номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа фильтры номенклатуры</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФильтрыНоменклатурыРасширеннаяПодсказка" id="98"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПользовательскихНастроек" id="153">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользовательские настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользовательские настройки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="154"/>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокТоваров" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>СписокТоваров.Parent</Field>
+				<Field>СписокТоваров.Ref</Field>
+				<Field>СписокТоваров.ДанныеПрепарата</Field>
+				<Field>СписокТоваров.ЭтоЛекарственноеСредство</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Товары.Ссылка,
+	Товары.Ссылка КАК Номенклатура,
+	Товары.ПометкаУдаления,
+	Товары.Родитель,
+	Товары.ЭтоГруппа,
+	Товары.Код,
+	Товары.Наименование,
+	ВЫРАЗИТЬ(Товары.НаименованиеПолное КАК СТРОКА(350)) КАК НаименованиеПолное,
+	Товары.Артикул КАК Артикул,
+	Товары.ВидНоменклатуры КАК ВидНоменклатуры,
+	Товары.ТипНоменклатуры КАК ТипНоменклатуры,
+	Товары.ТипНоменклатурыРасширенный КАК ТипНоменклатурыРасширенный,
+	Товары.ЭтоЛекарственноеСредство КАК ЭтоЛекарственноеСредство,
+	Товары.ЭлементКАТ КАК ДанныеПрепарата,
+	Товары.Производитель КАК Производитель
+	//ПОЛЯ_ДЛЯ_ОТБОРА
+ИЗ
+	Справочник.Номенклатура КАК Товары
+	//СОЕДИНЕНИЯ
+ГДЕ
+	(НЕ Товары.ЭтоГруппа)</QueryText>
+				<MainTable>Catalog.Номенклатура</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодФормы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСтандартныйПоискПриПодбореТоваров" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать стандартный поиск при подборе товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантПоискаТоваров" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант поиска товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыФормы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НоменклатураФильтраПоСвойствам" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура фильтра по свойствам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТребуетсяОбновитьОтображениеПользовательскихНастроек" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется обновить отображение пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИзменитьВыделенные" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьВыделенные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьКлассификаторыИзКАТ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить классификаторы для выделенных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить ОКПД2 из аптечного товара для выделенных объектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьКлассификаторыИзКАТ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоискПоШтрихкоду" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск по штрихкоду</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск по штрихкоду</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F7</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.НовыйПоШтрихкоду</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоискПоШтрихкодуВыполнить</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастроитьПоиск" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить поиск...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить поиск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьПоиск</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НоменклатураФильтраПоСвойствам">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ДополнительныеСведенияКоманднаяПанель</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>2</Index>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>3</Index>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИнтеграцияС1СДокументооборотСоздатьПисьмо</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИнтеграцияС1СДокументооборотСоздатьБизнесПроцесс</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>BusinessProcess.Задание.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

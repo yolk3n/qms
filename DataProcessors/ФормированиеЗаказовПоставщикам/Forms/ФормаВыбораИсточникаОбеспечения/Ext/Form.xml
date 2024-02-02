@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор источника обеспечения</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<EnterKeyBehavior>DefaultButton</EnterKeyBehavior>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПоставщикиСпецификаций" id="10">
+			<Representation>List</Representation>
+			<ChoiceMode>true</ChoiceMode>
+			<SelectionMode>SingleRow</SelectionMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПоставщикиСпецификаций</DataPath>
+			<RowPictureDataPath>ПоставщикиСпецификаций.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщики спецификаций</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="ПоставщикиСпецификацийКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ПоставщикиСпецификацийКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="ПоставщикиСпецификацийРасширеннаяПодсказка" id="98"/>
+			<SearchStringAddition name="ПоставщикиСпецификацийСтрокаПоиска" id="132">
+				<AdditionSource>
+					<Item>ПоставщикиСпецификаций</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоставщикиСпецификацийСтрокаПоискаКонтекстноеМеню" id="133"/>
+				<ExtendedTooltip name="ПоставщикиСпецификацийСтрокаПоискаРасширеннаяПодсказка" id="134"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПоставщикиСпецификацийСостояниеПросмотра" id="135">
+				<AdditionSource>
+					<Item>ПоставщикиСпецификаций</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоставщикиСпецификацийСостояниеПросмотраКонтекстноеМеню" id="136"/>
+				<ExtendedTooltip name="ПоставщикиСпецификацийСостояниеПросмотраРасширеннаяПодсказка" id="137"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПоставщикиСпецификацийУправлениеПоиском" id="138">
+				<AdditionSource>
+					<Item>ПоставщикиСпецификаций</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоставщикиСпецификацийУправлениеПоискомКонтекстноеМеню" id="139"/>
+				<ExtendedTooltip name="ПоставщикиСпецификацийУправлениеПоискомРасширеннаяПодсказка" id="140"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПоставщикиСпецификацийПоставщик" id="159">
+					<DataPath>ПоставщикиСпецификаций.Наименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПоставщикиСпецификацийПоставщикКонтекстноеМеню" id="160"/>
+					<ExtendedTooltip name="ПоставщикиСпецификацийПоставщикРасширеннаяПодсказка" id="161"/>
+				</LabelField>
+				<LabelField name="ПоставщикиСпецификацийПоследняяПоставка" id="153">
+					<DataPath>ПоставщикиСпецификаций.ПоследняяПоставка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Последняя поставка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПоставщикиСпецификацийПоследняяПоставкаКонтекстноеМеню" id="154"/>
+					<ExtendedTooltip name="ПоставщикиСпецификацийПоследняяПоставкаРасширеннаяПодсказка" id="155"/>
+				</LabelField>
+				<LabelField name="ПоставщикиСпецификацийВсегоПоставок" id="150">
+					<DataPath>ПоставщикиСпецификаций.ВсегоПоставок</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего поставок</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПоставщикиСпецификацийВсегоПоставокКонтекстноеМеню" id="151"/>
+					<ExtendedTooltip name="ПоставщикиСпецификацийВсегоПоставокРасширеннаяПодсказка" id="152"/>
+				</LabelField>
+				<LabelField name="ПоставщикиСпецификацийПоСпецификации" id="156">
+					<DataPath>ПоставщикиСпецификаций.ПоСпецификации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По спецификации</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПоставщикиСпецификацийПоСпецификацииКонтекстноеМеню" id="157"/>
+					<ExtendedTooltip name="ПоставщикиСпецификацийПоСпецификацииРасширеннаяПодсказка" id="158"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="171">
+					<DataPath>ПоставщикиСпецификаций.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="172"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="173"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<RadioButtonField name="РежимОтображенияПоставщиков" id="168">
+			<DataPath>РежимОтображенияПоставщиков</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущие поставщики</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ТекущиеПоставщики</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Все поставщики</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ВсеПоставщики</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="РежимОтображенияПоставщиковКонтекстноеМеню" id="169"/>
+			<ExtendedTooltip name="РежимОтображенияПоставщиковРасширеннаяПодсказка" id="170"/>
+			<Events>
+				<Event name="OnChange">РежимОтображенияПоставщиковПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПоставщикиСпецификаций" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщики спецификаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~ПоставщикиСпецификаций.Поставщик</Field>
+				<Field>ПоставщикиСпецификаций.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Поставщики.Ссылка                    КАК Ссылка,
+	Поставщики.Наименование              КАК Наименование,
+	СтатистикаПоставок.ВсегоПоставок     КАК ВсегоПоставок,
+	СтатистикаПоставок.ПоследняяПоставка КАК ПоследняяПоставка,
+	ОстаткиПоСпецификации.ПоСпецификации КАК ПоСпецификации
+{ВЫБРАТЬ
+	ПоСпецификации}
+ИЗ
+	Справочник.Контрагенты КАК Поставщики
+		{ЛЕВОЕ СОЕДИНЕНИЕ
+			(ВЫБРАТЬ
+				ДокументСпецификация.Контрагент                    КАК Поставщик,
+				СУММА(ОстаткиПоСпецификации.ПоСпецификацииОстаток) КАК ПоСпецификации
+			ИЗ
+				РегистрНакопления.ЗаказыПоставщикам.Остатки(, Номенклатура = &amp;Номенклатура) КАК ОстаткиПоСпецификации
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ
+						Документ.СпецификацияКДоговору КАК ДокументСпецификация
+					ПО
+						ОстаткиПоСпецификации.Спецификация = ДокументСпецификация.Ссылка
+				
+			СГРУППИРОВАТЬ ПО
+				ДокументСпецификация.Контрагент) КАК ОстаткиПоСпецификации
+		ПО
+			Поставщики.Ссылка = ОстаткиПоСпецификации.Поставщик}
+			
+		{ЛЕВОЕ СОЕДИНЕНИЕ
+			(ВЫБРАТЬ
+				Поступление.Контрагент                   КАК Поставщик,
+				МАКСИМУМ(Поступление.Дата)               КАК ПоследняяПоставка,
+				КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Поступление.Ссылка) КАК ВсегоПоставок
+			ИЗ
+				Документ.ПоступлениеТоваров КАК Поступление
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ
+						Документ.ПоступлениеТоваров.Товары КАК ТоварыПоступления
+					ПО
+						Поступление.Ссылка = ТоварыПоступления.Ссылка
+						И (ТоварыПоступления.Номенклатура = &amp;Номенклатура)
+			ГДЕ
+				Поступление.Проведен
+				И Поступление.Склад = &amp;Склад
+				
+			СГРУППИРОВАТЬ ПО
+				Поступление.Контрагент) КАК СтатистикаПоставок
+		ПО
+			Поставщики.Ссылка = СтатистикаПоставок.Поставщик}
+ГДЕ
+	НЕ Поставщики.ПометкаУдаления
+	И НЕ Поставщики.ЭтоГруппа
+</QueryText>
+				<MainTable>Catalog.Контрагенты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ПоСпецификации</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ВсегоПоставок</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ПоследняяПоставка</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="РежимОтображенияПоставщиков" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим отображения поставщиков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>РежимОтображенияПоставщиков</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+</Form>

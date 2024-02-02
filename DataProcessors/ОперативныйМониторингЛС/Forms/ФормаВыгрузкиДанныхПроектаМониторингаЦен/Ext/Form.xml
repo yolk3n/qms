@@ -1,0 +1,840 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ВыгрузитьДанныеОперативногоМониторингаЛС" id="20">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВыгрузитьДанныеОперативногоМониторингаЛС</CommandName>
+				<ExtendedTooltip name="ВыгрузитьДанныеОперативногоМониторингаЛСРасширеннаяПодсказка" id="72"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="113">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="114"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаЛево" id="115">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="116"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПериодСоставленияОтчета" id="64">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период составления отчета</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период составления отчета</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодСоставленияОтчетаРасширеннаяПодсказка" id="74"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПериодСоставленияОтчета" id="67">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период составления отчета</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПериодСоставленияОтчетаКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ДекорацияПериодСоставленияОтчетаРасширеннаяПодсказка" id="75"/>
+								</LabelDecoration>
+								<Button name="УстановитьПредыдущийПериод" id="65">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УстановитьПредыдущийПериод</CommandName>
+									<ExtendedTooltip name="УстановитьПредыдущийПериодРасширеннаяПодсказка" id="76"/>
+								</Button>
+								<LabelField name="ПериодСоставленияОтчета" id="69">
+									<DataPath>ПериодСоставленияОтчета</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Width>11</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='MMMM yyyy'</v8:content>
+										</v8:item>
+									</Format>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ContextMenu name="ПериодСоставленияОтчетаКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ПериодСоставленияОтчетаРасширеннаяПодсказка" id="77"/>
+								</LabelField>
+								<Button name="УстановитьСледующийПериод" id="66">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УстановитьСледующийПериод</CommandName>
+									<ExtendedTooltip name="УстановитьСледующийПериодРасширеннаяПодсказка" id="78"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаПраво" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="118"/>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОрганизация" id="138">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа организация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа организация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОрганизацияРасширеннаяПодсказка" id="139"/>
+			<ChildItems>
+				<InputField name="Организация" id="1">
+					<DataPath>Организация</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>30</MaxWidth>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="73"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КодОрганизации" id="140">
+					<DataPath>КодОрганизации</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="КодОрганизацииКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="КодОрганизацииРасширеннаяПодсказка" id="142">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполняется в том случае, если данные импортируются другой организацией. Идентификатор организации, можно получить в разделе «&lt;b&gt;Настройки&lt;/&gt;» на вкладке «&lt;b&gt;Организация&lt;/&gt;» на сайте &lt;link http://mols.roszdravnadzor.ru/&gt;проекта&lt;/&gt;</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСегмент" id="122">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегмент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сегмент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаСегментРасширеннаяПодсказка" id="123"/>
+			<ChildItems>
+				<RadioButtonField name="ГоспитальныйСегмент" id="129">
+					<DataPath>Сегмент</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Госпитальный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ГоспитальныйСегментКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="ГоспитальныйСегментРасширеннаяПодсказка" id="131"/>
+					<Events>
+						<Event name="OnChange">ГоспитальныйСегментПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<UsualGroup name="ГруппаАмбулаторныйСегмент" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа амбулаторный сегмент</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа амбулаторный сегмент</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаАмбулаторныйСегментРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<RadioButtonField name="АмбулаторныйСегмент" id="119">
+							<DataPath>Сегмент</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Амбулаторный</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="АмбулаторныйСегментКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="АмбулаторныйСегментРасширеннаяПодсказка" id="121"/>
+							<Events>
+								<Event name="OnChange">АмбулаторныйСегментПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="РозничныйВидЦены" id="124">
+							<DataPath>РозничныйВидЦены</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
+							<ContextMenu name="РозничныйВидЦеныКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="РозничныйВидЦеныРасширеннаяПодсказка" id="126"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КомпоновщикНастроекНастройкиОтбор" id="135">
+			<DataPath>КомпоновщикНастроекДляОтбора.Settings.Filter</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомпоновщикНастроекНастройкиОтборКонтекстноеМеню" id="136"/>
+			<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборРасширеннаяПодсказка" id="137"/>
+		</InputField>
+		<UsualGroup name="ГруппаДанныеПоМониторингуЦен" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные оперативного мониторинга ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа данные по мониторингу цен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаДанныеПоМониторингуЦенРасширеннаяПодсказка" id="88"/>
+			<ChildItems>
+				<Table name="ВыгружаемыеДанные" id="21">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ВыгружаемыеДанные</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ВыгружаемыеДанныеКонтекстноеМеню" id="22"/>
+					<AutoCommandBar name="ВыгружаемыеДанныеКоманднаяПанель" id="23">
+						<ChildItems>
+							<Button name="ВыгружаемыеДанныеЗаполнитьДанныеОперативногоМониторингуЛС" id="55">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьДанныеОперативногоМониторингуЛС</CommandName>
+								<ExtendedTooltip name="ВыгружаемыеДанныеЗаполнитьДанныеОперативногоМониторингуЛСРасширеннаяПодсказка" id="89"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ВыгружаемыеДанныеРасширеннаяПодсказка" id="90"/>
+					<SearchStringAddition name="ВыгружаемыеДанныеСтрокаПоиска" id="91">
+						<AdditionSource>
+							<Item>ВыгружаемыеДанные</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыгружаемыеДанныеСтрокаПоискаКонтекстноеМеню" id="92"/>
+						<ExtendedTooltip name="ВыгружаемыеДанныеСтрокаПоискаРасширеннаяПодсказка" id="93"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ВыгружаемыеДанныеСостояниеПросмотра" id="94">
+						<AdditionSource>
+							<Item>ВыгружаемыеДанные</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыгружаемыеДанныеСостояниеПросмотраКонтекстноеМеню" id="95"/>
+						<ExtendedTooltip name="ВыгружаемыеДанныеСостояниеПросмотраРасширеннаяПодсказка" id="96"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ВыгружаемыеДанныеУправлениеПоиском" id="97">
+						<AdditionSource>
+							<Item>ВыгружаемыеДанные</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыгружаемыеДанныеУправлениеПоискомКонтекстноеМеню" id="98"/>
+						<ExtendedTooltip name="ВыгружаемыеДанныеУправлениеПоискомРасширеннаяПодсказка" id="99"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ВыгружаемыеДанныеНоменклатура" id="48">
+							<DataPath>ВыгружаемыеДанные.Номенклатура</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ContextMenu name="ВыгружаемыеДанныеНоменклатураКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеНоменклатураРасширеннаяПодсказка" id="100"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеНоменклатураРосздравнадзора" id="50">
+							<DataPath>ВыгружаемыеДанные.НоменклатураРосздравнадзора</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Номенклатура</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Items.ВыгружаемыеДанные.CurrentData.Номенклатура</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ВыгружаемыеДанныеНоменклатураРосздравнадзораКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеНоменклатураРосздравнадзораРасширеннаяПодсказка" id="101"/>
+							<Events>
+								<Event name="OnChange">ВыгружаемыеДанныеНоменклатураРосздравнадзораПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеУникальныйКодРосздравнадзора" id="62">
+							<DataPath>ВыгружаемыеДанные.УникальныйКодРосздравнадзора</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВыгружаемыеДанныеУникальныйКодРосздравнадзораКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеУникальныйКодРосздравнадзораРасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеСерииНоменклатуры" id="32">
+							<DataPath>ВыгружаемыеДанные.СерияНоменклатуры</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Items.ВыгружаемыеДанные.CurrentData.Номенклатура</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ВыгружаемыеДанныеСерииНоменклатурыКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеСерииНоменклатурыРасширеннаяПодсказка" id="104"/>
+							<Events>
+								<Event name="OnChange">ВыгружаемыеДанныеСерииНоменклатурыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеСерия" id="56">
+							<DataPath>ВыгружаемыеДанные.Серия</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВыгружаемыеДанныеСерияКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеСерияРасширеннаяПодсказка" id="105"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеКоличество" id="34">
+							<DataPath>ВыгружаемыеДанные.Количество</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВыгружаемыеДанныеКоличествоКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеКоличествоРасширеннаяПодсказка" id="106"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеЦенаПроизводителя" id="40">
+							<DataPath>ВыгружаемыеДанные.ЦенаПроизводителя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВыгружаемыеДанныеЦенаПроизводителяКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеЦенаПроизводителяРасширеннаяПодсказка" id="108"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеМаксимальнаяЦенаПроизводителя" id="132">
+							<DataPath>ВыгружаемыеДанные.МаксимальнаяЦенаПроизводителя</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВыгружаемыеДанныеМаксимальнаяЦенаПроизводителяКонтекстноеМеню" id="133"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеМаксимальнаяЦенаПроизводителяРасширеннаяПодсказка" id="134"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеЦенаЗакупки" id="42">
+							<DataPath>ВыгружаемыеДанные.ЦенаЗакупки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВыгружаемыеДанныеЦенаЗакупкиКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеЦенаЗакупкиРасширеннаяПодсказка" id="107"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеСредстваНаЗакупку" id="36">
+							<DataPath>ВыгружаемыеДанные.СредстваНаЗакупку</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВыгружаемыеДанныеСредстваНаЗакупкуКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеСредстваНаЗакупкуРасширеннаяПодсказка" id="109"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеРозничнаяЦена" id="44">
+							<DataPath>ВыгружаемыеДанные.РозничнаяЦена</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВыгружаемыеДанныеРозничнаяЦенаКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеРозничнаяЦенаРасширеннаяПодсказка" id="112"/>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеПоставщик" id="46">
+							<DataPath>ВыгружаемыеДанные.Поставщик</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ContextMenu name="ВыгружаемыеДанныеПоставщикКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеПоставщикРасширеннаяПодсказка" id="110"/>
+							<Events>
+								<Event name="OnChange">ВыгружаемыеДанныеПоставщикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВыгружаемыеДанныеКодПоставщика" id="38">
+							<DataPath>ВыгружаемыеДанные.КодПоставщика</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВыгружаемыеДанныеКодПоставщикаКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ВыгружаемыеДанныеКодПоставщикаРасширеннаяПодсказка" id="111"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>Организация</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВыгружаемыеДанные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружаемые данные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СерияНоменклатуры" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СредстваНаЗакупку" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Средства на закупку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодПоставщика" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаПроизводителя" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена производителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаЗакупки" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена закупки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РозничнаяЦена" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Розничная цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поставщик" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НоменклатураРосздравнадзора" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура росздравнадзора</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.НоменклатураКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Серия" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УникальныйКодРосздравнадзора" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>DrugID</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="МаксимальнаяЦенаПроизводителя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Максимальная цена производителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПериодСоставленияОтчета" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период составления отчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сегмент" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегмент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>Сегмент</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="РозничныйВидЦены" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Розничный вид цены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
+			</Type>
+			<Save>
+				<Field>РозничныйВидЦены</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КомпоновщикНастроекДляОтбора" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек для отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+			<Save>
+				<Field>КомпоновщикНастроекДляОтбора.Settings.Filter</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КодОрганизации" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>КодОрганизации</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыгрузитьДанныеОперативногоМониторингаЛС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные оперативного мониторинга ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные оперативного мониторинга ЛС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьДанныеОперативногоМониторингаЛС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьДанныеОперативногоМониторингуЛС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по данным учета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные заполняются по состоянию на 15-ое число отчетного периода.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДанныеОперативногоМониторингуЛС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьСледующийПериод" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить следующий период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить следующий период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьСледующийПериод</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьПредыдущийПериод" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить предыдущий период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить предыдущий период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПредыдущийПериод</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

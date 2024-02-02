@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНоменклатура" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номенклатура</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНоменклатураРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВидыНоменклатуры" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды номенклатуры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВидыНоменклатурыРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Button name="ОткрытьВидыНоменклатуры" id="5">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьВидыНоменклатуры</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьВидыНоменклатурыРасширеннаяПодсказка" id="6">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Классификация номенклатуры по ассортиментным группам. Номенклатура, относящаяся к одному виду имеет общие параметры учета и набор свойств, которыми она описывается.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<Button name="ОткрытьВидНоменклатурыТовар" id="7">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьВидНоменклатурыТовар</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьВидНоменклатурыТоварРасширеннаяПодсказка" id="8">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройка общих параметров учета и набора свойств.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<Button name="ОткрытьВидНоменклатурыЛекарственноеСредство" id="9">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьВидНоменклатурыЛекарственноеСредство</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьВидНоменклатурыЛекарственноеСредствоРасширеннаяПодсказка" id="10">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройка общих параметров учета и набора свойств.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ОткрытьЕдиницыИзмерения" id="13">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьЕдиницыИзмерения</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ОткрытьЕдиницыИзмеренияРасширеннаяПодсказка" id="14">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>43</MaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Классификатор единиц измерения, основывающийся на Общероссийском классификаторе единиц измерения.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<Button name="ОткрытьЦеновыеГруппы" id="15">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьЦеновыеГруппы</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ОткрытьЦеновыеГруппыРасширеннаяПодсказка" id="16">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>43</MaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Объединение номенклатуры в группы, для которых применяются одинаковые правила расчета цены.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<UsualGroup name="ГруппаНоменклатураГоризонтальная" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа номенклатура горизонтальная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа номенклатура горизонтальная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНоменклатураГоризонтальнаяРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<Button name="ОткрытьГруппыБухгалтерскогоУчета" id="17">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьГруппыБухгалтерскогоУчета</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьГруппыБухгалтерскогоУчетаРасширеннаяПодсказка" id="18">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Классификация номенклатуры по правилам отражения в бухгалтерском учете.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<Button name="ОткрытьГруппыПКУ" id="41">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьГруппыПКУ</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьГруппыПКУРасширеннаяПодсказка" id="42">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Объединение номенклатуры в группы предметно-количественного учета</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ОткрытьГруппыДоступаНоменклатуры" id="19">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьГруппыДоступаНоменклатуры</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ОткрытьГруппыДоступаНоменклатурыРасширеннаяПодсказка" id="20">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>43</MaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Классификатор деления номенклатуры на группы, по которым можно ограничивать доступ на добавление и изменение.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<UsualGroup name="ГруппаНоменклатураГоризонтальная2" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа номенклатура горизонтальная1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа номенклатура горизонтальная1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНоменклатураГоризонтальная2РасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<Button name="ОткрытьОКПД2" id="55">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьОКПД2</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьОКПД2РасширеннаяПодсказка" id="56">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Классификация номенклатуры по общероссийскому классификатору продукции по видам экономической деятельности с 2014 года.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ОткрытьКлассификаторТНВЭД" id="61">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьКлассификаторТНВЭД</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ОткрытьКлассификаторТНВЭДРасширеннаяПодсказка" id="62">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>43</MaxWidth>
+						<Height>3</Height>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Классификатор товаров, применяемый таможенными органами и участниками внешнеэкономической деятельности в целях проведения таможенных операций.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<Button name="ОткрытьНоменклатурнуюКлассификациюМедицинскихИзделийПоВидам" id="63">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьНоменклатурнуюКлассификациюМедицинскихИзделийПоВидам</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ОткрытьНоменклатурнуюКлассификациюМедицинскихИзделийПоВидамРасширеннаяПодсказка" id="64">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>43</MaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Содержит числовое обозначение вида медицинского изделия - идентификационный уникальный номер записи, наименование, описание, содержащее соответствующие классификационные признаки вида медицинского изделия, указываемые в зависимости от назначения.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЛекарственныеСредства" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лекарственные средства</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа лекарственные средства</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаЛекарственныеСредстваРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКЛПРЛС" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа КЛП РЛС</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКЛПРЛСРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<Button name="ОткрытьКЛП" id="65">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьКЛП</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьКЛПРасширеннаяПодсказка" id="66">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Каталог лекарственных препаратов, составная часть ЕСКЛП, описывающая товарные позиции (упаковки). Содержит "Позиции КЛП"</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<Button name="ОткрытьРегистрЛекарственныхСредств" id="23">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьРегистрЛекарственныхСредств</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьРегистрЛекарственныхСредствРасширеннаяПодсказка" id="24">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Регистр лекарственных средст, на основании которых создается номенклатура с типом Лекарственное средство</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ОткрытьСМНН" id="67">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьСМНН</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ОткрытьСМННРасширеннаяПодсказка" id="68">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>43</MaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Справочник международных непатентованных препаратов, составная часть ЕСКЛП, описывающая группы лекарственных средств на основе триады МНН + лекарственная форма + дозировка, дополнительно сгруппированных на основе иерархии узлов ОКПД2</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<UsualGroup name="ГруппаТорговыеНаименованияДействующиеВеществаМНН" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа торговые наименования действующие вещества МНН</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа торговые наименования действующие вещества МНН</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТорговыеНаименованияДействующиеВеществаМННРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<Button name="ОткрытьТорговыеНаименования" id="27">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьТорговыеНаименования</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьТорговыеНаименованияРасширеннаяПодсказка" id="28">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список торговых наименований лекарственных средств</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<Button name="ОткрытьДействующиеВеществаМНН" id="29">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьДействующиеВеществаМНН</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьДействующиеВеществаМННРасширеннаяПодсказка" id="30">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список действующих веществ (МНН) лекарственных средств</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛекарственныеФормыФормыВыпуска" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лекарственные формы формы выпуска</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лекарственные формы формы выпуска</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛекарственныеФормыФормыВыпускаРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<Button name="ОткрытьЛекарственныеФормы" id="33">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьЛекарственныеФормы</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьЛекарственныеФормыРасширеннаяПодсказка" id="34">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Классификатор лекарственных форм препаратов</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<Button name="ОткрытьФормыВыпуска" id="35">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьФормыВыпуска</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьФормыВыпускаРасширеннаяПодсказка" id="36">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Описание параметров лекарственных форм препаратов</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ОткрытьФирмы" id="37">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьФирмы</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ОткрытьФирмыРасширеннаяПодсказка" id="38">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>43</MaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Производители, регистраторы, упаковщики лекарственных средств</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+				<UsualGroup name="ГруппаКлассификация" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа классификация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа классификация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКлассификацияРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<Button name="ОткрытьАТХКлассификация" id="39">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьАТХКлассификация</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьАТХКлассификацияРасширеннаяПодсказка" id="40">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Анатомо-терапевтическо-химическая классификация лекарственных средств</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<Button name="ОткрытьФармакоТерапевтическиеГруппы" id="59">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьФармакоТерапевтическиеГруппы</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьФармакоТерапевтическиеГруппыРасширеннаяПодсказка" id="60">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>43</MaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Фармако-терапевтические группы Государственного реестра Министерства здравоохранения РФ</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ОткрытьВидНоменклатурыТовар" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка ведения товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть вид номенклатуры товар</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВидНоменклатурыТовар</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВидНоменклатурыЛекарственноеСредство" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка ведения лекарственных средств</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть вид номенклатуры лекарственное средство</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВидНоменклатурыЛекарственноеСредство</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВидыНоменклатуры" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть виды номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВидыНоменклатуры</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьЕдиницыИзмерения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единицы измерения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть единицы измерения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЕдиницыИзмерения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьЦеновыеГруппы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ценовые группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ценовые группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЦеновыеГруппы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьГруппыБухгалтерскогоУчета" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы бухгалтерского учета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть группы бухгалтерского учета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьГруппыБухгалтерскогоУчета</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьГруппыДоступаНоменклатуры" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы доступа номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть группы доступа номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьГруппыДоступаНоменклатуры</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРегистрЛекарственныхСредств" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистр лекарственных средств</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть регистр лекарственных средств</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРегистрЛекарственныхСредств</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьТорговыеНаименования" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговые наименования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть торговые наименования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьТорговыеНаименования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьДействующиеВеществаМНН" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действующие вещества (МНН)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть действующие вещества МНН</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДействующиеВеществаМНН</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьЛекарственныеФормы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лекарственные формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть лекарственные формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЛекарственныеФормы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьФормыВыпуска" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формы выпуска</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть формы выпуска</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормыВыпуска</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьФирмы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фирмы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть фирмы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФирмы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьАТХКлассификация" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>АТХ классификация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть АТХКлассификация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьАТХКлассификация</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьГруппыПКУ" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы ПКУ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть группы ПКУ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьГруппыПКУ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьОКПД2" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКПД 2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ОКПД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОКПД2</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьФармакоТерапевтическиеГруппы" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фармако-терапевтические группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть фармако терапевтические группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФармакоТерапевтическиеГруппы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьКлассификаторТНВЭД" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТН ВЭД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть классификатор ТНВЭД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьКлассификаторТНВЭД</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьНоменклатурнуюКлассификациюМедицинскихИзделийПоВидам" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатурная классификация медицинских изделий по видам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть номенклатурную классификацию медицинских изделий по видам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНоменклатурнуюКлассификациюМедицинскихИзделийПоВидам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьКЛП" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог лекарственных препаратов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть регистр лекарственных средств</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьКЛП</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСМНН" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник международных непатентованных наименований</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть регистр лекарственных средств</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСМНН</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

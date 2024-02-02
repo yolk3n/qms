@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="OIDКлассификатораМинздрава" id="70">
+			<DataPath>Объект.OIDКлассификатораМинздрава</DataPath>
+			<ContextMenu name="OIDКлассификатораМинздраваКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="OIDКлассификатораМинздраваРасширеннаяПодсказка" id="72"/>
+		</InputField>
+		<InputField name="ВерсияКлассификатораМинздрава" id="67">
+			<DataPath>Объект.ВерсияКлассификатораМинздрава</DataPath>
+			<ContextMenu name="ВерсияКлассификатораМинздраваКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="ВерсияКлассификатораМинздраваРасширеннаяПодсказка" id="69"/>
+		</InputField>
+		<InputField name="КодМинздрава" id="22">
+			<DataPath>Объект.КодМинздрава</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодМинздраваКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КодМинздраваРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="НаименованиеПолное" id="85">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="86"/>
+			<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="87"/>
+		</InputField>
+		<InputField name="Родитель" id="7">
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ФорматФайлаДляРЭМД" id="73">
+			<DataPath>Объект.ФорматФайлаДляРЭМД</DataPath>
+			<ContextMenu name="ФорматФайлаДляРЭМДКонтекстноеМеню" id="74"/>
+			<ExtendedTooltip name="ФорматФайлаДляРЭМДРасширеннаяПодсказка" id="75"/>
+		</InputField>
+		<InputField name="КодТипаМД" id="79">
+			<DataPath>Объект.КодТипаМД</DataPath>
+			<ContextMenu name="КодТипаМДКонтекстноеМеню" id="80"/>
+			<ExtendedTooltip name="КодТипаМДРасширеннаяПодсказка" id="81"/>
+		</InputField>
+		<InputField name="СсылкаНаРуководствоПоРеализацииСЭМД" id="88">
+			<DataPath>Объект.СсылкаНаРуководствоПоРеализацииСЭМД</DataPath>
+			<ContextMenu name="СсылкаНаРуководствоПоРеализацииСЭМДКонтекстноеМеню" id="89"/>
+			<ExtendedTooltip name="СсылкаНаРуководствоПоРеализацииСЭМДРасширеннаяПодсказка" id="90"/>
+		</InputField>
+		<CheckBoxField name="НеобходимаПодписьМО" id="34">
+			<DataPath>Объект.НеобходимаПодписьМО</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеобходимаПодписьМОКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="НеобходимаПодписьМОРасширеннаяПодсказка" id="36"/>
+		</CheckBoxField>
+		<CheckBoxField name="НеобходимСНИЛСПациента" id="76">
+			<DataPath>Объект.НеобходимСНИЛСПациента</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеобходимСНИЛСПациентаКонтекстноеМеню" id="77"/>
+			<ExtendedTooltip name="НеобходимСНИЛСПациентаРасширеннаяПодсказка" id="78"/>
+		</CheckBoxField>
+		<CheckBoxField name="ПередаватьВИЭМК" id="82">
+			<DataPath>Объект.ПередаватьВИЭМК</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПередаватьВИЭМККонтекстноеМеню" id="83"/>
+			<ExtendedTooltip name="ПередаватьВИЭМКРасширеннаяПодсказка" id="84"/>
+		</CheckBoxField>
+		<UsualGroup name="Архивирование_Статус" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архивирование статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архивирование статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Архивирование_СтатусExtendedTooltip" id="66"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПравилаПодписания" id="119">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила подписания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа правила подписания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<ExtendedTooltip name="ГруппаПравилаПодписанияРасширеннаяПодсказка" id="120"/>
+			<ChildItems>
+				<Table name="ПравилаПодписания" id="91">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ПравилаПодписания</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПравилаПодписанияКонтекстноеМеню" id="92"/>
+					<AutoCommandBar name="ПравилаПодписанияКоманднаяПанель" id="93"/>
+					<ExtendedTooltip name="ПравилаПодписанияРасширеннаяПодсказка" id="94"/>
+					<SearchStringAddition name="ПравилаПодписанияСтрокаПоиска" id="95">
+						<AdditionSource>
+							<Item>ПравилаПодписания</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПравилаПодписанияСтрокаПоискаКонтекстноеМеню" id="96"/>
+						<ExtendedTooltip name="ПравилаПодписанияСтрокаПоискаРасширеннаяПодсказка" id="97"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПравилаПодписанияСостояниеПросмотра" id="98">
+						<AdditionSource>
+							<Item>ПравилаПодписания</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПравилаПодписанияСостояниеПросмотраКонтекстноеМеню" id="99"/>
+						<ExtendedTooltip name="ПравилаПодписанияСостояниеПросмотраРасширеннаяПодсказка" id="100"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПравилаПодписанияУправлениеПоиском" id="101">
+						<AdditionSource>
+							<Item>ПравилаПодписания</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПравилаПодписанияУправлениеПоискомКонтекстноеМеню" id="102"/>
+						<ExtendedTooltip name="ПравилаПодписанияУправлениеПоискомРасширеннаяПодсказка" id="103"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПравилаПодписанияРольРЭМД" id="110">
+							<DataPath>ПравилаПодписания.РольРЭМД</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПравилаПодписанияРольРЭМДКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ПравилаПодписанияРольРЭМДРасширеннаяПодсказка" id="112"/>
+						</InputField>
+						<InputField name="ПравилаПодписанияДолжность" id="116">
+							<DataPath>ПравилаПодписания.Должность</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПравилаПодписанияДолжностьКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="ПравилаПодписанияДолжностьРасширеннаяПодсказка" id="118"/>
+						</InputField>
+						<InputField name="ПравилаПодписанияКодМинздраваДолжности" id="113">
+							<DataPath>ПравилаПодписания.КодМинздраваДолжности</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПравилаПодписанияКодМинздраваДолжностиКонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="ПравилаПодписанияКодМинздраваДолжностиРасширеннаяПодсказка" id="115"/>
+						</InputField>
+						<InputField name="ПравилаПодписанияМинимальноеКоличествоПодписей" id="104">
+							<DataPath>ПравилаПодписания.МинимальноеКоличествоПодписей</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПравилаПодписанияМинимальноеКоличествоПодписейКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ПравилаПодписанияМинимальноеКоличествоПодписейРасширеннаяПодсказка" id="106"/>
+						</InputField>
+						<InputField name="ПравилаПодписанияМаксимальноеКоличествоПодписей" id="107">
+							<DataPath>ПравилаПодписания.МаксимальноеКоличествоПодписей</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПравилаПодписанияМаксимальноеКоличествоПодписейКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ПравилаПодписанияМаксимальноеКоличествоПодписейРасширеннаяПодсказка" id="109"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТипыМДРегистрируемыхВРЭМД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПравилаПодписания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила подписания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="МинимальноеКоличествоПодписей" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минимальное количество подписей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="МаксимальноеКоличествоПодписей" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Максимальное количество подписей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РольРЭМД" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роль РЭМД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РолиПриПодписанииРЭМД</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодМинздраваДолжности" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код минздрава должности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Должность" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Должность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

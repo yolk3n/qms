@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Subsystem uuid="ab8b1c52-e760-4788-a2d4-116fb9109589">
+		<Properties>
+			<Name>МедСкан</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ГК МедСкан</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаявкаНаЗакупку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МедсканВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Помещения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТребованиеОтделения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ЗаявкиНаЗакупку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаказПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МедсканКлиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЦеныЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Медскан_ДобавлениеИзменениеЗаявокНаЗакупку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МедсканПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.сок_ПериодАнализаРасхода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Оборудование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.сок_БуферДляЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ФормированиеОтгрузокВОтделенияТовраСоСклада</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сок_ОткрфтиеФормыБуфераЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтпускТоваровВОтделение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.сок_НеФормализованноеТребованиеОтделения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.сок_БуферНеформальныхТребований</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.сок_ПредварительныйРасчетПациента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.сок_ОткрытиеФормыБуфераНеформализованныъхТроебований</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Сок_ОтчетПоСрокамГодности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.ОбменБФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоКИЗ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.яя_Пациенты</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>МедСканОтчеты</Subsystem>
+			<Subsystem>Формуляры</Subsystem>
+			<Subsystem>сок_Служебная</Subsystem>
+			<Subsystem>сок_СНИ</Subsystem>
+			<Subsystem>сок_Финансы</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

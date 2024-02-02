@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаТипЛинииОбразец" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип линии образец</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип линии образец</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТипЛинииОбразецРасширеннаяПодсказка" id="9"/>
+			<ChildItems>
+				<Table name="ТипыЛинии" id="1">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>18</Width>
+					<Height>6</Height>
+					<SelectionMode>SingleRow</SelectionMode>
+					<Header>false</Header>
+					<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<VerticalStretch>false</VerticalStretch>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТипыЛинии</DataPath>
+					<RowPictureDataPath>ТипыЛинии.Picture</RowPictureDataPath>
+					<ContextMenu name="ТипыЛинииКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="ТипыЛинииКоманднаяПанель" id="3"/>
+					<ExtendedTooltip name="ТипыЛинииРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="ТипыЛинииСтрокаПоиска" id="34">
+						<AdditionSource>
+							<Item>ТипыЛинии</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыЛинииСтрокаПоискаКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="ТипыЛинииСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТипыЛинииСостояниеПросмотра" id="37">
+						<AdditionSource>
+							<Item>ТипыЛинии</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыЛинииСостояниеПросмотраКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ТипыЛинииСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТипыЛинииУправлениеПоиском" id="40">
+						<AdditionSource>
+							<Item>ТипыЛинии</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыЛинииУправлениеПоискомКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ТипыЛинииУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">ТипЛинииПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ТипЛинииЗначение" id="5">
+							<DataPath>ТипыЛинии.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТипЛинииЗначениеКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ТипЛинииЗначениеРасширеннаяПодсказка" id="7"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<SpreadSheetDocumentField name="ПримерЛинииЯчейки" id="10">
+					<DataPath>ПримерЛинииЯчейки</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<Width>18</Width>
+					<Height>7</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<VerticalScrollBar>false</VerticalScrollBar>
+					<HorizontalScrollBar>false</HorizontalScrollBar>
+					<Protection>true</Protection>
+					<SelectionShowMode>WhenActive</SelectionShowMode>
+					<ShowGroups>false</ShowGroups>
+					<EnableStartDrag>false</EnableStartDrag>
+					<EnableDrag>false</EnableDrag>
+					<ContextMenu name="ПримерЛинииЯчейкиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПримерЛинииЯчейкиРасширеннаяПодсказка" id="12"/>
+				</SpreadSheetDocumentField>
+				<SpreadSheetDocumentField name="ПримерЛинииРисунка" id="31">
+					<DataPath>ПримерЛинииРисунка</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<Width>18</Width>
+					<Height>7</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalScrollBar>false</VerticalScrollBar>
+					<HorizontalScrollBar>false</HorizontalScrollBar>
+					<Protection>true</Protection>
+					<SelectionShowMode>WhenActive</SelectionShowMode>
+					<ShowGroups>false</ShowGroups>
+					<EnableStartDrag>false</EnableStartDrag>
+					<EnableDrag>false</EnableDrag>
+					<ContextMenu name="ПримерЛинииРисункаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ПримерЛинииРисункаРасширеннаяПодсказка" id="33"/>
+				</SpreadSheetDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Толщина" id="13">
+			<DataPath>Толщина</DataPath>
+			<Width>4</Width>
+			<SpinButton>true</SpinButton>
+			<MinValue xsi:type="xs:decimal">1</MinValue>
+			<MaxValue xsi:type="xs:decimal">3</MaxValue>
+			<ContextMenu name="ТолщинаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТолщинаРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">ТолщинаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаКнопки" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<LabelDecoration name="КнопкиОтступ" id="22">
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="КнопкиОтступКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КнопкиОтступРасширеннаяПодсказка" id="24"/>
+				</LabelDecoration>
+				<Button name="КомандаОК" id="18">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОК</CommandName>
+					<ExtendedTooltip name="КомандаОКРасширеннаяПодсказка" id="19"/>
+				</Button>
+				<Button name="Отмена" id="20">
+					<Type>UsualButton</Type>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="21"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТипыЛинии" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип линии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Толщина" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Толщина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПримерЛинииЯчейки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример линии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+			<Settings xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xsi:type="mxl:SpreadsheetDocument">
+				<mxl:columns>
+					<mxl:size>3</mxl:size>
+					<mxl:columnsItem>
+						<mxl:index>0</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>1</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+					<mxl:columnsItem>
+						<mxl:index>1</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>2</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+				</mxl:columns>
+				<mxl:rowsItem>
+					<mxl:index>0</mxl:index>
+					<mxl:row>
+						<mxl:formatIndex>3</mxl:formatIndex>
+						<mxl:empty>true</mxl:empty>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>1</mxl:index>
+					<mxl:row>
+						<mxl:c>
+							<mxl:i>1</mxl:i>
+							<mxl:c>
+								<mxl:f>4</mxl:f>
+							</mxl:c>
+						</mxl:c>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>2</mxl:index>
+					<mxl:indexTo>3</mxl:indexTo>
+					<mxl:row>
+						<mxl:empty>true</mxl:empty>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>4</mxl:index>
+					<mxl:row>
+						<mxl:c>
+							<mxl:i>2</mxl:i>
+							<mxl:c>
+								<mxl:f>0</mxl:f>
+								<mxl:tl/>
+							</mxl:c>
+						</mxl:c>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>5</mxl:index>
+					<mxl:indexTo>9</mxl:indexTo>
+					<mxl:row>
+						<mxl:empty>true</mxl:empty>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>10</mxl:index>
+					<mxl:row>
+						<mxl:c>
+							<mxl:i>1</mxl:i>
+							<mxl:c>
+								<mxl:f>5</mxl:f>
+							</mxl:c>
+						</mxl:c>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>11</mxl:index>
+					<mxl:row>
+						<mxl:c>
+							<mxl:i>1</mxl:i>
+							<mxl:c>
+								<mxl:f>0</mxl:f>
+								<mxl:tl/>
+							</mxl:c>
+						</mxl:c>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:defaultFormatIndex>6</mxl:defaultFormatIndex>
+				<mxl:height>12</mxl:height>
+				<mxl:vgRows>12</mxl:vgRows>
+				<mxl:merge>
+					<mxl:r>1</mxl:r>
+					<mxl:c>1</mxl:c>
+					<mxl:h>8</mxl:h>
+				</mxl:merge>
+				<mxl:namedItem xsi:type="mxl:NamedItemCells">
+					<mxl:name>ПримерЛинии</mxl:name>
+					<mxl:area>
+						<mxl:type>Rectangle</mxl:type>
+						<mxl:beginRow>1</mxl:beginRow>
+						<mxl:endRow>9</mxl:endRow>
+						<mxl:beginColumn>1</mxl:beginColumn>
+						<mxl:endColumn>1</mxl:endColumn>
+					</mxl:area>
+				</mxl:namedItem>
+				<mxl:line width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+				</mxl:line>
+				<mxl:line width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+				</mxl:line>
+				<mxl:format>
+					<mxl:width>11</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>141</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:height>33</mxl:height>
+				</mxl:format>
+				<mxl:format>
+					<mxl:border>0</mxl:border>
+				</mxl:format>
+				<mxl:format>
+					<mxl:border>1</mxl:border>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>72</mxl:width>
+				</mxl:format>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТипЛинии" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип линии</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПримерЛинииРисунка" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример линии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+			<Settings xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xsi:type="mxl:SpreadsheetDocument">
+				<mxl:columns>
+					<mxl:size>3</mxl:size>
+					<mxl:columnsItem>
+						<mxl:index>0</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>1</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+					<mxl:columnsItem>
+						<mxl:index>1</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>2</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+					<mxl:columnsItem>
+						<mxl:index>2</mxl:index>
+						<mxl:column>
+							<mxl:formatIndex>3</mxl:formatIndex>
+						</mxl:column>
+					</mxl:columnsItem>
+				</mxl:columns>
+				<mxl:rowsItem>
+					<mxl:index>0</mxl:index>
+					<mxl:row>
+						<mxl:empty>true</mxl:empty>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>1</mxl:index>
+					<mxl:row>
+						<mxl:c>
+							<mxl:i>1</mxl:i>
+							<mxl:c>
+								<mxl:f>0</mxl:f>
+								<mxl:tl/>
+							</mxl:c>
+						</mxl:c>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>2</mxl:index>
+					<mxl:indexTo>10</mxl:indexTo>
+					<mxl:row>
+						<mxl:empty>true</mxl:empty>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:rowsItem>
+					<mxl:index>11</mxl:index>
+					<mxl:row>
+						<mxl:c>
+							<mxl:i>1</mxl:i>
+							<mxl:c>
+								<mxl:f>0</mxl:f>
+								<mxl:tl/>
+							</mxl:c>
+						</mxl:c>
+					</mxl:row>
+				</mxl:rowsItem>
+				<mxl:drawing>
+					<mxl:drawingType>Rectangle</mxl:drawingType>
+					<mxl:id>1</mxl:id>
+					<mxl:formatIndex>4</mxl:formatIndex>
+					<mxl:beginRow>9</mxl:beginRow>
+					<mxl:beginRowOffset>18</mxl:beginRowOffset>
+					<mxl:endRow>1</mxl:endRow>
+					<mxl:endRowOffset>0</mxl:endRowOffset>
+					<mxl:beginColumn>1</mxl:beginColumn>
+					<mxl:beginColumnOffset>351</mxl:beginColumnOffset>
+					<mxl:endColumn>0</mxl:endColumn>
+					<mxl:endColumnOffset>42</mxl:endColumnOffset>
+					<mxl:autoSize>false</mxl:autoSize>
+					<mxl:pictureSize>Stretch</mxl:pictureSize>
+					<mxl:zOrder>1</mxl:zOrder>
+				</mxl:drawing>
+				<mxl:defaultFormatIndex>5</mxl:defaultFormatIndex>
+				<mxl:height>12</mxl:height>
+				<mxl:vgRows>12</mxl:vgRows>
+				<mxl:merge>
+					<mxl:r>1</mxl:r>
+					<mxl:c>1</mxl:c>
+					<mxl:h>8</mxl:h>
+				</mxl:merge>
+				<mxl:namedItem xsi:type="mxl:NamedItemDrawing">
+					<mxl:name>ПримерЛинии</mxl:name>
+					<mxl:drawingID>1</mxl:drawingID>
+				</mxl:namedItem>
+				<mxl:line width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:SpreadsheetDocumentDrawingLineType">Solid</v8ui:style>
+				</mxl:line>
+				<mxl:format>
+					<mxl:width>17</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>154</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>25</mxl:width>
+				</mxl:format>
+				<mxl:format>
+					<mxl:drawingBorder>0</mxl:drawingBorder>
+					<mxl:verticalAlignment>Top</mxl:verticalAlignment>
+					<mxl:backColor>style:FieldBackColor</mxl:backColor>
+				</mxl:format>
+				<mxl:format>
+					<mxl:width>72</mxl:width>
+				</mxl:format>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТипЛинии">
+			<Type/>
+		</Parameter>
+		<Parameter name="Толщина">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

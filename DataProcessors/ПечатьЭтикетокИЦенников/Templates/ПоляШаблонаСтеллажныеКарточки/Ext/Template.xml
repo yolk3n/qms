@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Упаковка</dataPath>
+			<field>Упаковка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрихкод</dataPath>
+			<field>Штрихкод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокНаСкладе</dataPath>
+			<field>ОстатокНаСкладе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток на складе</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущееВремя</dataPath>
+			<field>ТекущееВремя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее время</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПользователь</dataPath>
+			<field>ТекущийПользователь</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поставщик</dataPath>
+			<field>Поставщик</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДокумента</dataPath>
+			<field>ДатаДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦены</dataPath>
+			<field>ВидЦены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоследнегоИзмененияЦены</dataPath>
+			<field>ДатаПоследнегоИзмененияЦены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсточникФинансирования</dataPath>
+			<field>ИсточникФинансирования</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник финансирования</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШаблонСтеллажнойКарточки</dataPath>
+			<field>ШаблонСтеллажнойКарточки</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсходныеДанные.НомерСтроки                                 КАК НомерСтроки,
+	ИсходныеДанные.Порядок                                     КАК Порядок,
+	ИсходныеДанные.Номенклатура                                КАК Номенклатура,
+	ИсходныеДанные.СерияНоменклатуры                           КАК СерияНоменклатуры,
+	ИсходныеДанные.Партия                                      КАК Партия,
+	ИсходныеДанные.Упаковка                                    КАК Упаковка,
+	ИсходныеДанные.Количество                                  КАК Количество,
+	ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)              КАК Организация,
+	ЗНАЧЕНИЕ(Справочник.Склады.ПустаяСсылка)                   КАК Склад,
+	ЗНАЧЕНИЕ(Справочник.МестаХранения.ПустаяСсылка)            КАК МестоХранения,
+	ЗНАЧЕНИЕ(Справочник.ИсточникиФинансирования.ПустаяСсылка)  КАК ИсточникФинансирования,
+	ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)              КАК Поставщик,
+	"ДатаДокумента"                                            КАК ДатаДокумента,
+	"ЦенаВДокументе"                                           КАК Цена
+ПОМЕСТИТЬ ИсходныеДанные
+ИЗ
+	(ВЫБРАТЬ
+		ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)        КАК Номенклатура,
+		ЗНАЧЕНИЕ(Справочник.СерииНоменклатуры.ПустаяСсылка)   КАК СерияНоменклатуры,
+		ЗНАЧЕНИЕ(Справочник.ПартииНоменклатуры.ПустаяСсылка)  КАК Партия,
+		ЗНАЧЕНИЕ(Справочник.ЕдиницыИзмерения.ПустаяСсылка)    КАК Упаковка,
+		0                                                     КАК Порядок,
+		0                                                     КАК Количество,
+		0                                                     КАК НомерСтроки
+	) КАК ИсходныеДанные
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	СерияНоменклатуры,
+	Партия,
+	Упаковка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Штрихкоды.Номенклатура        КАК Номенклатура,
+	Штрихкоды.СерияНоменклатуры   КАК СерияНоменклатуры,
+	Штрихкоды.Партия              КАК Партия,
+	Штрихкоды.ЕдиницаИзмерения    КАК Упаковка,
+	МАКСИМУМ(Штрихкоды.Штрихкод)  КАК Штрихкод
+ПОМЕСТИТЬ ШтрихкодыНоменклатуры
+ИЗ
+	РегистрСведений.ШтрихкодыНоменклатуры КАК Штрихкоды
+ГДЕ
+	(Штрихкоды.Номенклатура, Штрихкоды.СерияНоменклатуры, Штрихкоды.Партия, Штрихкоды.ЕдиницаИзмерения) В
+			(ВЫБРАТЬ
+				ИсходныеДанные.Номенклатура,
+				ИсходныеДанные.СерияНоменклатуры,
+				ИсходныеДанные.Партия,
+				ИсходныеДанные.Упаковка
+			ИЗ
+				ИсходныеДанные)
+{ГДЕ
+	Штрихкоды.Номенклатура.*,
+	Штрихкоды.СерияНоменклатуры.*,
+	Штрихкоды.Партия.*,
+	Штрихкоды.ЕдиницаИзмерения.* КАК Упаковка}
+
+СГРУППИРОВАТЬ ПО
+	Штрихкоды.Номенклатура,
+	Штрихкоды.СерияНоменклатуры,
+	Штрихкоды.Партия,
+	Штрихкоды.ЕдиницаИзмерения
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	СерияНоменклатуры,
+	Партия,
+	Упаковка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсходныеДанныеПоследнийЗапрос.НомерСтроки                  КАК НомерСтроки,
+	ИсходныеДанныеПоследнийЗапрос.Порядок                      КАК Порядок,
+	ИсходныеДанныеПоследнийЗапрос.Номенклатура                 КАК Номенклатура,
+	ИсходныеДанныеПоследнийЗапрос.СерияНоменклатуры            КАК СерияНоменклатуры,
+	ИсходныеДанныеПоследнийЗапрос.Партия                       КАК Партия,
+	ИсходныеДанныеПоследнийЗапрос.Упаковка                     КАК Упаковка,
+	ЕСТЬNULL(ТоварыНаСкладахОстатки.Организация,
+		ИсходныеДанныеПоследнийЗапрос.Организация)             КАК Организация,
+	ЕСТЬNULL(ТоварыНаСкладахОстатки.Склад,
+		ИсходныеДанныеПоследнийЗапрос.Склад)                   КАК Склад,
+	ЕСТЬNULL(ТоварыНаСкладахОстатки.МестоХранения,
+		ИсходныеДанныеПоследнийЗапрос.МестоХранения)           КАК МестоХранения,
+	ЕСТЬNULL(ТоварыНаСкладахОстатки.ИсточникФинансирования,
+		ИсходныеДанныеПоследнийЗапрос.ИсточникФинансирования)  КАК ИсточникФинансирования,
+	ИсходныеДанныеПоследнийЗапрос.Поставщик                    КАК Поставщик,
+	ИсходныеДанныеПоследнийЗапрос.ДатаДокумента                КАК ДатаДокумента,
+	ВидыЦен.Ссылка                                             КАК ВидЦены,
+	ВЫБОР
+		КОГДА НЕ ЦеныНоменклатурыСрезПоследних.Цена ЕСТЬ NULL
+			ТОГДА ЦеныНоменклатурыСрезПоследних.Цена
+				* ВЫБОР
+					КОГДА ЦеныНоменклатурыСрезПоследних.Упаковка &lt;&gt; ИсходныеДанныеПоследнийЗапрос.Упаковка
+						ТОГДА КоэффициентыПолучаемыхЕдиниц.Коэффициент
+							/ КоэффициентыУпаковокХраненияЦены.Коэффициент
+					ИНАЧЕ 1
+				КОНЕЦ
+		ИНАЧЕ ИсходныеДанныеПоследнийЗапрос.Цена
+	КОНЕЦ                                                      КАК Цена,
+	ЦеныНоменклатурыСрезПоследних.Период                       КАК ДатаПоследнегоИзмененияЦены,
+	ЦеныНоменклатурыСрезПоследних.Упаковка                     КАК УпаковкаЦены,
+	ИсходныеДанныеПоследнийЗапрос.Количество                   КАК Количество,
+	ВидыНоменклатуры.ШаблонСтеллажнойКарточки                  КАК ШаблонСтеллажнойКарточки,
+	ШтрихкодыНоменклатуры.Штрихкод                             КАК Штрихкод,
+	ЕСТЬNULL(ТоварыНаСкладахОстатки.ВНаличииОстаток, 0)
+		/ КоэффициентыПолучаемыхЕдиниц.Коэффициент             КАК ОстатокНаСкладе,
+	&amp;ТекущееВремя                                              КАК ТекущееВремя,
+	Пользователи.Ссылка                                        КАК ТекущийПользователь
+{ВЫБРАТЬ
+	Номенклатура.*,
+	СерияНоменклатуры.*,
+	Партия.*,
+	Упаковка.*,
+	Количество,
+	ШаблонСтеллажнойКарточки,
+	Штрихкод,
+	Организация.*,
+	Склад.*,
+	МестоХранения.*,
+	ИсточникФинансирования.*,
+	Поставщик.*,
+	ВидЦены.*,
+	ДатаПоследнегоИзмененияЦены,
+	Цена,
+	ДатаДокумента,
+	ОстатокНаСкладе,
+	ТекущееВремя,
+	ТекущийПользователь.*,
+	НомерСтроки}
+ИЗ
+	ИсходныеДанные КАК ИсходныеДанныеПоследнийЗапрос
+		
+		{ЛЕВОЕ СОЕДИНЕНИЕ ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
+			И ИсходныеДанныеПоследнийЗапрос.СерияНоменклатуры = ШтрихкодыНоменклатуры.СерияНоменклатуры
+			И ИсходныеДанныеПоследнийЗапрос.Партия = ШтрихкодыНоменклатуры.Партия
+			И ИсходныеДанныеПоследнийЗапрос.Упаковка = ШтрихкодыНоменклатуры.Упаковка}
+		
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК Пользователи
+		ПО (Пользователи.Ссылка = &amp;ТекущийПользователь)}
+		
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.СвободныеОстатки.Остатки(,
+			(Номенклатура, СерияНоменклатуры, Партия, Организация, Склад, МестоХранения, ИсточникФинансирования) В
+				(ВЫБРАТЬ
+					ИсходныеДанные.Номенклатура,
+					ИсходныеДанные.СерияНоменклатуры,
+					ИсходныеДанные.Партия,
+					ИсходныеДанные.Организация,
+					ИсходныеДанные.Склад,
+					ИсходныеДанные.МестоХранения,
+					ИсходныеДанные.ИсточникФинансирования
+				ИЗ
+					ИсходныеДанные)) КАК ТоварыНаСкладахОстатки
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ТоварыНаСкладахОстатки.Номенклатура
+			И ИсходныеДанныеПоследнийЗапрос.СерияНоменклатуры = ТоварыНаСкладахОстатки.СерияНоменклатуры
+			И ИсходныеДанныеПоследнийЗапрос.Партия = ТоварыНаСкладахОстатки.Партия
+			И ИсходныеДанныеПоследнийЗапрос.Организация = ТоварыНаСкладахОстатки.Организация
+			И ИсходныеДанныеПоследнийЗапрос.Склад = ТоварыНаСкладахОстатки.Склад
+			И ИсходныеДанныеПоследнийЗапрос.МестоХранения = ТоварыНаСкладахОстатки.МестоХранения
+			И ИсходныеДанныеПоследнийЗапрос.ИсточникФинансирования = ТоварыНаСкладахОстатки.ИсточникФинансирования}
+		
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЦен КАК ВидыЦен
+		ПО (ВидыЦен.Ссылка = &amp;ВидЦены)}
+		
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыНоменклатуры КАК ВидыНоменклатуры
+		ПО ВидыНоменклатуры.Ссылка = ИсходныеДанныеПоследнийЗапрос.Номенклатура.ВидНоменклатуры}
+		
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры.СрезПоследних(КОНЕЦПЕРИОДА(&amp;ДатаЦен, ДЕНЬ), ВидЦены = &amp;ВидЦены {(Номенклатура).* КАК Номенклатура, (СерияНоменклатуры).* КАК СерияНоменклатуры}) КАК ЦеныНоменклатурыСрезПоследних
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = ЦеныНоменклатурыСрезПоследних.Номенклатура
+			И ИсходныеДанныеПоследнийЗапрос.СерияНоменклатуры = ЦеныНоменклатурыСрезПоследних.СерияНоменклатуры
+			И ИсходныеДанныеПоследнийЗапрос.Партия = ЦеныНоменклатурыСрезПоследних.Партия}
+		
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЕдиницыИзмеренияНоменклатуры КАК КоэффициентыПолучаемыхЕдиниц
+		ПО ИсходныеДанныеПоследнийЗапрос.Номенклатура = КоэффициентыПолучаемыхЕдиниц.Номенклатура
+			И ИсходныеДанныеПоследнийЗапрос.Упаковка = КоэффициентыПолучаемыхЕдиниц.ЕдиницаИзмерения}
+		
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЕдиницыИзмеренияНоменклатуры КАК КоэффициентыУпаковокХраненияЦены
+		ПО ЦеныНоменклатурыСрезПоследних.Номенклатура = КоэффициентыУпаковокХраненияЦены.Номенклатура
+			И ЦеныНоменклатурыСрезПоследних.Упаковка = КоэффициентыУпаковокХраненияЦены.ЕдиницаИзмерения}
+{ГДЕ
+	ИсходныеДанныеПоследнийЗапрос.Номенклатура.*           КАК Номенклатура,
+	ИсходныеДанныеПоследнийЗапрос.СерияНоменклатуры.*      КАК СерияНоменклатуры,
+	ИсходныеДанныеПоследнийЗапрос.Партия.*                 КАК Партия,
+	ИсходныеДанныеПоследнийЗапрос.Упаковка.*               КАК Упаковка,
+	ИсходныеДанныеПоследнийЗапрос.МестоХранения.*          КАК МестоХранения,
+	ИсходныеДанныеПоследнийЗапрос.ИсточникФинансирования.* КАК ИсточникФинансирования,
+	ШтрихкодыНоменклатуры.Штрихкод                         КАК Штрихкод,
+	ЦеныНоменклатурыСрезПоследних.Цена                     КАК Цена,
+	ЦеныНоменклатурыСрезПоследних.Период                   КАК ДатаПоследнегоИзмененияЦены,
+	ТоварыНаСкладахОстатки.ВНаличииОстаток                 КАК ОстатокНаСкладе}
+УПОРЯДОЧИТЬ ПО
+	ИсходныеДанныеПоследнийЗапрос.Порядок</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<parameter>
+		<name>ТекущееВремя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущее время</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТекущийПользователь</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущий пользователь</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВидЦены</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид цены</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаЦен</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата цен</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">МестоХранения</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.МестаХранения.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Штрихкод</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Штрихкод</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="xs:string">Только со штрихкодом</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ОстатокНаСкладе</dcsset:left>
+					<dcsset:comparisonType>Greater</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					<dcsset:presentation xsi:type="xs:string">Только с остатками на складе</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Цена</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только с ценами</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

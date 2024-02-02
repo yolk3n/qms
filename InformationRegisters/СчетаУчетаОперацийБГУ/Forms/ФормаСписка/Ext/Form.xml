@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="57"/>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="41">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="44">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="47">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Период" id="50">
+					<DataPath>Список.Period</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="Организация" id="5">
+					<DataPath>Список.Организация</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="7"/>
+				</LabelField>
+				<LabelField name="ИсточникФинансирования" id="8">
+					<DataPath>Список.ИсточникФинансирования</DataPath>
+					<ContextMenu name="ИсточникФинансированияКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ИсточникФинансированияРасширеннаяПодсказка" id="10"/>
+				</LabelField>
+				<LabelField name="КФО" id="11">
+					<DataPath>Список.КФО</DataPath>
+					<ContextMenu name="КФОКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="КФОРасширеннаяПодсказка" id="13"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаКПСПоСчету105" id="58">
+					<Group>InCell</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКПСПоСчету105РасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<LabelField name="КПСПоСчету105" id="14">
+							<DataPath>Список.КПСПоСчету105</DataPath>
+							<ContextMenu name="КПСПоСчету105КонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="КПСПоСчету105РасширеннаяПодсказка" id="16"/>
+						</LabelField>
+						<LabelField name="ВидКПСПоСчету105" id="60">
+							<DataPath>Список.ВидКПСПоСчету105</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПСПоСчету105КонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ВидКПСПоСчету105РасширеннаяПодсказка" id="62"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКПСРасчетыСПоставщиками" id="104">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа КПСРасчеты с поставщиками</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа КПСРасчеты с поставщиками</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКПСРасчетыСПоставщикамиРасширеннаяПодсказка" id="105"/>
+					<ChildItems>
+						<LabelField name="КПСРасчетыСПоставщиками" id="98">
+							<DataPath>Список.КПСРасчетыСПоставщиками</DataPath>
+							<ContextMenu name="КПСРасчетыСПоставщикамиКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="КПСРасчетыСПоставщикамиРасширеннаяПодсказка" id="100"/>
+						</LabelField>
+						<LabelField name="ВидКПСРасчетыСПоставщиками" id="101">
+							<DataPath>Список.ВидКПСРасчетыСПоставщиками</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПСРасчетыСПоставщикамиКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="ВидКПСРасчетыСПоставщикамиРасширеннаяПодсказка" id="103"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКПСРозницы" id="63">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКПСРозницыРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<LabelField name="КПСРозницы" id="17">
+							<DataPath>Список.КПСРозницы</DataPath>
+							<ContextMenu name="КПСРозницыКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="КПСРозницыРасширеннаяПодсказка" id="19"/>
+						</LabelField>
+						<LabelField name="ВидКПСРозницы" id="65">
+							<DataPath>Список.ВидКПСРозницы</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПСРозницыКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="ВидКПСРозницыРасширеннаяПодсказка" id="67"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКПСДохода" id="68">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКПСДоходаРасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<LabelField name="КПСДохода" id="20">
+							<DataPath>Список.КПСДохода</DataPath>
+							<ContextMenu name="КПСДоходаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="КПСДоходаРасширеннаяПодсказка" id="22"/>
+						</LabelField>
+						<LabelField name="ВидКПСДохода" id="70">
+							<DataPath>Список.ВидКПСДохода</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПСДоходаКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ВидКПСДоходаРасширеннаяПодсказка" id="72"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКПССписаниеНедостач" id="73">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКПССписаниеНедостачРасширеннаяПодсказка" id="74"/>
+					<ChildItems>
+						<LabelField name="КПССписаниеНедостач" id="23">
+							<DataPath>Список.КПССписаниеНедостач</DataPath>
+							<ContextMenu name="КПССписаниеНедостачКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="КПССписаниеНедостачРасширеннаяПодсказка" id="25"/>
+						</LabelField>
+						<LabelField name="ВидКПССписаниеНедостач" id="75">
+							<DataPath>Список.ВидКПССписаниеНедостач</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПССписаниеНедостачКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ВидКПССписаниеНедостачРасширеннаяПодсказка" id="77"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКПСОприходованиеИзлишков" id="78">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКПСОприходованиеИзлишковРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<LabelField name="КПСОприходованиеИзлишков" id="38">
+							<DataPath>Список.КПСОприходованиеИзлишков</DataPath>
+							<ContextMenu name="КПСОприходованиеИзлишковКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="КПСОприходованиеИзлишковРасширеннаяПодсказка" id="40"/>
+						</LabelField>
+						<LabelField name="ВидКПСОприходованиеИзлишков" id="80">
+							<DataPath>Список.ВидКПСОприходованиеИзлишков</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПСОприходованиеИзлишковКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ВидКПСОприходованиеИзлишковРасширеннаяПодсказка" id="82"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКПСБезвозмездноеПолучениеМежбюджетное" id="83">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКПСБезвозмездноеПолучениеМежбюджетноеРасширеннаяПодсказка" id="84"/>
+					<ChildItems>
+						<LabelField name="КПСБезвозмездноеПолучениеМежбюджетное" id="29">
+							<DataPath>Список.КПСБезвозмездноеПолучениеМежбюджетное</DataPath>
+							<ContextMenu name="КПСБезвозмездноеПолучениеМежбюджетноеКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="КПСБезвозмездноеПолучениеМежбюджетноеРасширеннаяПодсказка" id="31"/>
+						</LabelField>
+						<LabelField name="ВидКПСБезвозмездноеПолучениеМежбюджетное" id="85">
+							<DataPath>Список.ВидКПСБезвозмездноеПолучениеМежбюджетное</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПСБезвозмездноеПолучениеМежбюджетноеКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ВидКПСБезвозмездноеПолучениеМежбюджетноеРасширеннаяПодсказка" id="87"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКПСБезвозмездноеПолучениеПрочее" id="88">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКПСБезвозмездноеПолучениеПрочееРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<LabelField name="КПСБезвозмездноеПолучениеПрочее" id="32">
+							<DataPath>Список.КПСБезвозмездноеПолучениеПрочее</DataPath>
+							<ContextMenu name="КПСБезвозмездноеПолучениеПрочееКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="КПСБезвозмездноеПолучениеПрочееРасширеннаяПодсказка" id="34"/>
+						</LabelField>
+						<LabelField name="ВидКПСБезвозмездноеПолучениеПрочее" id="90">
+							<DataPath>Список.ВидКПСБезвозмездноеПолучениеПрочее</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПСБезвозмездноеПолучениеПрочееКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ВидКПСБезвозмездноеПолучениеПрочееРасширеннаяПодсказка" id="92"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКПСПередачиТоваровНаСторону" id="93">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКПСПередачиТоваровНаСторонуРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<LabelField name="КПСПередачиТоваровНаСторону" id="35">
+							<DataPath>Список.КПСПередачиТоваровНаСторону</DataPath>
+							<ContextMenu name="КПСПередачиТоваровНаСторонуКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="КПСПередачиТоваровНаСторонуРасширеннаяПодсказка" id="37"/>
+						</LabelField>
+						<LabelField name="ВидКПСПередачиТоваровНаСторону" id="95">
+							<DataPath>Список.ВидКПСПередачиТоваровНаСторону</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВидКПСПередачиТоваровНаСторонуКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ВидКПСПередачиТоваровНаСторонуРасширеннаяПодсказка" id="97"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="СчетУчетаВыдачиМЗНаНуждыУчреждения" id="26">
+					<DataPath>Список.СчетУчетаВыдачиМЗНаНуждыУчреждения</DataPath>
+					<ContextMenu name="СчетУчетаВыдачиМЗНаНуждыУчрежденияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СчетУчетаВыдачиМЗНаНуждыУчрежденияРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="СчетУчетаСписанияМЗНаПациентов" id="106">
+					<DataPath>Список.СчетУчетаСписанияМЗНаПациентов</DataPath>
+					<ContextMenu name="СчетУчетаСписанияМЗНаПациентовКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="СчетУчетаСписанияМЗНаПациентовРасширеннаяПодсказка" id="108"/>
+				</LabelField>
+				<LabelField name="ИсточникФинансовогоОбеспечения" id="53">
+					<DataPath>Список.ИсточникФинансовогоОбеспечения</DataPath>
+					<ContextMenu name="ИсточникФинансовогоОбеспеченияКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ИсточникФинансовогоОбеспеченияРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.СчетаУчетаОперацийБГУ</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

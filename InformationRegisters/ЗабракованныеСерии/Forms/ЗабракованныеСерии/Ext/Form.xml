@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СерииНоменклатуры" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>СерииНоменклатуры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СерииНоменклатурыКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СерииНоменклатурыКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<ButtonGroup name="ГруппаКомандыСписка" id="12">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды списка</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды списка</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ГруппаКомандыСпискаРасширеннаяПодсказка" id="20"/>
+						<ChildItems>
+							<Button name="СерииНоменклатурыДобавить" id="13">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СерииНоменклатуры.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="СерииНоменклатурыДобавитьРасширеннаяПодсказка" id="21"/>
+							</Button>
+							<Button name="СерииНоменклатурыИзменить" id="14">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СерииНоменклатуры.StandardCommand.Change</CommandName>
+								<ExtendedTooltip name="СерииНоменклатурыИзменитьРасширеннаяПодсказка" id="22"/>
+							</Button>
+							<Button name="СерииНоменклатурыУдалить" id="15">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СерииНоменклатуры.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="СерииНоменклатурыУдалитьРасширеннаяПодсказка" id="23"/>
+							</Button>
+							<Button name="СерииНоменклатурыОбновить" id="16">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Обновить</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СерииНоменклатурыОбновитьРасширеннаяПодсказка" id="24"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="СерииНоменклатурыНайти" id="17">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СерииНоменклатуры.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="СерииНоменклатурыНайтиРасширеннаяПодсказка" id="25"/>
+					</Button>
+					<Button name="СерииНоменклатурыОтменитьПоиск" id="18">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СерииНоменклатуры.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="СерииНоменклатурыОтменитьПоискРасширеннаяПодсказка" id="26"/>
+					</Button>
+					<Button name="СерииНоменклатурыВывестиСписок" id="19">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СерииНоменклатуры.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="СерииНоменклатурыВывестиСписокРасширеннаяПодсказка" id="27"/>
+					</Button>
+					<Button name="СерииНоменклатурыДополнитьПодходящимиСериями" id="10">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДополнитьПодходящимиСериями</CommandName>
+						<ExtendedTooltip name="СерииНоменклатурыДополнитьПодходящимиСериямиРасширеннаяПодсказка" id="28"/>
+					</Button>
+					<Button name="ФормаИзменитьФорму" id="6">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="29"/>
+					</Button>
+					<Button name="ФормаСправка" id="7">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="30"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СерииНоменклатурыРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="СерииНоменклатурыСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>СерииНоменклатуры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СерииНоменклатурыСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="СерииНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СерииНоменклатурыСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>СерииНоменклатуры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СерииНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="СерииНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СерииНоменклатурыУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>СерииНоменклатуры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СерииНоменклатурыУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="СерииНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">СерииНоменклатурыПриОкончанииРедактирования</Event>
+				<Event name="BeforeAddRow">СерииНоменклатурыПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">СерииНоменклатурыПередУдалением</Event>
+				<Event name="BeforeEditEnd">СерииНоменклатурыПередОкончаниемРедактирования</Event>
+				<Event name="BeforeRowChange">СерииНоменклатурыПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="СерииНоменклатурыСерия" id="4">
+					<DataPath>СерииНоменклатуры.Серия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="СерииНоменклатурыСерияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СерииНоменклатурыСерияРасширеннаяПодсказка" id="41"/>
+					<Events>
+						<Event name="StartChoice">СерииНоменклатурыСерияНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СерииНоменклатурыСерияВладелец" id="8">
+					<DataPath>СерииНоменклатуры.Серия.Owner</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СерииНоменклатурыСерияВладелецКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СерииНоменклатурыСерияВладелецРасширеннаяПодсказка" id="42"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СерииНоменклатуры" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серии номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Серия" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СерииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗабраковкаСерии" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Забраковка серии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗабракованныеСерии</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДополнитьПодходящимиСериями" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить подходящими сериями</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить подходящими сериями</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionSettingsWizard</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДополнитьПодходящимиСериями</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЗабраковкаСерии">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗабракованныеСерии</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

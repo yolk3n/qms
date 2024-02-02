@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="13"/>
+		</InputField>
+		<InputField name="НаименованиеПолное" id="7">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="16"/>
+		</InputField>
+		<InputField name="ЛатинскаяТранскрипцияКраткая" id="5">
+			<DataPath>Объект.ЛатинскоеНаименование</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЛатинскаяТранскрипцияКраткаяКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ЛатинскаяТранскрипцияКраткаяРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ЛатинскаяТранскрипция" id="3">
+			<DataPath>Объект.ЛатинскоеНаименованиеПолное</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЛатинскаяТранскрипцияКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ЛатинскаяТранскрипцияРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<InputField name="ЛатинскоеНаименованиеРодительныйПадеж" id="19">
+			<DataPath>Объект.ЛатинскоеНаименованиеРодительныйПадеж</DataPath>
+			<TitleHeight>2</TitleHeight>
+			<ContextMenu name="ЛатинскоеНаименованиеРодительныйПадежКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ЛатинскоеНаименованиеРодительныйПадежРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Группа" id="9">
+			<DataPath>Объект.Группа</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<DropListButton>false</DropListButton>
+			<ChoiceButton>true</ChoiceButton>
+			<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+			<ContextMenu name="ГруппаКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ГруппаРасширеннаяПодсказка" id="17"/>
+		</InputField>
+		<InputField name="НаименованиеРЛС" id="11">
+			<DataPath>Объект.НаименованиеРЛС</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеРЛСКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="НаименованиеРЛСРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="КодЕСКЛП" id="22">
+			<DataPath>Объект.КодЕСКЛП</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="КодЕСКЛПКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КодЕСКЛПРасширеннаяПодсказка" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЛекарственныеФормы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

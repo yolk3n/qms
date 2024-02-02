@@ -1,0 +1,1595 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияГоденДо</dataPath>
+			<field>СерияГоденДо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия годен до</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсточникФинансирования</dataPath>
+			<field>ИсточникФинансирования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УровеньMax</dataPath>
+			<field>УровеньMax</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УровеньMin</dataPath>
+			<field>УровеньMin</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоХранения</dataPath>
+			<field>МестоХранения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Остаток</dataPath>
+			<field>Остаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияЗабракована</dataPath>
+			<field>СерияЗабракована</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия забракована</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Раздел</dataPath>
+			<field>Раздел</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раздел</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналог</dataPath>
+			<field>Аналог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналог</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СреднемесячноеПотребление</dataPath>
+			<field>СреднемесячноеПотребление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Среднемесячное потребление</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Потребность</dataPath>
+			<field>Потребность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Потребность</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Переместить</dataPath>
+			<field>Переместить</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КЗаказу</dataPath>
+			<field>КЗаказу</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К заказу</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказано</dataPath>
+			<field>Заказано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказано</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоЛС</dataPath>
+			<field>ЭтоЛС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это ЛС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗатоваренностьДней</dataPath>
+			<field>ЗатоваренностьДней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затоваренность дней</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПозицияНоменклатуры</dataPath>
+			<field>ПозицияНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позиция номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СостоянияТребованийОтделений.Номенклатура КАК Номенклатура,
+	СостоянияТребованийОтделений.Требование.СкладПолучатель КАК Склад,
+	СУММА(СостоянияТребованийОтделений.Количество) КАК Заказано
+ПОМЕСТИТЬ ВТЗаказано
+ИЗ
+	РегистрСведений.СостоянияТребованийОтделений КАК СостоянияТребованийОтделений
+ГДЕ
+	СостоянияТребованийОтделений.Состояние В (ЗНАЧЕНИЕ(Перечисление.СостоянияТребований.Заказано), ЗНАЧЕНИЕ(Перечисление.СостоянияТребований.ВЗакупке), ЗНАЧЕНИЕ(Перечисление.СостоянияТребований.Требование), ЗНАЧЕНИЕ(Перечисление.СостоянияТребований.Поступило), ЗНАЧЕНИЕ(Перечисление.СостоянияТребований.ТребованиеНеФормализованное))
+	И СостоянияТребованийОтделений.Требование ССЫЛКА Документ.ТребованиеОтделения
+	И СостоянияТребованийОтделений.Требование.СкладПолучатель = &amp;ТекущийСклад
+
+СГРУППИРОВАТЬ ПО
+	СостоянияТребованийОтделений.Номенклатура,
+	СостоянияТребованийОтделений.Требование.СкладПолучатель
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗаявкаНаЗакупкуТовары.Номенклатура,
+	ЗаявкаНаЗакупкуТовары.Ссылка.СкладОтправитель,
+	СУММА(ЗаявкаНаЗакупкуТовары.Количество)
+ИЗ
+	Документ.ЗаявкаНаЗакупку.Товары КАК ЗаявкаНаЗакупкуТовары
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаявкаНаЗакупку.ДокументыОснований КАК ЗаявкаНаЗакупкуДокументыОснований
+		ПО ЗаявкаНаЗакупкуТовары.Ссылка = ЗаявкаНаЗакупкуДокументыОснований.Ссылка
+ГДЕ
+	ЗаявкаНаЗакупкуТовары.Ссылка = &amp;ТекущаяЗНЗ
+	И ЗаявкаНаЗакупкуТовары.Ссылка.Проведен
+	И ЗаявкаНаЗакупкуДокументыОснований.Основание ЕСТЬ NULL
+	И ЗаявкаНаЗакупкуТовары.Ссылка.СкладОтправитель = &amp;ТекущийСклад
+
+СГРУППИРОВАТЬ ПО
+	ЗаявкаНаЗакупкуТовары.Номенклатура,
+	ЗаявкаНаЗакупкуТовары.Ссылка.СкладОтправитель
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Склад
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СвободныеОстаткиОстатки.Номенклатура КАК Номенклатура,
+	СвободныеОстаткиОстатки.Склад КАК Склад,
+	СУММА(СвободныеОстаткиОстатки.ВНаличииОстаток) КАК ВНаличииОстаток
+ПОМЕСТИТЬ ВТОстаткиНачПериода
+ИЗ
+	РегистрНакопления.СвободныеОстатки.Остатки(
+			{(ДОБАВИТЬКДАТЕ(&amp;ДатаАктуальности, ДЕНЬ, -&amp;ПериодАнализаРасхода))},
+			Организация = &amp;Организация
+				И НЕ Номенклатура.ПометкаУдаления) КАК СвободныеОстаткиОстатки
+
+СГРУППИРОВАТЬ ПО
+	СвободныеОстаткиОстатки.Номенклатура,
+	СвободныеОстаткиОстатки.Склад
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Склад
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ВЫБОР
+			КОГДА СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ВнутреннееПотреблениеТоваровВОтделении
+					ИЛИ СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ПотреблениеТоваровПоНазначениямВрачей
+					ИЛИ СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ВнутреннееПотреблениеТоваров
+					ИЛИ СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ОтпускТоваровВОтделение
+				ТОГДА СвободныеОстаткиОбороты.ВНаличииРасход
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Потребление,
+	СвободныеОстаткиОбороты.Склад КАК Склад,
+	СвободныеОстаткиОбороты.Номенклатура КАК Номенклатура,
+	МИНИМУМ(ВЫБОР
+			КОГДА СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ВводОстатков
+					ИЛИ СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ОтпускТоваровВОтделение
+					ИЛИ СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ПоступлениеТоваров
+					ИЛИ СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ПеремещениеТоваровМеждуОтделениями
+					ИЛИ СвободныеОстаткиОбороты.Регистратор ССЫЛКА Документ.ПеремещениеТоваров
+				ТОГДА СвободныеОстаткиОбороты.Период
+			ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+		КОНЕЦ) КАК ДатаПервогоПрихода
+ПОМЕСТИТЬ ВТПотребление
+ИЗ
+	РегистрНакопления.СвободныеОстатки.Обороты(
+			{(ДОБАВИТЬКДАТЕ(&amp;ДатаАктуальности, ДЕНЬ, -&amp;ПериодАнализаРасхода))},
+			{(&amp;ДатаАктуальности)},
+			Регистратор,
+			НЕ Номенклатура.ПометкаУдаления
+				И Организация = &amp;Организация) КАК СвободныеОстаткиОбороты
+
+СГРУППИРОВАТЬ ПО
+	СвободныеОстаткиОбороты.Склад,
+	СвободныеОстаткиОбороты.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	Склад,
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВсеОстатки.Номенклатура КАК Номенклатура,
+	Бит_АналогиНоменклатуры.Идентификатор КАК Идентификатор,
+	ВсеОстатки.Склад КАК Склад,
+	(ВсеОстатки.ВНаличии - ВсеОстатки.ВРезервеСоСклада) / ОсновнаяЕдиница.Коэффициент КАК Остаток,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ЕСТЬNULL(ВсеОстатки.ДнейРасчет, 0) = 0
+				ТОГДА 0
+			ИНАЧЕ ЕСТЬNULL(ВсеОстатки.Потребление, 0) * 30 / (ВсеОстатки.ДнейРасчет * ОсновнаяЕдиница.Коэффициент)
+		КОНЕЦ КАК ЧИСЛО(10, 2)) КАК СреднемесячноеПотребление,
+	ВсеОстатки.ДнейРасчет КАК ДнейРасчет,
+	Бит_УровниЗапасовНоменклатурыСрезПоследних.УровеньMin КАК УровеньMin,
+	Бит_УровниЗапасовНоменклатурыСрезПоследних.УровеньMax КАК УровеньMax,
+	ЕСТЬNULL(ВТЗаказано.Заказано, 0) КАК Заказано
+ПОМЕСТИТЬ ВТОстатки
+ИЗ
+	(ВЫБРАТЬ
+		ЕСТЬNULL(ТоварыНаСкладах.Номенклатура, ВТПотребление.Номенклатура) КАК Номенклатура,
+		СУММА(ЕСТЬNULL(ТоварыНаСкладах.ВНаличииОстаток, 0)) КАК ВНаличии,
+		СУММА(ЕСТЬNULL(ТоварыНаСкладах.ВРезервеСоСкладаОстаток, 0)) КАК ВРезервеСоСклада,
+		ЕСТЬNULL(ТоварыНаСкладах.Склад, ВТПотребление.Склад) КАК Склад,
+		МИНИМУМ(ЕСТЬNULL(ВТПотребление.Потребление, 0)) КАК Потребление,
+		МИНИМУМ(ВЫБОР
+				КОГДА ВТОстаткиНачПериода.ВНаличииОстаток ЕСТЬ NULL
+						И ВТПотребление.ДатаПервогоПрихода &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ТОГДА РАЗНОСТЬДАТ(ВТПотребление.ДатаПервогоПрихода, &amp;ДатаАктуальности, ДЕНЬ)
+				КОГДА ЕСТЬNULL(ВТПотребление.Потребление, 0) = 0
+					ТОГДА 0
+				ИНАЧЕ &amp;ПериодАнализаРасхода
+			КОНЕЦ) КАК ДнейРасчет
+	ИЗ
+		РегистрНакопления.СвободныеОстатки.Остатки(
+				{(&amp;ДатаАктуальности)},
+				Организация В (&amp;Организация)
+					И НЕ Номенклатура.ПометкаУдаления {(Номенклатура).* КАК Номенклатура, (ИсточникФинансирования).* КАК ИсточникФинансирования, (МестоХранения).* КАК МестоХранения, (ВЫБОР
+				    КОГДА ЕСТЬNULL(СерияНоменклатуры.ГоденДо, ДАТАВРЕМЯ(1, 1, 1)) = ДАТАВРЕМЯ(1, 1, 1)
+				        ТОГДА ДАТАВРЕМЯ(3099, 12, 31)
+				    ИНАЧЕ СерияНоменклатуры.ГоденДо
+				КОНЕЦ) КАК СерияГоденДо}) КАК ТоварыНаСкладах
+			{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КэшИнформацииОбОбъектах КАК СерияЗабракована
+			ПО ТоварыНаСкладах.СерияНоменклатуры = СерияЗабракована.Объект}
+			ПОЛНОЕ СОЕДИНЕНИЕ ВТПотребление КАК ВТПотребление
+			ПО ТоварыНаСкладах.Номенклатура = ВТПотребление.Номенклатура
+				И ТоварыНаСкладах.Склад = ВТПотребление.Склад
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТОстаткиНачПериода КАК ВТОстаткиНачПериода
+			ПО ТоварыНаСкладах.Номенклатура = ВТОстаткиНачПериода.Номенклатура
+				И ТоварыНаСкладах.Склад = ВТОстаткиНачПериода.Склад
+	{ГДЕ
+		(ЕСТЬNULL(СерияЗабракована.Забракован, ЛОЖЬ)) КАК СерияЗабракована}
+	
+	СГРУППИРОВАТЬ ПО
+		ЕСТЬNULL(ТоварыНаСкладах.Номенклатура, ВТПотребление.Номенклатура),
+		ЕСТЬNULL(ТоварыНаСкладах.Склад, ВТПотребление.Склад)) КАК ВсеОстатки
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЕдиницыИзмеренияНоменклатуры КАК ОсновнаяЕдиница
+		ПО ВсеОстатки.Номенклатура = ОсновнаяЕдиница.Номенклатура
+			И ВсеОстатки.Номенклатура.ОсновнаяЕдиницаУчета = ОсновнаяЕдиница.ЕдиницаИзмерения}
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Бит_АналогиНоменклатуры КАК Бит_АналогиНоменклатуры
+		ПО ВсеОстатки.Номенклатура = Бит_АналогиНоменклатуры.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Бит_УровниЗапасовНоменклатуры.СрезПоследних({(&amp;ДатаАктуальности)}, ) КАК Бит_УровниЗапасовНоменклатурыСрезПоследних
+		ПО ВсеОстатки.Склад = Бит_УровниЗапасовНоменклатурыСрезПоследних.Склад
+			И ВсеОстатки.Номенклатура = Бит_УровниЗапасовНоменклатурыСрезПоследних.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТЗаказано КАК ВТЗаказано
+		ПО ВсеОстатки.Номенклатура = ВТЗаказано.Номенклатура
+			И ВсеОстатки.Склад = ВТЗаказано.Склад
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Идентификатор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Бит_АналогиНоменклатуры.Номенклатура КАК Аналог,
+	Бит_АналогиНоменклатуры.Идентификатор КАК Идентификатор,
+	ВТОстатки.Склад КАК Склад,
+	ВТОстатки.Остаток КАК Остаток,
+	ВТОстатки.СреднемесячноеПотребление КАК СреднемесячноеПотребление,
+	ВТОстатки.ДнейРасчет КАК ДнейРасчет,
+	ВТОстатки.УровеньMin КАК УровеньMin,
+	ВТОстатки.УровеньMax КАК УровеньMax,
+	ВТОстатки.Заказано КАК Заказано
+ПОМЕСТИТЬ ВТАналоги
+ИЗ
+	РегистрСведений.Бит_АналогиНоменклатуры КАК Бит_АналогиНоменклатуры
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТОстатки КАК ВТОстатки
+		ПО Бит_АналогиНоменклатуры.Номенклатура = ВТОстатки.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	Аналог,
+	Идентификатор,
+	Склад
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТОстатки.Номенклатура КАК Номенклатура,
+	ВТОстатки.Склад КАК Склад,
+	МАКСИМУМ(ВТОстатки.Остаток) КАК Остаток,
+	МАКСИМУМ(ВТОстатки.СреднемесячноеПотребление) КАК СреднемесячноеПотребление,
+	МАКСИМУМ(ВТОстатки.ДнейРасчет) КАК ДнейРасчет,
+	МАКСИМУМ(ВТОстатки.УровеньMin) КАК УровеньMin,
+	МАКСИМУМ(ВТОстатки.УровеньMax) КАК УровеньMax,
+	МАКСИМУМ(ВТОстатки.Заказано) КАК Заказано,
+	МАКСИМУМ(ВЫБОР
+			КОГДА ВТОстатки.СреднемесячноеПотребление &gt; 0
+				ТОГДА ВЫРАЗИТЬ((ВТОстатки.Заказано + ВТОстатки.Остаток) * 30 / ВТОстатки.СреднемесячноеПотребление КАК ЧИСЛО(15, 2))
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ЗатоваренностьДней,
+	СУММА(ЕСТЬNULL(ВТАналоги.Остаток, 0)) КАК КоличествоАналоги
+ПОМЕСТИТЬ ВТТекущийСкладРасчет
+ИЗ
+	ВТОстатки КАК ВТОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТАналоги КАК ВТАналоги
+		ПО ВТОстатки.Склад = ВТАналоги.Склад
+			И ВТОстатки.Идентификатор = ВТАналоги.Идентификатор
+			И ВТОстатки.Номенклатура &lt;&gt; ВТАналоги.Аналог
+ГДЕ
+	ВТОстатки.Склад = &amp;ТекущийСклад
+
+СГРУППИРОВАТЬ ПО
+	ВТОстатки.Номенклатура,
+	ВТОстатки.Склад
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТТекущийСкладРасчет.Номенклатура КАК Номенклатура,
+	ВТТекущийСкладРасчет.Склад КАК Склад,
+	"1. Текущий склад" КАК Раздел,
+	ВТТекущийСкладРасчет.Номенклатура КАК Аналог,
+	ВТТекущийСкладРасчет.Остаток КАК Остаток,
+	ВТТекущийСкладРасчет.СреднемесячноеПотребление КАК СреднемесячноеПотребление,
+	ВТТекущийСкладРасчет.ДнейРасчет КАК ДнейРасчет,
+	ВТТекущийСкладРасчет.УровеньMin КАК УровеньMin,
+	ВТТекущийСкладРасчет.УровеньMax КАК УровеньMax,
+	ВТТекущийСкладРасчет.Заказано КАК Заказано,
+	ВЫБОР
+		КОГДА ВТТекущийСкладРасчет.Остаток + ВТТекущийСкладРасчет.КоличествоАналоги &lt;= ВТТекущийСкладРасчет.УровеньMin
+			ТОГДА ВЫРАЗИТЬ(ВТТекущийСкладРасчет.УровеньMax - (ВТТекущийСкладРасчет.Остаток + ВТТекущийСкладРасчет.КоличествоАналоги) КАК ЧИСЛО(15, 2))
+		ИНАЧЕ 0
+	КОНЕЦ КАК Потребность,
+	ВТТекущийСкладРасчет.ЗатоваренностьДней КАК ЗатоваренностьДней
+ПОМЕСТИТЬ ВТТекущийСклад
+ИЗ
+	ВТТекущийСкладРасчет КАК ВТТекущийСкладРасчет
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТОстатки.Номенклатура КАК Номенклатура,
+	ВТОстатки.Склад КАК Склад,
+	"2. На других складах" КАК Раздел,
+	ВТОстатки.Номенклатура КАК Аналог,
+	ВТОстатки.Остаток КАК Остаток,
+	ВТОстатки.СреднемесячноеПотребление КАК СреднемесячноеПотребление,
+	ВТОстатки.УровеньMin КАК УровеньMin,
+	ВТОстатки.УровеньMax КАК УровеньMax,
+	ВТОстатки.Заказано КАК Заказано,
+	ВЫБОР
+		КОГДА ВТОстатки.Остаток &gt; ВТОстатки.УровеньMax
+			ТОГДА ВЫРАЗИТЬ(ВТОстатки.Остаток - ВТОстатки.УровеньMax КАК ЧИСЛО(15, 2))
+	КОНЕЦ КАК Переместить,
+	ВЫБОР
+		КОГДА ВТОстатки.СреднемесячноеПотребление &gt; 0
+			ТОГДА ВЫРАЗИТЬ((ВТОстатки.Заказано + ВТОстатки.Остаток) * 30 / ВТОстатки.СреднемесячноеПотребление КАК ЧИСЛО(15, 2))
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЗатоваренностьДней
+ПОМЕСТИТЬ ВТНаСкладах
+ИЗ
+	ВТОстатки КАК ВТОстатки
+ГДЕ
+	ВТОстатки.Склад &lt;&gt; &amp;ТекущийСклад
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТОстатки.Номенклатура,
+	ВТАналоги.Склад,
+	ВЫБОР
+		КОГДА ВТАналоги.Склад = &amp;ТекущийСклад
+			ТОГДА "1. Текущий склад"
+		ИНАЧЕ "2. На других складах"
+	КОНЕЦ,
+	ВТАналоги.Аналог,
+	МАКСИМУМ(ВТАналоги.Остаток),
+	МАКСИМУМ(ВТАналоги.СреднемесячноеПотребление),
+	МАКСИМУМ(ВТАналоги.УровеньMin),
+	МАКСИМУМ(ВТАналоги.УровеньMax),
+	МАКСИМУМ(ВТАналоги.Заказано),
+	МАКСИМУМ(ВЫБОР
+			КОГДА ВТАналоги.Остаток &gt; ВТАналоги.УровеньMax
+				ТОГДА ВЫРАЗИТЬ(ВТАналоги.Остаток - ВТАналоги.УровеньMax КАК ЧИСЛО(15, 2))
+		КОНЕЦ),
+	МАКСИМУМ(ВЫБОР
+			КОГДА ВТАналоги.СреднемесячноеПотребление &gt; 0
+				ТОГДА ВЫРАЗИТЬ((ВТАналоги.Заказано + ВТАналоги.Остаток) * 30 / ВТАналоги.СреднемесячноеПотребление КАК ЧИСЛО(15, 2))
+			ИНАЧЕ 0
+		КОНЕЦ)
+ИЗ
+	ВТОстатки КАК ВТОстатки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТАналоги КАК ВТАналоги
+		ПО ВТОстатки.Номенклатура &lt;&gt; ВТАналоги.Аналог
+			И ВТОстатки.Идентификатор = ВТАналоги.Идентификатор
+
+СГРУППИРОВАТЬ ПО
+	ВТАналоги.Склад,
+	ВТАналоги.Аналог,
+	ВТОстатки.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТТекущийСклад.Номенклатура КАК Номенклатура,
+	ВТТекущийСклад.Склад КАК Склад,
+	ВТТекущийСклад.Раздел КАК Раздел,
+	ВТТекущийСклад.Аналог КАК Аналог,
+	МАКСИМУМ(ВТТекущийСклад.Остаток) КАК Остаток,
+	МАКСИМУМ(ВТТекущийСклад.СреднемесячноеПотребление) КАК СреднемесячноеПотребление,
+	МАКСИМУМ(ВТТекущийСклад.УровеньMin) КАК УровеньMin,
+	МАКСИМУМ(ВТТекущийСклад.УровеньMax) КАК УровеньMax,
+	МАКСИМУМ(ВТТекущийСклад.Потребность) КАК Потребность,
+	СУММА(ЕСТЬNULL(ВТНаСкладах.Переместить, 0)) КАК Переместить,
+	МАКСИМУМ(ВТТекущийСклад.ЗатоваренностьДней) КАК ЗатоваренностьДней,
+	МАКСИМУМ(ВТТекущийСклад.Заказано) КАК Заказано
+ПОМЕСТИТЬ ВТДанные
+ИЗ
+	ВТТекущийСклад КАК ВТТекущийСклад
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТНаСкладах КАК ВТНаСкладах
+		ПО ВТТекущийСклад.Номенклатура = ВТНаСкладах.Номенклатура
+
+СГРУППИРОВАТЬ ПО
+	ВТТекущийСклад.Склад,
+	ВТТекущийСклад.Раздел,
+	ВТТекущийСклад.Аналог,
+	ВТТекущийСклад.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТДанные.Номенклатура КАК ПозицияНоменклатуры,
+	ВТДанные.Склад КАК Склад,
+	ВТДанные.Раздел КАК Раздел,
+	ВТДанные.Аналог КАК Аналог,
+	ВТДанные.Остаток КАК Остаток,
+	ВТДанные.СреднемесячноеПотребление КАК СреднемесячноеПотребление,
+	ВТДанные.УровеньMin КАК УровеньMin,
+	ВТДанные.УровеньMax КАК УровеньMax,
+	ВТДанные.Заказано КАК Заказано,
+	ВЫБОР
+		КОГДА ВТДанные.Потребность &gt; ВТДанные.Заказано
+			ТОГДА ОКР(ВТДанные.Потребность - ВТДанные.Заказано)
+		ИНАЧЕ 0
+	КОНЕЦ КАК Потребность,
+	ВТДанные.Переместить КАК Переместить,
+	ВЫБОР
+		КОГДА ВТДанные.Потребность - ВТДанные.Заказано - ВТДанные.Переместить &gt; 0
+			ТОГДА ОКР(ВТДанные.Потребность - ВТДанные.Заказано) - ВТДанные.Переместить
+		ИНАЧЕ 0
+	КОНЕЦ КАК КЗаказу,
+	ВЫБОР
+		КОГДА ВТДанные.Номенклатура.Упаковка = ЗНАЧЕНИЕ(Справочник.ЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ВТДанные.Номенклатура.ОсновнаяЕдиницаУчета
+		ИНАЧЕ ВТДанные.Номенклатура.Упаковка
+	КОНЕЦ КАК ЕдиницаИзмерения,
+	ВЫБОР
+		КОГДА ВТДанные.Номенклатура.Родитель.Наименование = "ЛС"
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЭтоЛС,
+	ВТДанные.ЗатоваренностьДней КАК ЗатоваренностьДней
+ИЗ
+	ВТДанные КАК ВТДанные
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТНаСкладах.Номенклатура,
+	ВТНаСкладах.Склад,
+	ВТНаСкладах.Раздел,
+	ВТНаСкладах.Аналог,
+	ВТНаСкладах.Остаток,
+	ВТНаСкладах.СреднемесячноеПотребление,
+	ВТНаСкладах.УровеньMin,
+	ВТНаСкладах.УровеньMax,
+	ВТНаСкладах.Заказано,
+	NULL,
+	ВТНаСкладах.Переместить,
+	NULL,
+	NULL,
+	NULL,
+	ВТНаСкладах.ЗатоваренностьДней
+ИЗ
+	ВТНаСкладах КАК ВТНаСкладах</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Заказано</dataPath>
+		<expression>Сумма(Заказано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КЗаказу</dataPath>
+		<expression>Сумма(КЗаказу)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Остаток</dataPath>
+		<expression>Сумма(Остаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Переместить</dataPath>
+		<expression>Сумма(Переместить)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Потребность</dataPath>
+		<expression>Сумма(Потребность)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СреднемесячноеПотребление</dataPath>
+		<expression>Сумма(СреднемесячноеПотребление)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>УровеньMax</dataPath>
+		<expression>Максимум(УровеньMax)</expression>
+		<group>Склад</group>
+	</totalField>
+	<totalField>
+		<dataPath>УровеньMin</dataPath>
+		<expression>Максимум(УровеньMin)</expression>
+		<group>Склад</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЗатоваренностьДней</dataPath>
+		<expression>ВЫБОР КОГДА Сумма(СреднемесячноеПотребление)&gt;0 ТОГДА (СУММА(Остаток)+СУММА(Заказано))*30/Сумма(СреднемесячноеПотребление) ИНАЧЕ 0 КОНЕЦ</expression>
+		<group>ПозицияНоменклатуры</group>
+		<group>Раздел</group>
+		<group>Склад</group>
+	</totalField>
+	<parameter>
+		<name>ДатаАктуальности</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата актуальности</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТекущийСклад</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущий склад</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Склады</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПериодАнализаРасхода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество дней анализа расхода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТекущаяЗНЗ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая ЗНЗ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ЗаявкаНаЗакупку</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПозицияНоменклатуры</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровни запасов</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УровеньMin</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Min</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УровеньMax</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Max</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Остаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СреднемесячноеПотребление</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Потребность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Переместить</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КЗаказу</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаАктуальности</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>0d3434cd-40ce-422a-83c7-0faf5426ae28</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>e96b0410-b4c4-4cad-bda7-7d7f7616eccd</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТекущийСклад</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>0882da99-aed1-4ff7-8083-43be119a1080</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодАнализаРасхода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:userSettingID>946d4888-a39d-4685-ba36-b4912ed9699b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТекущаяЗНЗ</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Документ.ЗаявкаНаЗакупку.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Остаток</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=1; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СреднемесячноеПотребление</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Потребность</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>УровеньMax</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>УровеньMin</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПозицияНоменклатуры</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Раздел</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Раздел</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Текущий</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Аналог</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Раздел</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Раздел</dcsset:left>
+							<dcsset:comparisonType>NotContains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Текущий</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Аналог</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:conditionalAppearance>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>УровеньMin</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>УровеньMax</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:filter/>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>Текст</dcscor:parameter>
+										<dcscor:value xsi:type="xs:string"/>
+									</dcscor:item>
+								</dcsset:appearance>
+								<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+								<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+								<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+								<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+								<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+								<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+								<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+								<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+								<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+							</dcsset:item>
+						</dcsset:conditionalAppearance>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Склад</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Дополнительный</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дополнительный</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПозицияНоменклатуры</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Склад</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭтоЛС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УровеньMin</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УровеньMax</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕдиницаИзмерения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Аналог</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Остаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СреднемесячноеПотребление</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Потребность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Переместить</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КЗаказу</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаАктуальности</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>c0977d32-3f24-43c0-9e81-6d5fec6914c2</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>185f0016-e95f-472d-9d27-d64bebd7b851</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТекущийСклад</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>19e3428a-d0b2-4f2b-8909-5291922d7991</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодАнализаРасхода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:userSettingID>8388bb42-8faa-4b8a-b6bc-72c500c5ab62</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТекущаяЗНЗ</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Документ.ЗаявкаНаЗакупку.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>АнализЗапасов</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Анализ запасов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПозицияНоменклатуры</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровни запасов</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УровеньMin</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>min</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УровеньMax</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>max</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Остаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СреднемесячноеПотребление</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗатоваренностьДней</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Затоваренность, дней</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПозицияНоменклатуры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>4dd33447-fc8c-4692-9ae4-1e47500ab854</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаАктуальности</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>d4b0abed-a59d-47fb-83d4-30a3f3d1ce03</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>d3fafd81-d45a-4504-a60a-1d9580728be2</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТекущийСклад</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>c9c98a3e-c68b-422b-94c4-186c096adc15</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодАнализаРасхода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:userSettingID>636cf128-4f4d-46be-a76c-0cc741ff2cd3</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТекущаяЗНЗ</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>5ec07c14-6591-4962-8f7f-f63a421bc4c2</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПозицияНоменклатуры.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Остаток</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=1; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СреднемесячноеПотребление</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЗатоваренностьДней</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Заказано</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>УровеньMax</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>УровеньMin</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Анализ запасов</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПозицияНоменклатуры</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Раздел</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Раздел</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Текущий</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Аналог</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:conditionalAppearance>
+							<dcsset:item>
+								<dcsset:selection/>
+								<dcsset:filter>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ЗатоваренностьДней</dcsset:left>
+										<dcsset:comparisonType>Greater</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">60</dcsset:right>
+									</dcsset:item>
+								</dcsset:filter>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>ЦветТекста</dcscor:parameter>
+										<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+								<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+								<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+								<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+								<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+								<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+								<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+								<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+								<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+								<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+							</dcsset:item>
+						</dcsset:conditionalAppearance>
+					</dcsset:item>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Раздел</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Раздел</dcsset:left>
+							<dcsset:comparisonType>NotContains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Текущий</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Раздел</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗатоваренностьДней</dcsset:left>
+									<dcsset:comparisonType>Greater</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">60</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+							<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+							<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+							<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+							<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+							<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+							<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+							<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+							<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Аналог</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:conditionalAppearance>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>УровеньMax</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>УровеньMin</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:filter/>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>Текст</dcscor:parameter>
+										<dcscor:value xsi:type="xs:string"/>
+									</dcscor:item>
+								</dcsset:appearance>
+								<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+								<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+								<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+								<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+								<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+								<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+								<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+								<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+								<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:selection/>
+								<dcsset:filter>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ЗатоваренностьДней</dcsset:left>
+										<dcsset:comparisonType>Greater</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">60</dcsset:right>
+									</dcsset:item>
+								</dcsset:filter>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>ЦветТекста</dcscor:parameter>
+										<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+								<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+								<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+								<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+								<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+								<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+								<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+								<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+								<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+								<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+							</dcsset:item>
+						</dcsset:conditionalAppearance>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Склад</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:conditionalAppearance>
+								<dcsset:item>
+									<dcsset:selection/>
+									<dcsset:filter>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ЗатоваренностьДней</dcsset:left>
+											<dcsset:comparisonType>Greater</dcsset:comparisonType>
+											<dcsset:right xsi:type="xs:decimal">60</dcsset:right>
+										</dcsset:item>
+									</dcsset:filter>
+									<dcsset:appearance>
+										<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+											<dcscor:parameter>ЦветТекста</dcscor:parameter>
+											<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+										</dcscor:item>
+									</dcsset:appearance>
+									<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+									<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+									<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+									<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+									<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+									<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+									<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+									<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+									<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+								</dcsset:item>
+							</dcsset:conditionalAppearance>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

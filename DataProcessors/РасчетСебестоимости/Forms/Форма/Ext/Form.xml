@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ФонУправляющегоПоля</BackColor>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<InputField name="Организация" id="10">
+					<DataPath>Объект.Организация</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="ChoiceProcessing">ОрганизацияОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<CommandBar name="ГруппаКомандыФормы" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команды формы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<Button name="РассчитатьСебестоимость" id="50">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.РассчитатьСебестоимость</CommandName>
+							<ExtendedTooltip name="РассчитатьСебестоимостьРасширеннаяПодсказка" id="51"/>
+						</Button>
+						<Button name="ПрерватьРасчетСебестоимости" id="52">
+							<Type>CommandBarButton</Type>
+							<Enabled>false</Enabled>
+							<CommandName>Form.Command.ПрерватьРасчетСебестоимости</CommandName>
+							<ExtendedTooltip name="ПрерватьРасчетСебестоимостиРасширеннаяПодсказка" id="53"/>
+						</Button>
+						<Button name="ОбновитьИнформациюПоРасчету" id="137">
+							<Type>CommandBarButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ОбновитьИнформациюПоРасчету</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Refresh</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ОбновитьИнформациюПоРасчетуРасширеннаяПодсказка" id="138"/>
+						</Button>
+						<Button name="ИзменитьФорму" id="133">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="134"/>
+						</Button>
+						<Button name="АвтообновлениеПриЗакрытииПодчиненныхФорм" id="139">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.АвтообновлениеПриЗакрытииПодчиненныхФорм</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="АвтообновлениеПриЗакрытииПодчиненныхФормРасширеннаяПодсказка" id="140"/>
+						</Button>
+						<Button name="ОткрытьЖурналРегистрации" id="135">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОткрытьЖурналРегистрации</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ОткрытьЖурналРегистрацииРасширеннаяПодсказка" id="136"/>
+						</Button>
+						<Button name="ФормаСправка" id="48">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="49"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="СтраницаОжиданияВыполнения" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ожидания выполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="СтраницаОжиданияВыполненияРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОжиданияВыполнения" id="67">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ожидания выполнения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОжиданияВыполненияРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаОжиданияВыполнения" id="54">
+									<Width>10</Width>
+									<Height>4</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка ожидания выполнения</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаОжиданияВыполненияКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ДекорацияКартинкаОжиданияВыполненияРасширеннаяПодсказка" id="56"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияНадписьОжиданияВыполнения" id="43">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>60</MaxWidth>
+									<Height>6</Height>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пожалуйста, подождите...</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ДекорацияНадписьОжиданияВыполненияКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ДекорацияНадписьОжиданияВыполненияРасширеннаяПодсказка" id="45"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРасчетСебестоимостиВыполнен" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница расчет себестоимости выполнен</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРасчетСебестоимостиВыполненРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРасчетСебестоимостиВыполнен" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расчет себестоимости выполнен</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасчетСебестоимостиВыполненРасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаРасчетСебестоимостиВыполнен" id="69">
+									<Width>10</Width>
+									<Height>4</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка расчет себестоимости выполнен</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ЗеленаяГалка</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаРасчетСебестоимостиВыполненКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ДекорацияКартинкаРасчетСебестоимостиВыполненРасширеннаяПодсказка" id="71"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияНадписьРасчетСебестоимостиВыполнен" id="57">
+									<Height>6</Height>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчет себестоимости выполнен успешно.
+Дата актуальности расчета - %1.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ДекорацияНадписьРасчетСебестоимостиВыполненКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ДекорацияНадписьРасчетСебестоимостиВыполненРасширеннаяПодсказка" id="59"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРасчетСебестоимостиНеВыполнен" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница расчет себестоимости не выполнен</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРасчетСебестоимостиНеВыполненРасширеннаяПодсказка" id="112"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРасчетСебестоимостиНеВыполнен" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расчет себестоимости не выполнен</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасчетСебестоимостиНеВыполненРасширеннаяПодсказка" id="114"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаРасчетСебестоимостиНеВыполнен" id="115">
+									<Width>10</Width>
+									<Height>4</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка расчет себестоимости не выполнен</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Внимание48</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаРасчетСебестоимостиНеВыполненКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ДекорацияКартинкаРасчетСебестоимостиНеВыполненРасширеннаяПодсказка" id="117"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияНадписьРасчетСебестоимостиНеВыполнен" id="118">
+									<Height>6</Height>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчет себестоимости не выполнен.
+Дата актуальности расчета - %1.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ДекорацияНадписьРасчетСебестоимостиНеВыполненКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ДекорацияНадписьРасчетСебестоимостиНеВыполненРасширеннаяПодсказка" id="120"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРасчетСебестоимостиНеМожетБытьВыполнен" id="92">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница расчет себестоимости не может быть выполнен</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРасчетСебестоимостиНеМожетБытьВыполненРасширеннаяПодсказка" id="93"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРасчетСебестоимостиНеМожетБытьВыполнен" id="94">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расчет себестоимости не может быть выполнен</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасчетСебестоимостиНеМожетБытьВыполненРасширеннаяПодсказка" id="95"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаРасчетСебестоимостиНеМожетБытьВыполнен" id="96">
+									<Width>10</Width>
+									<Height>4</Height>
+									<Picture>
+										<xr:Ref>CommonPicture.Ошибка32</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаРасчетСебестоимостиНеМожетБытьВыполненКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ДекорацияКартинкаРасчетСебестоимостиНеМожетБытьВыполненРасширеннаяПодсказка" id="98"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияНадписьРасчетСебестоимостиНеМожетБытьВыполнен" id="99">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>6</Height>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчет себестоимости не может быть выполнен корректно.
+Дата актуальности расчета - %1.
+Существуют ограничения выполнения расчета:</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ДекорацияНадписьРасчетСебестоимостиНеМожетБытьВыполненКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ДекорацияНадписьРасчетСебестоимостиНеМожетБытьВыполненРасширеннаяПодсказка" id="101"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОграниченияРасчета" id="121">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ограничения расчета</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОграниченияРасчетаРасширеннаяПодсказка" id="122"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРасчетСебестоимостиВыполненСОшибками" id="123">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница расчет себестоимости выполнен с ошибками</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаРасчетСебестоимостиВыполненСОшибкамиРасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРасчетСебестоимостиВыполненСОшибками" id="125">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расчет себестоимости выполнен с ошибками</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасчетСебестоимостиВыполненСОшибкамиРасширеннаяПодсказка" id="126"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаРасчетСебестоимостиВыполненСОшибками" id="127">
+									<Width>10</Width>
+									<Height>4</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка расчет себестоимости выполнен с ошибками</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Ошибка32</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКартинкаРасчетСебестоимостиВыполненСОшибкамиКонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="ДекорацияКартинкаРасчетСебестоимостиВыполненСОшибкамиРасширеннаяПодсказка" id="129"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияНадписьРасчетСебестоимостиВыполненСОшибками" id="130">
+									<Height>6</Height>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчет себестоимости выполнен с ошибками.
+Дата актуальности расчета - %1.
+Подробности см. в Журнале регистрации.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ДекорацияНадписьРасчетСебестоимостиВыполненСОшибкамиКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ДекорацияНадписьРасчетСебестоимостиВыполненСОшибкамиРасширеннаяПодсказка" id="132"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РасчетСебестоимости</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.Организация</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЗакрытьФормуБезПодтверждения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму без подтверждения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеРасчетаСебестоимости" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние расчета себестоимости</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОграниченияРасчета" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ограничения расчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КлючОшибки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеОшибки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПояснениеОшибки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пояснение ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДатаАктуальностиРасчета" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата актуальности расчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообновлениеПриЗакрытииПодчиненныхФорм" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автообновление при закрытии подчиненных форм</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>АвтообновлениеПриЗакрытииПодчиненныхФорм</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РассчитатьСебестоимость" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать себестоимость</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать себестоимость</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РассчитатьСебестоимость</Action>
+		</Command>
+		<Command name="ПрерватьРасчетСебестоимости" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прервать расчет себестоимости</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прервать расчет себестоимости</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрерватьРасчетСебестоимости</Action>
+		</Command>
+		<Command name="ОткрытьЖурналРегистрации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьЖурналРегистрации</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьИнформациюПоРасчету" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить информацию по расчету</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить информацию по расчету</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьИнформациюПоРасчету</Action>
+		</Command>
+		<Command name="АвтообновлениеПриЗакрытииПодчиненныхФорм" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автообновление при закрытии подчиненных форм</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять обновление статусов этапов после закрытия подчиненных форм (открываемых по гиперссылкам из этой формы)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АвтообновлениеПриЗакрытииПодчиненныхФорм</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

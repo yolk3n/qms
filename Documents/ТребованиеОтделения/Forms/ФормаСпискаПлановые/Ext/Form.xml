@@ -1,0 +1,1315 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Требования отделений (плановые)</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="23"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ГруппаСтраницыПриСменеСтраницы</Event>
+				<Event name="OnCurrentPageChange">сок_ГруппаСтраницыПриСменеСтраницыПосле</Event>
+			</Events>
+			<ChildItems>
+				<Page name="СтаршаяМедСестра" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Старшая мед. сестра</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все требования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтаршаяМедСестраРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="СписокСтаршаяМедСестра" id="26">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокСтаршаяМедСестраКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="СписокСтаршаяМедСестраКоманднаяПанель" id="28">
+								<ChildItems>
+									<Button name="СписокСтаршаяМедСестраНаСогласованиеЗавОтделения" id="75">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.НаСогласованиеЗавОтделения</CommandName>
+										<ExtendedTooltip name="СписокСтаршаяМедСестраНаСогласованиеЗавОтделенияРасширеннаяПодсказка" id="76"/>
+									</Button>
+									<Button name="СписокСтаршаяМедСестраЗакрытьЗаказСтаршейМедсестрой" id="77">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗакрытьЗаказСтаршейМедсестрой</CommandName>
+										<ExtendedTooltip name="СписокСтаршаяМедСестраЗакрытьЗаказСтаршейМедсестройРасширеннаяПодсказка" id="78"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокСтаршаяМедСестраРасширеннаяПодсказка" id="29"/>
+							<SearchStringAddition name="СписокСтаршаяМедСестраСтрокаПоиска" id="30">
+								<AdditionSource>
+									<Item>СписокСтаршаяМедСестра</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтаршаяМедСестраСтрокаПоискаКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="СписокСтаршаяМедСестраСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСтаршаяМедСестраСостояниеПросмотра" id="33">
+								<AdditionSource>
+									<Item>СписокСтаршаяМедСестра</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтаршаяМедСестраСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="СписокСтаршаяМедСестраСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокСтаршаяМедСестраУправлениеПоиском" id="36">
+								<AdditionSource>
+									<Item>СписокСтаршаяМедСестра</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтаршаяМедСестраУправлениеПоискомКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="СписокСтаршаяМедСестраУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="ЕстьЗапрещенные" id="425">
+									<DataPath>Список.ЕстьЗапрещенные</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запр.</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЕстьЗапрещенныеКонтекстноеМеню" id="426"/>
+									<ExtendedTooltip name="ЕстьЗапрещенныеРасширеннаяПодсказка" id="427"/>
+								</CheckBoxField>
+								<LabelField name="Дата" id="728">
+									<DataPath>Список.Date</DataPath>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="729"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="730"/>
+								</LabelField>
+								<LabelField name="Номер" id="731">
+									<DataPath>Список.Number</DataPath>
+									<ContextMenu name="НомерКонтекстноеМеню" id="732"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="733"/>
+								</LabelField>
+								<LabelField name="Статус" id="749">
+									<DataPath>Список.Статус</DataPath>
+									<ContextMenu name="СтатусКонтекстноеМеню" id="750"/>
+									<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="751"/>
+								</LabelField>
+								<LabelField name="ДатаОтправкиНаСогласованиеСтаршейМедСестрой2" id="826">
+									<DataPath>Список.ДатаОтправкиНаСогласованиеСтаршейМедСестрой</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата. ст.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДатаОтправкиНаСогласованиеСтаршейМедСестрой2КонтекстноеМеню" id="827"/>
+									<ExtendedTooltip name="ДатаОтправкиНаСогласованиеСтаршейМедСестрой2РасширеннаяПодсказка" id="828"/>
+								</LabelField>
+								<LabelField name="Отделение2" id="746">
+									<DataPath>Список.Отделение</DataPath>
+									<ContextMenu name="Отделение2КонтекстноеМеню" id="747"/>
+									<ExtendedTooltip name="Отделение2РасширеннаяПодсказка" id="748"/>
+								</LabelField>
+								<LabelField name="СтаршаяМедСестра4" id="823">
+									<DataPath>Список.СтаршаяМедСестра</DataPath>
+									<ContextMenu name="СтаршаяМедСестра4КонтекстноеМеню" id="824"/>
+									<ExtendedTooltip name="СтаршаяМедСестра4РасширеннаяПодсказка" id="825"/>
+								</LabelField>
+								<LabelField name="ЖелаемаяДатаПоступления" id="734">
+									<DataPath>Список.ЖелаемаяДатаПоступления</DataPath>
+									<ContextMenu name="ЖелаемаяДатаПоступленияКонтекстноеМеню" id="735"/>
+									<ExtendedTooltip name="ЖелаемаяДатаПоступленияРасширеннаяПодсказка" id="736"/>
+								</LabelField>
+								<LabelField name="Комментарий" id="737">
+									<DataPath>Список.Комментарий</DataPath>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="738"/>
+									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="739"/>
+								</LabelField>
+								<LabelField name="Организация2" id="740">
+									<DataPath>Список.Организация</DataPath>
+									<ContextMenu name="Организация2КонтекстноеМеню" id="741"/>
+									<ExtendedTooltip name="Организация2РасширеннаяПодсказка" id="742"/>
+								</LabelField>
+								<LabelField name="Ответственный2" id="743">
+									<DataPath>Список.Ответственный</DataPath>
+									<ContextMenu name="Ответственный2КонтекстноеМеню" id="744"/>
+									<ExtendedTooltip name="Ответственный2РасширеннаяПодсказка" id="745"/>
+								</LabelField>
+								<LabelField name="ВидОперации" id="428">
+									<DataPath>Список.ВидОперации</DataPath>
+									<ContextMenu name="ВидОперацииКонтекстноеМеню" id="429"/>
+									<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="430"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ЗавОтделением" id="79">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зав.отделением </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все требования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗавОтделениемРасширеннаяПодсказка" id="80"/>
+					<ChildItems>
+						<Table name="СписокЗавОтделения" id="81">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокЗавОтделенияКонтекстноеМеню" id="82"/>
+							<AutoCommandBar name="СписокЗавОтделенияКоманднаяПанель" id="83">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокЗавОтделенияККлинФармаколагу" id="139">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ККлинФармаколагу</CommandName>
+										<ExtendedTooltip name="СписокЗавОтделенияККлинФармаколагуРасширеннаяПодсказка" id="140"/>
+									</Button>
+									<Button name="СписокЗавОтделенияВернутьСтаршейМедСестре" id="752">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВернутьСтаршейМедСестре</CommandName>
+										<ExtendedTooltip name="СписокЗавОтделенияВернутьСтаршейМедСестреРасширеннаяПодсказка" id="753"/>
+									</Button>
+									<Button name="СписокЗавОтделенияЗакрытьЗаказСтаршейМедсестрой" id="141">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗакрытьЗаказСтаршейМедсестрой</CommandName>
+										<ExtendedTooltip name="СписокЗавОтделенияЗакрытьЗаказСтаршейМедсестройРасширеннаяПодсказка" id="142"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокЗавОтделенияРасширеннаяПодсказка" id="84"/>
+							<SearchStringAddition name="СписокЗавОтделенияСтрокаПоиска" id="85">
+								<AdditionSource>
+									<Item>СписокЗавОтделения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗавОтделенияСтрокаПоискаКонтекстноеМеню" id="86"/>
+								<ExtendedTooltip name="СписокЗавОтделенияСтрокаПоискаРасширеннаяПодсказка" id="87"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокЗавОтделенияСостояниеПросмотра" id="88">
+								<AdditionSource>
+									<Item>СписокЗавОтделения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗавОтделенияСостояниеПросмотраКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="СписокЗавОтделенияСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокЗавОтделенияУправлениеПоиском" id="91">
+								<AdditionSource>
+									<Item>СписокЗавОтделения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗавОтделенияУправлениеПоискомКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="СписокЗавОтделенияУправлениеПоискомРасширеннаяПодсказка" id="93"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Дата1" id="431">
+									<DataPath>Список.Date</DataPath>
+									<ContextMenu name="Дата1КонтекстноеМеню" id="432"/>
+									<ExtendedTooltip name="Дата1РасширеннаяПодсказка" id="433"/>
+								</LabelField>
+								<LabelField name="Номер1" id="434">
+									<DataPath>Список.Number</DataPath>
+									<ContextMenu name="Номер1КонтекстноеМеню" id="435"/>
+									<ExtendedTooltip name="Номер1РасширеннаяПодсказка" id="436"/>
+								</LabelField>
+								<LabelField name="ГруппаПКУ1" id="437">
+									<DataPath>Список.ГруппаПКУ</DataPath>
+									<ContextMenu name="ГруппаПКУ1КонтекстноеМеню" id="438"/>
+									<ExtendedTooltip name="ГруппаПКУ1РасширеннаяПодсказка" id="439"/>
+								</LabelField>
+								<LabelField name="ЖелаемаяДатаПоступления1" id="440">
+									<DataPath>Список.ЖелаемаяДатаПоступления</DataPath>
+									<ContextMenu name="ЖелаемаяДатаПоступления1КонтекстноеМеню" id="441"/>
+									<ExtendedTooltip name="ЖелаемаяДатаПоступления1РасширеннаяПодсказка" id="442"/>
+								</LabelField>
+								<LabelField name="Комментарий1" id="443">
+									<DataPath>Список.Комментарий</DataPath>
+									<ContextMenu name="Комментарий1КонтекстноеМеню" id="444"/>
+									<ExtendedTooltip name="Комментарий1РасширеннаяПодсказка" id="445"/>
+								</LabelField>
+								<LabelField name="Организация1" id="446">
+									<DataPath>Список.Организация</DataPath>
+									<ContextMenu name="Организация1КонтекстноеМеню" id="447"/>
+									<ExtendedTooltip name="Организация1РасширеннаяПодсказка" id="448"/>
+								</LabelField>
+								<LabelField name="Ответственный1" id="449">
+									<DataPath>Список.Ответственный</DataPath>
+									<ContextMenu name="Ответственный1КонтекстноеМеню" id="450"/>
+									<ExtendedTooltip name="Ответственный1РасширеннаяПодсказка" id="451"/>
+								</LabelField>
+								<LabelField name="Отделение1" id="452">
+									<DataPath>Список.Отделение</DataPath>
+									<ContextMenu name="Отделение1КонтекстноеМеню" id="453"/>
+									<ExtendedTooltip name="Отделение1РасширеннаяПодсказка" id="454"/>
+								</LabelField>
+								<CheckBoxField name="ПодписанЭП1" id="455">
+									<DataPath>Список.ПодписанЭП</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПодписанЭП1КонтекстноеМеню" id="456"/>
+									<ExtendedTooltip name="ПодписанЭП1РасширеннаяПодсказка" id="457"/>
+								</CheckBoxField>
+								<LabelField name="ПодразделениеОрганизации1" id="458">
+									<DataPath>Список.ПодразделениеОрганизации</DataPath>
+									<ContextMenu name="ПодразделениеОрганизации1КонтекстноеМеню" id="459"/>
+									<ExtendedTooltip name="ПодразделениеОрганизации1РасширеннаяПодсказка" id="460"/>
+								</LabelField>
+								<LabelField name="Приоритет1" id="461">
+									<DataPath>Список.Приоритет</DataPath>
+									<ContextMenu name="Приоритет1КонтекстноеМеню" id="462"/>
+									<ExtendedTooltip name="Приоритет1РасширеннаяПодсказка" id="463"/>
+								</LabelField>
+								<LabelField name="СкладОтправитель1" id="464">
+									<DataPath>Список.СкладОтправитель</DataPath>
+									<ContextMenu name="СкладОтправитель1КонтекстноеМеню" id="465"/>
+									<ExtendedTooltip name="СкладОтправитель1РасширеннаяПодсказка" id="466"/>
+								</LabelField>
+								<LabelField name="СкладПолучатель1" id="467">
+									<DataPath>Список.СкладПолучатель</DataPath>
+									<ContextMenu name="СкладПолучатель1КонтекстноеМеню" id="468"/>
+									<ExtendedTooltip name="СкладПолучатель1РасширеннаяПодсказка" id="469"/>
+								</LabelField>
+								<CheckBoxField name="Согласован1" id="470">
+									<DataPath>Список.Согласован</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Согласован1КонтекстноеМеню" id="471"/>
+									<ExtendedTooltip name="Согласован1РасширеннаяПодсказка" id="472"/>
+								</CheckBoxField>
+								<LabelField name="Статус1" id="473">
+									<DataPath>Список.Статус</DataPath>
+									<ContextMenu name="Статус1КонтекстноеМеню" id="474"/>
+									<ExtendedTooltip name="Статус1РасширеннаяПодсказка" id="475"/>
+								</LabelField>
+								<LabelField name="Автор1" id="476">
+									<DataPath>Список.Автор</DataPath>
+									<ContextMenu name="Автор1КонтекстноеМеню" id="477"/>
+									<ExtendedTooltip name="Автор1РасширеннаяПодсказка" id="478"/>
+								</LabelField>
+								<LabelField name="ИсточникФинансирования1" id="479">
+									<DataPath>Список.ИсточникФинансирования</DataPath>
+									<ContextMenu name="ИсточникФинансирования1КонтекстноеМеню" id="480"/>
+									<ExtendedTooltip name="ИсточникФинансирования1РасширеннаяПодсказка" id="481"/>
+								</LabelField>
+								<LabelField name="ДатаПоступления1" id="482">
+									<DataPath>Список.ДатаПоступления</DataPath>
+									<ContextMenu name="ДатаПоступления1КонтекстноеМеню" id="483"/>
+									<ExtendedTooltip name="ДатаПоступления1РасширеннаяПодсказка" id="484"/>
+								</LabelField>
+								<CheckBoxField name="ПоступлениеОднойДатой1" id="485">
+									<DataPath>Список.ПоступлениеОднойДатой</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоступлениеОднойДатой1КонтекстноеМеню" id="486"/>
+									<ExtendedTooltip name="ПоступлениеОднойДатой1РасширеннаяПодсказка" id="487"/>
+								</CheckBoxField>
+								<LabelField name="ДатаСогласования1" id="488">
+									<DataPath>Список.ДатаСогласования</DataPath>
+									<ContextMenu name="ДатаСогласования1КонтекстноеМеню" id="489"/>
+									<ExtendedTooltip name="ДатаСогласования1РасширеннаяПодсказка" id="490"/>
+								</LabelField>
+								<LabelField name="ДатаПервогоПоступления1" id="491">
+									<DataPath>Список.ДатаПервогоПоступления</DataPath>
+									<ContextMenu name="ДатаПервогоПоступления1КонтекстноеМеню" id="492"/>
+									<ExtendedTooltip name="ДатаПервогоПоступления1РасширеннаяПодсказка" id="493"/>
+								</LabelField>
+								<LabelField name="МаксимальныйКодСтроки1" id="494">
+									<DataPath>Список.МаксимальныйКодСтроки</DataPath>
+									<ContextMenu name="МаксимальныйКодСтроки1КонтекстноеМеню" id="495"/>
+									<ExtendedTooltip name="МаксимальныйКодСтроки1РасширеннаяПодсказка" id="496"/>
+								</LabelField>
+								<CheckBoxField name="Срочно1" id="497">
+									<DataPath>Список.Срочно</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Срочно1КонтекстноеМеню" id="498"/>
+									<ExtendedTooltip name="Срочно1РасширеннаяПодсказка" id="499"/>
+								</CheckBoxField>
+								<CheckBoxField name="СогласовноЗавОтделением2" id="500">
+									<DataPath>Список.СогласовноЗавОтделением</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СогласовноЗавОтделением2КонтекстноеМеню" id="501"/>
+									<ExtendedTooltip name="СогласовноЗавОтделением2РасширеннаяПодсказка" id="502"/>
+								</CheckBoxField>
+								<CheckBoxField name="СогласованоКлинФармакологом2" id="503">
+									<DataPath>Список.СогласованоКлинФармакологом</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СогласованоКлинФармакологом2КонтекстноеМеню" id="504"/>
+									<ExtendedTooltip name="СогласованоКлинФармакологом2РасширеннаяПодсказка" id="505"/>
+								</CheckBoxField>
+								<LabelField name="ЗавОтделением4" id="506">
+									<DataPath>Список.ЗавОтделением</DataPath>
+									<ContextMenu name="ЗавОтделением4КонтекстноеМеню" id="507"/>
+									<ExtendedTooltip name="ЗавОтделением4РасширеннаяПодсказка" id="508"/>
+								</LabelField>
+								<LabelField name="ДатаСогласованияЗавОтделением3" id="509">
+									<DataPath>Список.ДатаСогласованияЗавОтделением</DataPath>
+									<ContextMenu name="ДатаСогласованияЗавОтделением3КонтекстноеМеню" id="510"/>
+									<ExtendedTooltip name="ДатаСогласованияЗавОтделением3РасширеннаяПодсказка" id="511"/>
+								</LabelField>
+								<LabelField name="КлинФармаколог3" id="512">
+									<DataPath>Список.КлинФармаколог</DataPath>
+									<ContextMenu name="КлинФармаколог3КонтекстноеМеню" id="513"/>
+									<ExtendedTooltip name="КлинФармаколог3РасширеннаяПодсказка" id="514"/>
+								</LabelField>
+								<LabelField name="ДатаСогласованияКлинФармакологом2" id="515">
+									<DataPath>Список.ДатаСогласованияКлинФармакологом</DataPath>
+									<ContextMenu name="ДатаСогласованияКлинФармакологом2КонтекстноеМеню" id="516"/>
+									<ExtendedTooltip name="ДатаСогласованияКлинФармакологом2РасширеннаяПодсказка" id="517"/>
+								</LabelField>
+								<LabelField name="СтаршаяМедСестра1" id="518">
+									<DataPath>Список.СтаршаяМедСестра</DataPath>
+									<ContextMenu name="СтаршаяМедСестра1КонтекстноеМеню" id="519"/>
+									<ExtendedTooltip name="СтаршаяМедСестра1РасширеннаяПодсказка" id="520"/>
+								</LabelField>
+								<LabelField name="ДатаОтправкиНаСогласованиеСтаршейМедСестрой" id="521">
+									<DataPath>Список.ДатаОтправкиНаСогласованиеСтаршейМедСестрой</DataPath>
+									<ContextMenu name="ДатаОтправкиНаСогласованиеСтаршейМедСестройКонтекстноеМеню" id="522"/>
+									<ExtendedTooltip name="ДатаОтправкиНаСогласованиеСтаршейМедСестройРасширеннаяПодсказка" id="523"/>
+								</LabelField>
+								<CheckBoxField name="ЕстьЗапрещенные1" id="524">
+									<DataPath>Список.ЕстьЗапрещенные</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЕстьЗапрещенные1КонтекстноеМеню" id="525"/>
+									<ExtendedTooltip name="ЕстьЗапрещенные1РасширеннаяПодсказка" id="526"/>
+								</CheckBoxField>
+								<LabelField name="ВидОперации1" id="527">
+									<DataPath>Список.ВидОперации</DataPath>
+									<ContextMenu name="ВидОперации1КонтекстноеМеню" id="528"/>
+									<ExtendedTooltip name="ВидОперации1РасширеннаяПодсказка" id="529"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="КлинФармаколог" id="143">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клин фармаколог</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все требования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="КлинФармакологРасширеннаяПодсказка" id="144"/>
+					<ChildItems>
+						<Table name="СписокКлинФармаколог" id="145">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокКлинФармакологКонтекстноеМеню" id="146"/>
+							<AutoCommandBar name="СписокКлинФармакологКоманднаяПанель" id="147">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокКлинФармакологПередатьВАптеку" id="209">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПередатьВАптеку</CommandName>
+										<ExtendedTooltip name="СписокКлинФармакологПередатьВАптекуРасширеннаяПодсказка" id="210"/>
+									</Button>
+									<Button name="СписокКлинФармакологВернутьЗавОтделением" id="829">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВернутьЗавОтделением</CommandName>
+										<ExtendedTooltip name="СписокКлинФармакологВернутьЗавОтделениемРасширеннаяПодсказка" id="830"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокКлинФармакологРасширеннаяПодсказка" id="148"/>
+							<SearchStringAddition name="СписокКлинФармакологСтрокаПоиска" id="149">
+								<AdditionSource>
+									<Item>СписокКлинФармаколог</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКлинФармакологСтрокаПоискаКонтекстноеМеню" id="150"/>
+								<ExtendedTooltip name="СписокКлинФармакологСтрокаПоискаРасширеннаяПодсказка" id="151"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокКлинФармакологСостояниеПросмотра" id="152">
+								<AdditionSource>
+									<Item>СписокКлинФармаколог</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКлинФармакологСостояниеПросмотраКонтекстноеМеню" id="153"/>
+								<ExtendedTooltip name="СписокКлинФармакологСостояниеПросмотраРасширеннаяПодсказка" id="154"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокКлинФармакологУправлениеПоиском" id="155">
+								<AdditionSource>
+									<Item>СписокКлинФармаколог</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКлинФармакологУправлениеПоискомКонтекстноеМеню" id="156"/>
+								<ExtendedTooltip name="СписокКлинФармакологУправлениеПоискомРасширеннаяПодсказка" id="157"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Дата3" id="530">
+									<DataPath>Список.Date</DataPath>
+									<ContextMenu name="Дата3КонтекстноеМеню" id="531"/>
+									<ExtendedTooltip name="Дата3РасширеннаяПодсказка" id="532"/>
+								</LabelField>
+								<LabelField name="Номер3" id="533">
+									<DataPath>Список.Number</DataPath>
+									<ContextMenu name="Номер3КонтекстноеМеню" id="534"/>
+									<ExtendedTooltip name="Номер3РасширеннаяПодсказка" id="535"/>
+								</LabelField>
+								<LabelField name="ГруппаПКУ2" id="536">
+									<DataPath>Список.ГруппаПКУ</DataPath>
+									<ContextMenu name="ГруппаПКУ2КонтекстноеМеню" id="537"/>
+									<ExtendedTooltip name="ГруппаПКУ2РасширеннаяПодсказка" id="538"/>
+								</LabelField>
+								<LabelField name="ЖелаемаяДатаПоступления2" id="539">
+									<DataPath>Список.ЖелаемаяДатаПоступления</DataPath>
+									<ContextMenu name="ЖелаемаяДатаПоступления2КонтекстноеМеню" id="540"/>
+									<ExtendedTooltip name="ЖелаемаяДатаПоступления2РасширеннаяПодсказка" id="541"/>
+								</LabelField>
+								<LabelField name="Комментарий2" id="542">
+									<DataPath>Список.Комментарий</DataPath>
+									<ContextMenu name="Комментарий2КонтекстноеМеню" id="543"/>
+									<ExtendedTooltip name="Комментарий2РасширеннаяПодсказка" id="544"/>
+								</LabelField>
+								<LabelField name="Организация3" id="545">
+									<DataPath>Список.Организация</DataPath>
+									<ContextMenu name="Организация3КонтекстноеМеню" id="546"/>
+									<ExtendedTooltip name="Организация3РасширеннаяПодсказка" id="547"/>
+								</LabelField>
+								<LabelField name="Ответственный3" id="548">
+									<DataPath>Список.Ответственный</DataPath>
+									<ContextMenu name="Ответственный3КонтекстноеМеню" id="549"/>
+									<ExtendedTooltip name="Ответственный3РасширеннаяПодсказка" id="550"/>
+								</LabelField>
+								<LabelField name="Отделение3" id="551">
+									<DataPath>Список.Отделение</DataPath>
+									<ContextMenu name="Отделение3КонтекстноеМеню" id="552"/>
+									<ExtendedTooltip name="Отделение3РасширеннаяПодсказка" id="553"/>
+								</LabelField>
+								<CheckBoxField name="ПодписанЭП3" id="554">
+									<DataPath>Список.ПодписанЭП</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПодписанЭП3КонтекстноеМеню" id="555"/>
+									<ExtendedTooltip name="ПодписанЭП3РасширеннаяПодсказка" id="556"/>
+								</CheckBoxField>
+								<LabelField name="ПодразделениеОрганизации2" id="557">
+									<DataPath>Список.ПодразделениеОрганизации</DataPath>
+									<ContextMenu name="ПодразделениеОрганизации2КонтекстноеМеню" id="558"/>
+									<ExtendedTooltip name="ПодразделениеОрганизации2РасширеннаяПодсказка" id="559"/>
+								</LabelField>
+								<LabelField name="Приоритет2" id="560">
+									<DataPath>Список.Приоритет</DataPath>
+									<ContextMenu name="Приоритет2КонтекстноеМеню" id="561"/>
+									<ExtendedTooltip name="Приоритет2РасширеннаяПодсказка" id="562"/>
+								</LabelField>
+								<LabelField name="СкладОтправитель2" id="563">
+									<DataPath>Список.СкладОтправитель</DataPath>
+									<ContextMenu name="СкладОтправитель2КонтекстноеМеню" id="564"/>
+									<ExtendedTooltip name="СкладОтправитель2РасширеннаяПодсказка" id="565"/>
+								</LabelField>
+								<LabelField name="СкладПолучатель2" id="566">
+									<DataPath>Список.СкладПолучатель</DataPath>
+									<ContextMenu name="СкладПолучатель2КонтекстноеМеню" id="567"/>
+									<ExtendedTooltip name="СкладПолучатель2РасширеннаяПодсказка" id="568"/>
+								</LabelField>
+								<CheckBoxField name="Согласован2" id="569">
+									<DataPath>Список.Согласован</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Согласован2КонтекстноеМеню" id="570"/>
+									<ExtendedTooltip name="Согласован2РасширеннаяПодсказка" id="571"/>
+								</CheckBoxField>
+								<LabelField name="Статус2" id="572">
+									<DataPath>Список.Статус</DataPath>
+									<ContextMenu name="Статус2КонтекстноеМеню" id="573"/>
+									<ExtendedTooltip name="Статус2РасширеннаяПодсказка" id="574"/>
+								</LabelField>
+								<LabelField name="Автор2" id="575">
+									<DataPath>Список.Автор</DataPath>
+									<ContextMenu name="Автор2КонтекстноеМеню" id="576"/>
+									<ExtendedTooltip name="Автор2РасширеннаяПодсказка" id="577"/>
+								</LabelField>
+								<LabelField name="ИсточникФинансирования2" id="578">
+									<DataPath>Список.ИсточникФинансирования</DataPath>
+									<ContextMenu name="ИсточникФинансирования2КонтекстноеМеню" id="579"/>
+									<ExtendedTooltip name="ИсточникФинансирования2РасширеннаяПодсказка" id="580"/>
+								</LabelField>
+								<LabelField name="ДатаПоступления2" id="581">
+									<DataPath>Список.ДатаПоступления</DataPath>
+									<ContextMenu name="ДатаПоступления2КонтекстноеМеню" id="582"/>
+									<ExtendedTooltip name="ДатаПоступления2РасширеннаяПодсказка" id="583"/>
+								</LabelField>
+								<CheckBoxField name="ПоступлениеОднойДатой2" id="584">
+									<DataPath>Список.ПоступлениеОднойДатой</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоступлениеОднойДатой2КонтекстноеМеню" id="585"/>
+									<ExtendedTooltip name="ПоступлениеОднойДатой2РасширеннаяПодсказка" id="586"/>
+								</CheckBoxField>
+								<LabelField name="ДатаСогласования2" id="587">
+									<DataPath>Список.ДатаСогласования</DataPath>
+									<ContextMenu name="ДатаСогласования2КонтекстноеМеню" id="588"/>
+									<ExtendedTooltip name="ДатаСогласования2РасширеннаяПодсказка" id="589"/>
+								</LabelField>
+								<LabelField name="ДатаПервогоПоступления2" id="590">
+									<DataPath>Список.ДатаПервогоПоступления</DataPath>
+									<ContextMenu name="ДатаПервогоПоступления2КонтекстноеМеню" id="591"/>
+									<ExtendedTooltip name="ДатаПервогоПоступления2РасширеннаяПодсказка" id="592"/>
+								</LabelField>
+								<LabelField name="МаксимальныйКодСтроки2" id="593">
+									<DataPath>Список.МаксимальныйКодСтроки</DataPath>
+									<ContextMenu name="МаксимальныйКодСтроки2КонтекстноеМеню" id="594"/>
+									<ExtendedTooltip name="МаксимальныйКодСтроки2РасширеннаяПодсказка" id="595"/>
+								</LabelField>
+								<CheckBoxField name="Срочно2" id="596">
+									<DataPath>Список.Срочно</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Срочно2КонтекстноеМеню" id="597"/>
+									<ExtendedTooltip name="Срочно2РасширеннаяПодсказка" id="598"/>
+								</CheckBoxField>
+								<CheckBoxField name="СогласовноЗавОтделением3" id="599">
+									<DataPath>Список.СогласовноЗавОтделением</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СогласовноЗавОтделением3КонтекстноеМеню" id="600"/>
+									<ExtendedTooltip name="СогласовноЗавОтделением3РасширеннаяПодсказка" id="601"/>
+								</CheckBoxField>
+								<CheckBoxField name="СогласованоКлинФармакологом3" id="602">
+									<DataPath>Список.СогласованоКлинФармакологом</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СогласованоКлинФармакологом3КонтекстноеМеню" id="603"/>
+									<ExtendedTooltip name="СогласованоКлинФармакологом3РасширеннаяПодсказка" id="604"/>
+								</CheckBoxField>
+								<LabelField name="ЗавОтделением1" id="605">
+									<DataPath>Список.ЗавОтделением</DataPath>
+									<ContextMenu name="ЗавОтделением1КонтекстноеМеню" id="606"/>
+									<ExtendedTooltip name="ЗавОтделением1РасширеннаяПодсказка" id="607"/>
+								</LabelField>
+								<LabelField name="ДатаСогласованияЗавОтделением" id="608">
+									<DataPath>Список.ДатаСогласованияЗавОтделением</DataPath>
+									<ContextMenu name="ДатаСогласованияЗавОтделениемКонтекстноеМеню" id="609"/>
+									<ExtendedTooltip name="ДатаСогласованияЗавОтделениемРасширеннаяПодсказка" id="610"/>
+								</LabelField>
+								<LabelField name="КлинФармаколог4" id="611">
+									<DataPath>Список.КлинФармаколог</DataPath>
+									<ContextMenu name="КлинФармаколог4КонтекстноеМеню" id="612"/>
+									<ExtendedTooltip name="КлинФармаколог4РасширеннаяПодсказка" id="613"/>
+								</LabelField>
+								<LabelField name="ДатаСогласованияКлинФармакологом3" id="614">
+									<DataPath>Список.ДатаСогласованияКлинФармакологом</DataPath>
+									<ContextMenu name="ДатаСогласованияКлинФармакологом3КонтекстноеМеню" id="615"/>
+									<ExtendedTooltip name="ДатаСогласованияКлинФармакологом3РасширеннаяПодсказка" id="616"/>
+								</LabelField>
+								<LabelField name="СтаршаяМедСестра2" id="617">
+									<DataPath>Список.СтаршаяМедСестра</DataPath>
+									<ContextMenu name="СтаршаяМедСестра2КонтекстноеМеню" id="618"/>
+									<ExtendedTooltip name="СтаршаяМедСестра2РасширеннаяПодсказка" id="619"/>
+								</LabelField>
+								<LabelField name="ДатаОтправкиНаСогласованиеСтаршейМедСестрой1" id="620">
+									<DataPath>Список.ДатаОтправкиНаСогласованиеСтаршейМедСестрой</DataPath>
+									<ContextMenu name="ДатаОтправкиНаСогласованиеСтаршейМедСестрой1КонтекстноеМеню" id="621"/>
+									<ExtendedTooltip name="ДатаОтправкиНаСогласованиеСтаршейМедСестрой1РасширеннаяПодсказка" id="622"/>
+								</LabelField>
+								<CheckBoxField name="ЕстьЗапрещенные3" id="623">
+									<DataPath>Список.ЕстьЗапрещенные</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЕстьЗапрещенные3КонтекстноеМеню" id="624"/>
+									<ExtendedTooltip name="ЕстьЗапрещенные3РасширеннаяПодсказка" id="625"/>
+								</CheckBoxField>
+								<LabelField name="ВидОперации2" id="626">
+									<DataPath>Список.ВидОперации</DataPath>
+									<ContextMenu name="ВидОперации2КонтекстноеМеню" id="627"/>
+									<ExtendedTooltip name="ВидОперации2РасширеннаяПодсказка" id="628"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ВсеТребования" id="211">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все требования</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все требования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ВсеТребованияРасширеннаяПодсказка" id="212"/>
+					<ChildItems>
+						<Table name="Список" id="213">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокКонтекстноеМеню" id="214">
+								<ChildItems>
+									<Button name="СписокКонтекстноеМенюИсправитьЕдиницы" id="292">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюИсправитьЕдиницыРасширеннаяПодсказка" id="293"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="215">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Popup name="ПодменюСоздатьНаОсновании" id="294">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать на основании</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать на основании</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Picture>
+											<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Representation>Picture</Representation>
+										<ExtendedTooltip name="ПодменюСоздатьНаОснованииРасширеннаяПодсказка" id="295"/>
+										<ChildItems>
+											<Popup name="ПодменюБизнесПроцессы" id="296">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Процессы</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Подменю бизнес процессы</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Picture>
+													<xr:Ref>StdPicture.BusinessProcess</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Representation>Picture</Representation>
+												<ExtendedTooltip name="ПодменюБизнесПроцессыРасширеннаяПодсказка" id="297"/>
+											</Popup>
+										</ChildItems>
+									</Popup>
+									<Popup name="ГруппаУстановитьСтатус" id="298">
+										<Visible>false</Visible>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Установить статус</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Установить статус у выделенных в списке требований</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаУстановитьСтатусРасширеннаяПодсказка" id="299"/>
+										<ChildItems>
+											<Button name="СписокУстановитьСтатусНеСогласован" id="300">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="СписокУстановитьСтатусНеСогласованРасширеннаяПодсказка" id="301"/>
+											</Button>
+											<Button name="СписокУстановитьСтатусСогласован" id="302">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="СписокУстановитьСтатусСогласованРасширеннаяПодсказка" id="303"/>
+											</Button>
+											<Button name="СписокУстановитьСтатусКВыполнению" id="304">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="СписокУстановитьСтатусКВыполнениюРасширеннаяПодсказка" id="305"/>
+											</Button>
+											<Button name="СписокУстановитьСтатусЗакрытУПолностьюОтработанныхТребований" id="306">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="СписокУстановитьСтатусЗакрытУПолностьюОтработанныхТребованийРасширеннаяПодсказка" id="307"/>
+											</Button>
+											<Button name="СписокУстановитьСтатусЗакрытСОтменойНеотработанныхСтрок" id="308">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="СписокУстановитьСтатусЗакрытСОтменойНеотработанныхСтрокРасширеннаяПодсказка" id="309"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Popup name="ПодменюОтчеты" id="310">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отчеты</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отчеты</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Picture>
+											<xr:Ref>CommonPicture.Отчеты</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Representation>Picture</Representation>
+										<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="311"/>
+										<ChildItems>
+											<ButtonGroup name="ПодменюОтчетыВажное" id="312">
+												<ExtendedTooltip name="ПодменюОтчетыВажноеРасширеннаяПодсказка" id="313"/>
+											</ButtonGroup>
+											<ButtonGroup name="ПодменюОтчетыОбычное" id="314">
+												<ExtendedTooltip name="ПодменюОтчетыОбычноеРасширеннаяПодсказка" id="315"/>
+											</ButtonGroup>
+											<ButtonGroup name="ПодменюОтчетыСмТакже" id="316">
+												<ExtendedTooltip name="ПодменюОтчетыСмТакжеРасширеннаяПодсказка" id="317"/>
+											</ButtonGroup>
+										</ChildItems>
+									</Popup>
+									<ButtonGroup name="ГруппаГлобальныеКоманды" id="318">
+										<Visible>false</Visible>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа команды формы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа команды формы</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Form</CommandSource>
+										<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="319"/>
+										<ChildItems>
+											<Popup name="ПодменюЭДО" id="320">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>ЭДО</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>EDI</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Команды электронного документооборота</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Data interchange commands</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ПодменюЭДОРасширеннаяПодсказка" id="321"/>
+											</Popup>
+											<Popup name="ПодменюПечать" id="322">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Печать</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Команды печати</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Picture>
+													<xr:Ref>StdPicture.Print</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="323"/>
+											</Popup>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="КомандыФормы" id="324">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Команды формы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Команды формы</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Form</CommandSource>
+										<ExtendedTooltip name="КомандыФормыРасширеннаяПодсказка" id="325"/>
+									</ButtonGroup>
+									<Button name="СписокИзменитьФорму" id="326">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="СписокИзменитьФормуРасширеннаяПодсказка" id="327"/>
+									</Button>
+									<Button name="СписокСправка" id="328">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="СписокСправкаРасширеннаяПодсказка" id="329"/>
+									</Button>
+									<Button name="СписокСоздатьЗаявкуНаЗакупку" id="330">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьЗаявкуНаЗакупку</CommandName>
+										<ExtendedTooltip name="СписокСоздатьЗаявкуНаЗакупкуРасширеннаяПодсказка" id="331"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="216"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="217">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="218"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="219"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="220">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="221"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="222"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="223">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="224"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="225"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">сок_СписокВыборПосле</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ЕстьЗапрещенные2" id="781">
+									<DataPath>Список.ЕстьЗапрещенные</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запр</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЕстьЗапрещенные2КонтекстноеМеню" id="782"/>
+									<ExtendedTooltip name="ЕстьЗапрещенные2РасширеннаяПодсказка" id="783"/>
+								</CheckBoxField>
+								<CheckBoxField name="Срочно" id="814">
+									<DataPath>Список.Срочно</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ср.</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СрочноКонтекстноеМеню" id="815"/>
+									<ExtendedTooltip name="СрочноРасширеннаяПодсказка" id="816"/>
+								</CheckBoxField>
+								<CheckBoxField name="СогласовноЗавОтделением" id="811">
+									<DataPath>Список.СогласовноЗавОтделением</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зав.</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СогласовноЗавОтделениемКонтекстноеМеню" id="812"/>
+									<ExtendedTooltip name="СогласовноЗавОтделениемРасширеннаяПодсказка" id="813"/>
+								</CheckBoxField>
+								<CheckBoxField name="СогласованоКлинФармакологом" id="808">
+									<DataPath>Список.СогласованоКлинФармакологом</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Клин</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СогласованоКлинФармакологомКонтекстноеМеню" id="809"/>
+									<ExtendedTooltip name="СогласованоКлинФармакологомРасширеннаяПодсказка" id="810"/>
+								</CheckBoxField>
+								<LabelField name="Статус3" id="820">
+									<DataPath>Список.Статус</DataPath>
+									<ContextMenu name="Статус3КонтекстноеМеню" id="821"/>
+									<ExtendedTooltip name="Статус3РасширеннаяПодсказка" id="822"/>
+								</LabelField>
+								<LabelField name="Дата2" id="754">
+									<DataPath>Список.Date</DataPath>
+									<ContextMenu name="Дата2КонтекстноеМеню" id="755"/>
+									<ExtendedTooltip name="Дата2РасширеннаяПодсказка" id="756"/>
+								</LabelField>
+								<LabelField name="Номер2" id="757">
+									<DataPath>Список.Number</DataPath>
+									<ContextMenu name="Номер2КонтекстноеМеню" id="758"/>
+									<ExtendedTooltip name="Номер2РасширеннаяПодсказка" id="759"/>
+								</LabelField>
+								<LabelField name="Отделение" id="802">
+									<DataPath>Список.Отделение</DataPath>
+									<ContextMenu name="ОтделениеКонтекстноеМеню" id="803"/>
+									<ExtendedTooltip name="ОтделениеРасширеннаяПодсказка" id="804"/>
+								</LabelField>
+								<LabelField name="ЖелаемаяДатаПоступления3" id="784">
+									<DataPath>Список.ЖелаемаяДатаПоступления</DataPath>
+									<ContextMenu name="ЖелаемаяДатаПоступления3КонтекстноеМеню" id="785"/>
+									<ExtendedTooltip name="ЖелаемаяДатаПоступления3РасширеннаяПодсказка" id="786"/>
+								</LabelField>
+								<LabelField name="ДатаПоступления" id="769">
+									<DataPath>Список.ДатаПоступления</DataPath>
+									<ContextMenu name="ДатаПоступленияКонтекстноеМеню" id="770"/>
+									<ExtendedTooltip name="ДатаПоступленияРасширеннаяПодсказка" id="771"/>
+								</LabelField>
+								<LabelField name="СтаршаяМедСестра3" id="817">
+									<DataPath>Список.СтаршаяМедСестра</DataPath>
+									<ContextMenu name="СтаршаяМедСестра3КонтекстноеМеню" id="818"/>
+									<ExtendedTooltip name="СтаршаяМедСестра3РасширеннаяПодсказка" id="819"/>
+								</LabelField>
+								<LabelField name="ЗавОтделением2" id="787">
+									<DataPath>Список.ЗавОтделением</DataPath>
+									<ContextMenu name="ЗавОтделением2КонтекстноеМеню" id="788"/>
+									<ExtendedTooltip name="ЗавОтделением2РасширеннаяПодсказка" id="789"/>
+								</LabelField>
+								<LabelField name="ДатаСогласованияЗавОтделением1" id="775">
+									<DataPath>Список.ДатаСогласованияЗавОтделением</DataPath>
+									<ContextMenu name="ДатаСогласованияЗавОтделением1КонтекстноеМеню" id="776"/>
+									<ExtendedTooltip name="ДатаСогласованияЗавОтделением1РасширеннаяПодсказка" id="777"/>
+								</LabelField>
+								<LabelField name="КлинФармаколог1" id="790">
+									<DataPath>Список.КлинФармаколог</DataPath>
+									<ContextMenu name="КлинФармаколог1КонтекстноеМеню" id="791"/>
+									<ExtendedTooltip name="КлинФармаколог1РасширеннаяПодсказка" id="792"/>
+								</LabelField>
+								<LabelField name="ДатаСогласованияКлинФармакологом" id="778">
+									<DataPath>Список.ДатаСогласованияКлинФармакологом</DataPath>
+									<ContextMenu name="ДатаСогласованияКлинФармакологомКонтекстноеМеню" id="779"/>
+									<ExtendedTooltip name="ДатаСогласованияКлинФармакологомРасширеннаяПодсказка" id="780"/>
+								</LabelField>
+								<LabelField name="Комментарий3" id="793">
+									<DataPath>Список.Комментарий</DataPath>
+									<ContextMenu name="Комментарий3КонтекстноеМеню" id="794"/>
+									<ExtendedTooltip name="Комментарий3РасширеннаяПодсказка" id="795"/>
+								</LabelField>
+								<LabelField name="Организация" id="796">
+									<DataPath>Список.Организация</DataPath>
+									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="797"/>
+									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="798"/>
+								</LabelField>
+								<LabelField name="Ответственный" id="799">
+									<DataPath>Список.Ответственный</DataPath>
+									<ContextMenu name="ОтветственныйКонтекстноеМеню" id="800"/>
+									<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="801"/>
+								</LabelField>
+								<LabelField name="Автор" id="763">
+									<DataPath>Список.Автор</DataPath>
+									<ContextMenu name="АвторКонтекстноеМеню" id="764"/>
+									<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="765"/>
+								</LabelField>
+								<LabelField name="ВидОперации3" id="766">
+									<DataPath>Список.ВидОперации</DataPath>
+									<ContextMenu name="ВидОперации3КонтекстноеМеню" id="767"/>
+									<ExtendedTooltip name="ВидОперации3РасширеннаяПодсказка" id="768"/>
+								</LabelField>
+								<LabelField name="Ссылка" id="760">
+									<DataPath>Список.Ref</DataPath>
+									<ContextMenu name="СсылкаКонтекстноеМеню" id="761"/>
+									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="762"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ТребованиеОтделения</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыТребованийОтделений.Закрыт</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ДосьеРамкаСтрокиЦвет</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗакрытьЗаказСтаршейМедсестрой" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть заказ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть заказ старшей медсестрой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьЗаказСтаршейМедсестрой</Action>
+			<Action>сок_ЗакрытьЗаказСтаршейМедсестройПосле</Action>
+		</Command>
+		<Command name="ККлинФармаколагу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласовать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К клин фармаколагу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ККлинФармаколагу</Action>
+			<Action>сок_ККлинФармаколагуПосле</Action>
+		</Command>
+		<Command name="НаСогласованиеЗавОтделения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На согласование зав отделения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На согласование зав отделения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НаСогласованиеЗавОтделения</Action>
+			<Action>сок_НаСогласованиеЗавОтделенияПосле</Action>
+		</Command>
+		<Command name="ПередатьВАптеку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласовать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в аптеку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВАптеку</Action>
+			<Action>сок_ПередатьВАптекуПосле</Action>
+		</Command>
+		<Command name="СоздатьЗаявкуНаЗакупку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать заявку на закупку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать заявку на закупку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьЗаявкуНаЗакупку</Action>
+			<Action>Расш1_СоздатьЗаявкуНаЗакупкуПосле</Action>
+		</Command>
+		<Command name="ВернутьСтаршейМедСестре" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть старшей мед сестре</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВернутьСтаршейМедСестре</Action>
+		</Command>
+		<Command name="ВернутьЗавОтделением" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть зав. отделением</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть зав отделением</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВернутьЗавОтделением</Action>
+		</Command>
+	</Commands>
+</Form>

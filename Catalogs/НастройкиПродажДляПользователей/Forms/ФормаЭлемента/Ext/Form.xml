@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыExtendedTooltip" id="68"/>
+		</Pages>
+		<UsualGroup name="РМК" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочее место кассира</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>РМК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="РМКExtendedTooltip" id="88"/>
+			<ChildItems>
+				<CheckBoxField name="РМК_Использовать" id="40">
+					<DataPath>Объект.РМК_Использовать</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешить в РМК</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РМК_ИспользоватьКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="РМК_ИспользоватьExtendedTooltip" id="89"/>
+					<Events>
+						<Event name="OnChange">РМК_ИспользоватьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаСписокИОтступ" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список и отступ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список и отступ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСписокИОтступExtendedTooltip" id="90"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОтступ" id="64">
+							<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ДекорацияОтступExtendedTooltip" id="91"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаСписок" id="62">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСписокExtendedTooltip" id="92"/>
+							<ChildItems>
+								<CheckBoxField name="РМК_ВозвратТовара" id="46">
+									<DataPath>Объект.РМК_ВозвратТовара</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РМК_ВозвратТовараКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="РМК_ВозвратТовараExtendedTooltip" id="93"/>
+								</CheckBoxField>
+								<CheckBoxField name="РМК_ВнесениеДенег" id="48">
+									<DataPath>Объект.РМК_ВнесениеДенег</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РМК_ВнесениеДенегКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="РМК_ВнесениеДенегExtendedTooltip" id="94"/>
+								</CheckBoxField>
+								<CheckBoxField name="РМК_ВыемкаДенег" id="50">
+									<DataPath>Объект.РМК_ВыемкаДенег</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выемку денег</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РМК_ВыемкаДенегКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="РМК_ВыемкаДенегExtendedTooltip" id="95"/>
+								</CheckBoxField>
+								<CheckBoxField name="РМК_КорректировкаСтрок" id="52">
+									<DataPath>Объект.РМК_КорректировкаСтрок</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Корректировку строк чека</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РМК_КорректировкаСтрокКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="РМК_КорректировкаСтрокExtendedTooltip" id="96"/>
+								</CheckBoxField>
+								<CheckBoxField name="РМК_Отложить" id="54">
+									<DataPath>Объект.РМК_Отложить</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Откладывать чеки</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РМК_ОтложитьКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="РМК_ОтложитьExtendedTooltip" id="97"/>
+								</CheckBoxField>
+								<CheckBoxField name="РМК_Зарезервировать" id="56">
+									<DataPath>Объект.РМК_Зарезервировать</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Резервирование товаров</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РМК_ЗарезервироватьКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="РМК_ЗарезервироватьExtendedTooltip" id="98"/>
+								</CheckBoxField>
+								<CheckBoxField name="РМК_ОткрытьСмену" id="58">
+									<DataPath>Объект.РМК_ОткрытьСмену</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открытие кассовой смены</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РМК_ОткрытьСменуКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="РМК_ОткрытьСменуExtendedTooltip" id="99"/>
+								</CheckBoxField>
+								<CheckBoxField name="РМК_ЗакрытьСмену" id="60">
+									<DataPath>Объект.РМК_ЗакрытьСмену</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Закрытие кассовой смены</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РМК_ЗакрытьСменуКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="РМК_ЗакрытьСменуExtendedTooltip" id="100"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиПродажДляПользователей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОткрытьФайлДляПросмотра" id="120">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьФайлДляПросмотра</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьФайлДляПросмотраРасширеннаяПодсказка" id="121"/>
+			</Button>
+			<Button name="ФормаПоказатьВсеСобытияСеансаЗапроса" id="136">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПоказатьВсеСобытияСеансаЗапроса</CommandName>
+				<ExtendedTooltip name="ФормаПоказатьВсеСобытияСеансаЗапросаРасширеннаяПодсказка" id="137"/>
+			</Button>
+			<Button name="ФормаОтправитьДокументВРЭМД" id="171">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ОтправитьДокументВРЭМД</CommandName>
+				<ExtendedTooltip name="ФормаОтправитьДокументВРЭМДРасширеннаяПодсказка" id="172"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКод" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Пациент" id="22">
+					<DataPath>Объект.Пациент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПациентКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПациентРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ДокументИнформационнойБазы" id="7">
+			<DataPath>Объект.ДокументИнформационнойБазы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДокументИнформационнойБазыКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДокументИнформационнойБазыРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="Opening">ДокументИнформационнойБазыОткрытие</Event>
+			</Events>
+		</InputField>
+		<InputField name="НомерДокумента" id="10">
+			<DataPath>Объект.НомерДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерДокументаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="НомерДокументаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ИдентификаторДокумента" id="13">
+			<DataPath>Объект.ИдентификаторДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИдентификаторДокументаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИдентификаторДокументаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="emdrId" id="16">
+			<DataPath>Объект.emdrId</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="emdrIdКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="emdrIdРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ХранитьДо" id="25">
+			<DataPath>Объект.ХранитьДо</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ХранитьДоКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ХранитьДоРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="НомерВерсии" id="78">
+			<DataPath>Объект.НомерВерсии</DataPath>
+			<ContextMenu name="НомерВерсииКонтекстноеМеню" id="79"/>
+			<ExtendedTooltip name="НомерВерсииРасширеннаяПодсказка" id="80"/>
+		</InputField>
+		<InputField name="ИдентификаторДокументаИЭМК" id="127">
+			<DataPath>Объект.ИдентификаторДокументаИЭМК</DataPath>
+			<ContextMenu name="ИдентификаторДокументаИЭМККонтекстноеМеню" id="128"/>
+			<ExtendedTooltip name="ИдентификаторДокументаИЭМКРасширеннаяПодсказка" id="129"/>
+		</InputField>
+		<InputField name="ИдентификаторКонтейнераДокументаИЭМК" id="130">
+			<DataPath>Объект.ИдентификаторКонтейнераДокументаИЭМК</DataPath>
+			<ContextMenu name="ИдентификаторКонтейнераДокументаИЭМККонтекстноеМеню" id="131"/>
+			<ExtendedTooltip name="ИдентификаторКонтейнераДокументаИЭМКРасширеннаяПодсказка" id="132"/>
+		</InputField>
+		<UsualGroup name="ГруппаДаты" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа даты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа даты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатыРасширеннаяПодсказка" id="65"/>
+			<ChildItems>
+				<InputField name="ДатаСоздания" id="19">
+					<DataPath>Объект.ДатаСоздания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="ДатаИзмененияСодержимогоДокумента" id="141">
+					<DataPath>Объект.ДатаИзмененияСодержимогоДокумента</DataPath>
+					<ContextMenu name="ДатаИзмененияСодержимогоДокументаКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="ДатаИзмененияСодержимогоДокументаРасширеннаяПодсказка" id="143"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ОтносительныйПутьКФайлуЭМД" id="4">
+			<DataPath>Объект.ОтносительныйПутьКФайлуЭМД</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтносительныйПутьКФайлуЭМДКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОтносительныйПутьКФайлуЭМДРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ФорматФайлаДляРЭМД" id="81">
+			<DataPath>Объект.ФорматФайлаДляРЭМД</DataPath>
+			<ContextMenu name="ФорматФайлаДляРЭМДКонтекстноеМеню" id="82"/>
+			<ExtendedTooltip name="ФорматФайлаДляРЭМДРасширеннаяПодсказка" id="83"/>
+		</InputField>
+		<InputField name="ТипРЭМД" id="84">
+			<DataPath>Объект.ТипРЭМД</DataPath>
+			<ContextMenu name="ТипРЭМДКонтекстноеМеню" id="85"/>
+			<ExtendedTooltip name="ТипРЭМДРасширеннаяПодсказка" id="86"/>
+		</InputField>
+		<CheckBoxField name="ОбновитьДанныеДокументаВРЭМД" id="75">
+			<DataPath>Объект.ОбновитьДанныеДокументаВРЭМД</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбновитьДанныеДокументаВРЭМДКонтекстноеМеню" id="76"/>
+			<ExtendedTooltip name="ОбновитьДанныеДокументаВРЭМДРасширеннаяПодсказка" id="77"/>
+		</CheckBoxField>
+		<CheckBoxField name="Отправить" id="66">
+			<DataPath>Объект.Отправить</DataPath>
+			<Visible>false</Visible>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтправитьКонтекстноеМеню" id="67"/>
+			<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="68"/>
+		</CheckBoxField>
+		<CheckBoxField name="ОтправитьВИЭМК" id="138">
+			<DataPath>Объект.ОтправитьВИЭМК</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтправитьВИЭМККонтекстноеМеню" id="139"/>
+			<ExtendedTooltip name="ОтправитьВИЭМКРасширеннаяПодсказка" id="140"/>
+		</CheckBoxField>
+		<Pages name="ГруппаСтраницы" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<Page name="ГруппаОшибка" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ошибка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаОшибкаРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<InputField name="ТекстПоследнейОшибки" id="28">
+							<DataPath>Ошибка</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текст последней ошибки РЭМД</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Height>4</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ТекстПоследнейОшибкиКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ТекстПоследнейОшибкиРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="ТекстПоследнейОшибкиИЭМК" id="122">
+							<DataPath>Объект.ТекстПоследнейОшибкиИЭМК</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ТекстПоследнейОшибкиИЭМККонтекстноеМеню" id="123"/>
+							<ExtendedTooltip name="ТекстПоследнейОшибкиИЭМКРасширеннаяПодсказка" id="124"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПодписи" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подписи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПодписиРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Table name="ЭлектронныеПодписиЭМД" id="31">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ЭлектронныеПодписиЭМД</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЭлектронныеПодписиЭМДКонтекстноеМеню" id="32"/>
+							<AutoCommandBar name="ЭлектронныеПодписиЭМДКоманднаяПанель" id="33"/>
+							<ExtendedTooltip name="ЭлектронныеПодписиЭМДРасширеннаяПодсказка" id="34"/>
+							<SearchStringAddition name="ЭлектронныеПодписиЭМДСтрокаПоиска" id="35">
+								<AdditionSource>
+									<Item>ЭлектронныеПодписиЭМД</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлектронныеПодписиЭМДСтрокаПоискаКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="ЭлектронныеПодписиЭМДСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЭлектронныеПодписиЭМДСостояниеПросмотра" id="38">
+								<AdditionSource>
+									<Item>ЭлектронныеПодписиЭМД</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлектронныеПодписиЭМДСостояниеПросмотраКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="ЭлектронныеПодписиЭМДСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЭлектронныеПодписиЭМДУправлениеПоиском" id="41">
+								<AdditionSource>
+									<Item>ЭлектронныеПодписиЭМД</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлектронныеПодписиЭМДУправлениеПоискомКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="ЭлектронныеПодписиЭМДУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЭлектронныеПодписиЭМДНомерСтроки" id="44">
+									<DataPath>Объект.ЭлектронныеПодписиЭМД.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭлектронныеПодписиЭМДНомерСтрокиКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ЭлектронныеПодписиЭМДНомерСтрокиРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+								<InputField name="ЭлектронныеПодписиЭМДСотрудник" id="53">
+									<DataPath>Объект.ЭлектронныеПодписиЭМД.Сотрудник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭлектронныеПодписиЭМДСотрудникКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ЭлектронныеПодписиЭМДСотрудникРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="ЭлектронныеПодписиЭМДОтносительныйПутьКФайлуПодписиЭМД" id="47">
+									<DataPath>Объект.ЭлектронныеПодписиЭМД.ОтносительныйПутьКФайлуПодписиЭМД</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭлектронныеПодписиЭМДОтносительныйПутьКФайлуПодписиЭМДКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ЭлектронныеПодписиЭМДОтносительныйПутьКФайлуПодписиЭМДРасширеннаяПодсказка" id="49"/>
+								</InputField>
+								<InputField name="ЭлектронныеПодписиЭМДРольРЭМД" id="69">
+									<DataPath>Объект.ЭлектронныеПодписиЭМД.РольРЭМД</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭлектронныеПодписиЭМДРольРЭМДКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ЭлектронныеПодписиЭМДРольРЭМДРасширеннаяПодсказка" id="71"/>
+								</InputField>
+								<CheckBoxField name="ЭлектронныеПодписиЭМДЭтоПодписьМО" id="72">
+									<DataPath>Объект.ЭлектронныеПодписиЭМД.ЭтоПодписьМО</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЭлектронныеПодписиЭМДЭтоПодписьМОКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ЭлектронныеПодписиЭМДЭтоПодписьМОРасширеннаяПодсказка" id="74"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСвязанныеДокументы" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Связанные документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа связанные документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСвязанныеДокументыРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<Table name="СвязанныеДокументы" id="89">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СвязанныеДокументы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СвязанныеДокументыКонтекстноеМеню" id="90"/>
+							<AutoCommandBar name="СвязанныеДокументыКоманднаяПанель" id="91"/>
+							<ExtendedTooltip name="СвязанныеДокументыРасширеннаяПодсказка" id="92"/>
+							<SearchStringAddition name="СвязанныеДокументыСтрокаПоиска" id="93">
+								<AdditionSource>
+									<Item>СвязанныеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвязанныеДокументыСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="СвязанныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СвязанныеДокументыСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>СвязанныеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СвязанныеДокументыСостояниеПросмотраКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="СвязанныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СвязанныеДокументыУправлениеПоиском" id="99">
+								<AdditionSource>
+									<Item>СвязанныеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СвязанныеДокументыУправлениеПоискомКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="СвязанныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СвязанныеДокументыНомерСтроки" id="102">
+									<DataPath>Объект.СвязанныеДокументы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СвязанныеДокументыНомерСтрокиКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="СвязанныеДокументыНомерСтрокиРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<InputField name="СвязанныеДокументыemdrId" id="105">
+									<DataPath>Объект.СвязанныеДокументы.emdrId</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СвязанныеДокументыemdrIdКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="СвязанныеДокументыemdrIdРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="СвязанныеДокументыКодТипаРЭМД" id="108">
+									<DataPath>Объект.СвязанныеДокументы.КодТипаРЭМД</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СвязанныеДокументыКодТипаРЭМДКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="СвязанныеДокументыКодТипаРЭМДРасширеннаяПодсказка" id="110"/>
+								</InputField>
+								<InputField name="СвязанныеДокументыНомерВерсии" id="111">
+									<DataPath>Объект.СвязанныеДокументы.НомерВерсии</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СвязанныеДокументыНомерВерсииКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="СвязанныеДокументыНомерВерсииРасширеннаяПодсказка" id="113"/>
+								</InputField>
+								<InputField name="СвязанныеДокументыТипСвязи" id="114">
+									<DataPath>Объект.СвязанныеДокументы.ТипСвязи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СвязанныеДокументыТипСвязиКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="СвязанныеДокументыТипСвязиРасширеннаяПодсказка" id="116"/>
+								</InputField>
+								<InputField name="СвязанныеДокументыКодOIDОрганизацииВладельца" id="117">
+									<DataPath>Объект.СвязанныеДокументы.КодOIDОрганизацииВладельца</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СвязанныеДокументыКодOIDОрганизацииВладельцаКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="СвязанныеДокументыКодOIDОрганизацииВладельцаРасширеннаяПодсказка" id="119"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИсторияИдентификаторов" id="144">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История идентификаторов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История идентификаторов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИсторияИдентификаторовРасширеннаяПодсказка" id="145"/>
+					<ChildItems>
+						<Table name="ИсторияИдентификаторов" id="146">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ИсторияИдентификаторов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИсторияИдентификаторовКонтекстноеМеню" id="147"/>
+							<AutoCommandBar name="ИсторияИдентификаторовКоманднаяПанель" id="148"/>
+							<ExtendedTooltip name="ИсторияИдентификаторовРасширеннаяПодсказка" id="149"/>
+							<SearchStringAddition name="ИсторияИдентификаторовСтрокаПоиска" id="150">
+								<AdditionSource>
+									<Item>ИсторияИдентификаторов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИдентификаторовСтрокаПоискаКонтекстноеМеню" id="151"/>
+								<ExtendedTooltip name="ИсторияИдентификаторовСтрокаПоискаРасширеннаяПодсказка" id="152"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсторияИдентификаторовСостояниеПросмотра" id="153">
+								<AdditionSource>
+									<Item>ИсторияИдентификаторов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИдентификаторовСостояниеПросмотраКонтекстноеМеню" id="154"/>
+								<ExtendedTooltip name="ИсторияИдентификаторовСостояниеПросмотраРасширеннаяПодсказка" id="155"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсторияИдентификаторовУправлениеПоиском" id="156">
+								<AdditionSource>
+									<Item>ИсторияИдентификаторов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсторияИдентификаторовУправлениеПоискомКонтекстноеМеню" id="157"/>
+								<ExtendedTooltip name="ИсторияИдентификаторовУправлениеПоискомРасширеннаяПодсказка" id="158"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ИсторияИдентификаторовНомерСтроки" id="159">
+									<DataPath>Объект.ИсторияИдентификаторов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсторияИдентификаторовНомерСтрокиКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ИсторияИдентификаторовНомерСтрокиРасширеннаяПодсказка" id="161"/>
+								</LabelField>
+								<InputField name="ИсторияИдентификаторовemdrId" id="162">
+									<DataPath>Объект.ИсторияИдентификаторов.emdrId</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсторияИдентификаторовemdrIdКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ИсторияИдентификаторовemdrIdРасширеннаяПодсказка" id="164"/>
+								</InputField>
+								<InputField name="ИсторияИдентификаторовИдентификаторДокумента" id="165">
+									<DataPath>Объект.ИсторияИдентификаторов.ИдентификаторДокумента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсторияИдентификаторовИдентификаторДокументаКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ИсторияИдентификаторовИдентификаторДокументаРасширеннаяПодсказка" id="167"/>
+								</InputField>
+								<InputField name="ИсторияИдентификаторовДатаПомещенияВИсторию" id="168">
+									<DataPath>Объект.ИсторияИдентификаторов.ДатаПомещенияВИсторию</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсторияИдентификаторовДатаПомещенияВИсториюКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ИсторияИдентификаторовДатаПомещенияВИсториюРасширеннаяПодсказка" id="170"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelField name="СтатусРегистрацииДокументаВРЭМД" id="133">
+			<DataPath>СтатусРегистрацииДокументаВРЭМД</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="СтатусРегистрацииДокументаВРЭМДКонтекстноеМеню" id="134"/>
+			<ExtendedTooltip name="СтатусРегистрацииДокументаВРЭМДРасширеннаяПодсказка" id="135"/>
+			<Events>
+				<Event name="Click">СтатусРегистрацииДокументаВРЭМДНажатие</Event>
+			</Events>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ФедеральныеВебСервисыЭМД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Ошибка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусРегистрацииДокументаВРЭМД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус регистрации документа в РЭМД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьФайлДляПросмотра" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл для просмотра</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл для просмотра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФайлДляПросмотра</Action>
+		</Command>
+		<Command name="ПоказатьВсеСобытияСеансаЗапроса" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать все события ЖР</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать все события журнала регистрации по идентификатору документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EventLog</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьВсеСобытияСеансаЗапроса</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОтправитьДокументВРЭМД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать документ в РЭМД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить документ ВРЭМД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьДокументВРЭМД</Action>
+		</Command>
+	</Commands>
+</Form>

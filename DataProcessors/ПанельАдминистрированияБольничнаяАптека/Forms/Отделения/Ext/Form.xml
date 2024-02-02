@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="1647">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="1648"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="1573">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление параметрами работы с отделениями.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="1574"/>
+					<ExtendedTooltip name="ОписаниеРазделаExtendedTooltip" id="1599"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="1649">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСправкаРасширеннаяПодсказка" id="1650"/>
+					<ChildItems>
+						<Button name="Справка" id="1651">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="1652"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтделения" id="1576">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отделения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отделения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтделенияExtendedTooltip" id="1600"/>
+			<ChildItems>
+				<CheckBoxField name="ВестиУчетВОтделениях" id="1577">
+					<DataPath>НаборКонстант.ВестиУчетВОтделениях</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учет в отделениях</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВестиУчетВОтделенияхКонтекстноеМеню" id="1578"/>
+					<ExtendedTooltip name="ВестиУчетВОтделенияхExtendedTooltip" id="1603">
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Возможность ведения требований отделений и назначений врачей.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">ВестиУчетВОтделенияхПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаТребованияОтделений" id="1631">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требования отделений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа требования отделений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаТребованияОтделенийРасширеннаяПодсказка" id="1632"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСтатусыТребованийОтделенийИспользоватьПричиныОтменыТребований" id="1633">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа статусы требований отделений использовать причины отмены требований</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа статусы требований отделений использовать причины отмены требований</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтатусыТребованийОтделенийИспользоватьПричиныОтменыТребованийРасширеннаяПодсказка" id="1634"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИспользоватьСтатусыТребованийОтделений" id="1677">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа использовать статусы требований отделений</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа использовать статусы требований отделений</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИспользоватьСтатусыТребованийОтделенийРасширеннаяПодсказка" id="1678"/>
+									<ChildItems>
+										<CheckBoxField name="ИспользоватьСтатусыТребованийОтделений" id="1625">
+											<DataPath>НаборКонстант.ИспользоватьСтатусыТребованийОтделений</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Статусы требований отделений</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьСтатусыТребованийОтделенийКонтекстноеМеню" id="1626"/>
+											<ExtendedTooltip name="ИспользоватьСтатусыТребованийОтделенийРасширеннаяПодсказка" id="1627">
+												<HorizontalStretch>true</HorizontalStretch>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Более детальный контроль процесса обработки требований отделений.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ИспользоватьСтатусыТребованийОтделенийПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаНеЗакрыватьТребованияОтделенийБезПолнойОтгрузки" id="1679">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа не закрывать требования отделений без полной отгрузки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа не закрывать требования отделений без полной отгрузки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНеЗакрыватьТребованияОтделенийБезПолнойОтгрузкиРасширеннаяПодсказка" id="1680"/>
+									<ChildItems>
+										<CheckBoxField name="НеЗакрыватьТребованияОтделенийБезПолнойОтгрузки" id="1674">
+											<DataPath>НаборКонстант.НеЗакрыватьТребованияОтделенийБезПолнойОтгрузки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Не закрывать частично отгруженные требования отделений</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="НеЗакрыватьТребованияОтделенийБезПолнойОтгрузкиКонтекстноеМеню" id="1675"/>
+											<ExtendedTooltip name="НеЗакрыватьТребованияОтделенийБезПолнойОтгрузкиРасширеннаяПодсказка" id="1676">
+												<HorizontalStretch>true</HorizontalStretch>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Установка запрета на закрытие требований отделений, отгруженных не полностью.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">НеЗакрыватьТребованияОтделенийБезПолнойОтгрузкиПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИспользоватьПричиныОтменыТребованийОтделений" id="1681">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать причины отмены требований отделений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать причины отмены требований отделений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьПричиныОтменыТребованийОтделенийРасширеннаяПодсказка" id="1682"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьПричиныОтменыТребованийОтделений" id="1617">
+									<DataPath>НаборКонстант.ИспользоватьПричиныОтменыТребованийОтделений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причины отмены требований отделений</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПричиныОтменыТребованийОтделенийКонтекстноеМеню" id="1618"/>
+									<ExtendedTooltip name="ИспользоватьПричиныОтменыТребованийОтделенийРасширеннаяПодсказка" id="1619">
+										<HorizontalStretch>true</HorizontalStretch>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ведение списка причин отмены требований отделений.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьПричиныОтменыТребованийОтделенийПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИспользоватьСогласованиеТребованийОтделений" id="1588">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать согласование требований отделений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать согласование требований отделений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьСогласованиеТребованийОтделенийExtendedTooltip" id="1605"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьБизнесПроцессыТребованийОтделений" id="1589">
+									<DataPath>НаборКонстант.ИспользоватьБизнесПроцессыТребованийОтделений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Согласование и исполнение требований отделений</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьБизнесПроцессыТребованийОтделенийКонтекстноеМеню" id="1590"/>
+									<ExtendedTooltip name="ИспользоватьБизнесПроцессыТребованийОтделенийExtendedTooltip" id="1607">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Возможность использования бизнес-процессов согласования и исполнения требований отделений.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьБизнесПроцессыТребованийОтделенийПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМедицинскиеКарты" id="1659">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Медицинские карты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа медицинские карты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>NormalSeparation</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ExtendedTooltip name="ГруппаМедицинскиеКартыРасширеннаяПодсказка" id="1660"/>
+					<ChildItems>
+						<CheckBoxField name="ПомещатьЗакрытыеМедкартыВАрхивАвтоматически" id="1661">
+							<DataPath>НаборКонстант.ПомещатьЗакрытыеМедкартыВАрхивАвтоматически</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Архивировать автоматически</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПомещатьЗакрытыеМедкартыВАрхивАвтоматическиКонтекстноеМеню" id="1662"/>
+							<ExtendedTooltip name="ПомещатьЗакрытыеМедкартыВАрхивАвтоматическиРасширеннаяПодсказка" id="1663">
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Возможность архивации медицинских карт регламентным заданием.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПомещатьЗакрытыеМедкартыВАрхивАвтоматическиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаАрхивироватьЧерез" id="1664">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа архивировать через</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаАрхивироватьЧерезРасширеннаяПодсказка" id="1665">
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Автоматическая архивация медицинских карт по истечению указанного количества дней.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<InputField name="КоличествоДнейДоПомещенияЗакрытыхМедкартВАрхив" id="1666">
+									<DataPath>НаборКонстант.КоличествоДнейДоПомещенияЗакрытыхМедкартВАрхив</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Архивировать через</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="КоличествоДнейДоПомещенияЗакрытыхМедкартВАрхивКонтекстноеМеню" id="1667"/>
+									<ExtendedTooltip name="КоличествоДнейДоПомещенияЗакрытыхМедкартВАрхивРасширеннаяПодсказка" id="1668"/>
+									<Events>
+										<Event name="OnChange">КоличествоДнейДоПомещенияЗакрытыхМедкартВАрхивПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьДней" id="1669">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дн.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьДнейКонтекстноеМеню" id="1670"/>
+									<ExtendedTooltip name="НадписьДнейРасширеннаяПодсказка" id="1671"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВестиСкладскойУчетВОтделениях" id="1583">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внутреннее товародвижение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вести складской учет в отделениях</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаВестиСкладскойУчетВОтделенияхExtendedTooltip" id="1610"/>
+					<ChildItems>
+						<CheckBoxField name="ВестиСкладскойУчетВОтделениях" id="1584">
+							<DataPath>НаборКонстант.ВестиСкладскойУчетВОтделениях</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Складской учет в отделениях</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВестиСкладскойУчетВОтделенияхКонтекстноеМеню" id="1585"/>
+							<ExtendedTooltip name="ВестиСкладскойУчетВОтделенияхExtendedTooltip" id="1611">
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Возможность ведения складских запасов отделений. Оформление внутренних потреблений товаров, списание по исполненным назначениям врачей, инвентаризация складских запасов, регистрация излишков и недостачи.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ВестиСкладскойУчетВОтделенияхПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьПеремещенияТоваровМеждуОтделениями" id="1690">
+							<DataPath>НаборКонстант.ИспользоватьПеремещенияТоваровМеждуОтделениями</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перемещение товаров</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПеремещенияТоваровМеждуОтделениямиКонтекстноеМеню" id="1691"/>
+							<ExtendedTooltip name="ИспользоватьПеремещенияТоваровМеждуОтделениямиРасширеннаяПодсказка" id="1692">
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Оформление документов перемещения товаров между отделениями.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьПеремещенияТоваровМеждуОтделениямиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьСтатусыВнутреннихПотребленийТоваров" id="1641">
+							<DataPath>НаборКонстант.ИспользоватьСтатусыВнутреннихПотребленийТоваровВОтделениях</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статусы внутренних потреблений товаров</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСтатусыВнутреннихПотребленийТоваровКонтекстноеМеню" id="1642"/>
+							<ExtendedTooltip name="ИспользоватьСтатусыВнутреннихПотребленийТоваровРасширеннаяПодсказка" id="1643">
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Более детальный контроль процесса отгрузки товаров. 
+Статусы: "К отгрузке", "Отгружено".</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьСтатусыВнутреннихПотребленийТоваровПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьСтатусыВозвратовТоваровИзОтделения" id="1656">
+							<DataPath>НаборКонстант.ИспользоватьСтатусыВозвратовТоваровИзОтделения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статусы возврата товаров из отделения</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСтатусыВозвратовТоваровИзОтделенияКонтекстноеМеню" id="1657"/>
+							<ExtendedTooltip name="ИспользоватьСтатусыВозвратовТоваровИзОтделенияРасширеннаяПодсказка" id="1658">
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Более детальный контроль процесса возврата товаров из отделения. Статусы: "К отгрузке", "Отгружено", "Принято".</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьСтатусыВозвратовТоваровИзОтделенияПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьСтатусыРазмещенияТоваровПоМестамХраненияВОтделении" id="1687">
+							<DataPath>НаборКонстант.ИспользоватьСтатусыРазмещенияТоваровПоМестамХраненияВОтделении</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статусы размещения товаров по местам хранения</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСтатусыРазмещенияТоваровПоМестамХраненияВОтделенииКонтекстноеМеню" id="1688"/>
+							<ExtendedTooltip name="ИспользоватьСтатусыРазмещенияТоваровПоМестамХраненияВОтделенииРасширеннаяПодсказка" id="1689">
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Более детальный контроль процесса размещения по местам хранения. Статусы: "К отгрузке", "Принято".</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьСтатусыРазмещенияТоваровПоМестамХраненияВОтделенииПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ВестиСкладскойУчетВОтделениях</Field>
+				<Field>НаборКонстант.ВестиУчетВОтделениях</Field>
+				<Field>НаборКонстант.ИспользоватьБизнесПроцессыТребованийОтделений</Field>
+				<Field>НаборКонстант.ИспользоватьПеремещенияТоваровМеждуОтделениями</Field>
+				<Field>НаборКонстант.ИспользоватьПричиныОтменыТребованийОтделений</Field>
+				<Field>НаборКонстант.ИспользоватьСтатусыВнутреннихПотребленийТоваровВОтделениях</Field>
+				<Field>НаборКонстант.ИспользоватьСтатусыВозвратовТоваровИзОтделения</Field>
+				<Field>НаборКонстант.ИспользоватьСтатусыРазмещенияТоваровПоМестамХраненияВОтделении</Field>
+				<Field>НаборКонстант.ИспользоватьСтатусыТребованийОтделений</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ОбновитьИнтерфейс" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить интерфейс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>
