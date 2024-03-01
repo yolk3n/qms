@@ -26,14 +26,31 @@
 
 КонецФункции
 
-Функция ПолучитьXMLДляCreateUpdateProductWMHS(Номенклатура) Экспорт 
+Функция СоздатьЗаписатьВXMLОбъектEnvelopeXDTO(ТипEnvelope, ОбъектBodyXDTO)
+	ОбъектEnvelopeXDTO = ФабрикаXDTO.Создать(ТипEnvelope);
+	ОбъектEnvelopeXDTO.Body.Добавить(ОбъектBodyXDTO);
 	
 	ЗаписьXML = Новый ЗаписьXML();
     ЗаписьXML.УстановитьСтроку();
+	ФабрикаXDTO.ЗаписатьXML(ЗаписьXML, ОбъектEnvelopeXDTO);
+	ДанныеXML = ЗаписьXML.Закрыть();
 	
+	Возврат ДанныеXML; 
+КонецФункции
+
+Функция ПолучитьСтруктуруТиповEnvelopeBody()	
 	ТипEnvelope = ФабрикаXDTO.Тип("http://schemas.xmlsoap.org/soap/envelope/", "Envelope"); 
 	ТипBody = ТипEnvelope.Свойства.Получить("Body").Тип;
-	ТипCreateUpdateProductWMHS = ТипBody.Свойства.Получить("CreateUpdateProductWMHS").Тип;
+	СтруктураТиповEnvelopeBody = Новый Структура;
+	СтруктураТиповEnvelopeBody.Вставить("ТипEnvelope", ТипEnvelope);
+	СтруктураТиповEnvelopeBody.Вставить("ТипBody", ТипBody);
+	Возврат СтруктураТиповEnvelopeBody;
+КонецФункции
+
+Функция ПолучитьXMLДляCreateUpdateProductWMHS(Номенклатура)  
+	
+	СтруктураТиповEnvelopeBody = ПолучитьСтруктуруТиповEnvelopeBody();
+	ТипCreateUpdateProductWMHS = СтруктураТиповEnvelopeBody.ТипBody.Свойства.Получить("CreateUpdateProductWMHS").Тип;
 	ТипProduct = ТипCreateUpdateProductWMHS.Свойства.Получить("Product").Тип;
 	
 	НоменклатураXDTO = ФабрикаXDTO.Создать(ТипProduct);
@@ -63,27 +80,17 @@
 	ОбъектXDTOCreateUpdateProductWMHS.RequestName = "";
 	ОбъектXDTOCreateUpdateProductWMHS.pIDo = "Хадасса"; 
 	
-	ОбъектBodyXDTO = ФабрикаXDTO.Создать(ТипBody); 
+	ОбъектBodyXDTO = ФабрикаXDTO.Создать(СтруктураТиповEnvelopeBody.ТипBody); 
 	ОбъектBodyXDTO.CreateUpdateProductWMHS = ОбъектXDTOCreateUpdateProductWMHS;
 	 
-	ОбъектEnvelopeXDTO = ФабрикаXDTO.Создать(ТипEnvelope);
-	ОбъектEnvelopeXDTO.Body.Добавить(ОбъектBodyXDTO);
-	
-	ФабрикаXDTO.ЗаписатьXML(ЗаписьXML, ОбъектEnvelopeXDTO);
-	ДанныеXML = ЗаписьXML.Закрыть();
-	
-	Возврат ДанныеXML;
-	
+	Возврат СоздатьЗаписатьВXMLОбъектEnvelopeXDTO(СтруктураТиповEnvelopeBody.ТипEnvelope, ОбъектBodyXDTO)
+		
 КонецФункции
 
-Функция ПолучитьXMLДляVerifyChangeUnitRatioWMHS(НоменклатураВладельца) Экспорт
+Функция ПолучитьXMLДляVerifyChangeUnitRatioWMHS(НоменклатураВладельца) 
 	
-	ЗаписьXML = Новый ЗаписьXML();
-    ЗаписьXML.УстановитьСтроку();
-	
-	ТипEnvelope = ФабрикаXDTO.Тип("http://schemas.xmlsoap.org/soap/envelope/", "Envelope"); 
-	ТипBody = ТипEnvelope.Свойства.Получить("Body").Тип;
-	ТипVerifyChangeUnitRatioWMHS = ТипBody.Свойства.Получить("VerifyChangeUnitRatioWMHS").Тип;
+	СтруктураТиповEnvelopeBody = ПолучитьСтруктуруТиповEnvelopeBody();
+	ТипVerifyChangeUnitRatioWMHS = СтруктураТиповEnvelopeBody.ТипBody.Свойства.Получить("VerifyChangeUnitRatioWMHS").Тип;
 	
 	ПроверкаУпаковкиXDTO = ФабрикаXDTO.Создать(ТипVerifyChangeUnitRatioWMHS); 
 	
@@ -91,46 +98,31 @@
 	ПроверкаУпаковкиXDTO.ProductCode = НоменклатураВладельца.ЭлементКАТ.Код;
 	ПроверкаУпаковкиXDTO.RequestName = "";  
 	
-	ОбъектBodyXDTO = ФабрикаXDTO.Создать(ТипBody); 
+	ОбъектBodyXDTO = ФабрикаXDTO.Создать(СтруктураТиповEnvelopeBody.ТипBody); 
 	ОбъектBodyXDTO.VerifyChangeUnitRatioWMHS = ПроверкаУпаковкиXDTO;
 	 
-	ОбъектEnvelopeXDTO = ФабрикаXDTO.Создать(ТипEnvelope);
-	ОбъектEnvelopeXDTO.Body.Добавить(ОбъектBodyXDTO);
-	
-	ФабрикаXDTO.ЗаписатьXML(ЗаписьXML, ОбъектEnvelopeXDTO);
-	ДанныеXML = ЗаписьXML.Закрыть();
-	
-	Возврат ДанныеXML;
+	Возврат СоздатьЗаписатьВXMLОбъектEnvelopeXDTO(СтруктураТиповEnvelopeBody.ТипEnvelope, ОбъектBodyXDTO)
 	
 КонецФункции 
 
-Функция ПолучитьXMLДляCreatePresenceAPTOSTWMHS(НоменклатураВладельца) Экспорт
+Функция ПолучитьXMLДляCreatePresenceAPTOSTWMHS(НоменклатураВладельца) 
 	
-	ЗаписьXML = Новый ЗаписьXML();
-    ЗаписьXML.УстановитьСтроку();
-	
-	ТипEnvelope = ФабрикаXDTO.Тип("http://schemas.xmlsoap.org/soap/envelope/", "Envelope"); 
-	ТипBody = ТипEnvelope.Свойства.Получить("Body").Тип;
-	ТипCreatePresenceAPTOSTWMHS = ТипBody.Свойства.Получить("pCreatePresenceAPTOSTWMHS").Тип;
+	СтруктураТиповEnvelopeBody = ПолучитьСтруктуруТиповEnvelopeBody();
+	ТипCreatePresenceAPTOSTWMHS = СтруктураТиповEnvelopeBody.ТипBody.Свойства.Получить("pCreatePresenceAPTOSTWMHS").Тип;
 	
 	ОстаткиXDTO = ФабрикаXDTO.Создать(ТипCreatePresenceAPTOSTWMHS); 
 	
 	//... 
 	
-	ОбъектBodyXDTO = ФабрикаXDTO.Создать(ТипBody); 
+	ОбъектBodyXDTO = ФабрикаXDTO.Создать(СтруктураТиповEnvelopeBody.ТипBody); 
 	ОбъектBodyXDTO.pCreatePresenceAPTOSTWMHS = ОстаткиXDTO;
 	 
-	ОбъектEnvelopeXDTO = ФабрикаXDTO.Создать(ТипEnvelope);
-	ОбъектEnvelopeXDTO.Body.Добавить(ОбъектBodyXDTO);
-	
-	ФабрикаXDTO.ЗаписатьXML(ЗаписьXML, ОбъектEnvelopeXDTO);
-	ДанныеXML = ЗаписьXML.Закрыть();
-	
-	Возврат ДанныеXML;
+	Возврат СоздатьЗаписатьВXMLОбъектEnvelopeXDTO(СтруктураТиповEnvelopeBody.ТипEnvelope, ОбъектBodyXDTO)
 	
 КонецФункции
 
-
+Процедура ЗаданиеОбмена() Экспорт
+КонецПроцедуры
 
 // Функция - Получает код объекта 
 // Параметры:
