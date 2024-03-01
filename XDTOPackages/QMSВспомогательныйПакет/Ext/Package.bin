@@ -2,17 +2,17 @@
 	<property name="CloseDepartmentPeriodIWMHS">
 		<typeDef xsi:type="ObjectType">
 			<property name="pIDo" type="xs:string"/>
-			<property name="DepCode" type="xs:unsignedByte"/>
+			<property name="DepCode" type="xs:string"/>
 			<property name="Date" type="xs:date"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="CloseDepartmentPeriodWMHS">
 		<typeDef xsi:type="ObjectType">
 			<property name="pIDo" type="xs:string"/>
-			<property name="DepCode" type="xs:unsignedByte"/>
+			<property name="DepCode" type="xs:string"/>
 			<property name="Date" type="xs:date"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="CreateDocumentWMHS">
@@ -29,29 +29,29 @@
 				<typeDef xsi:type="ObjectType">
 					<property name="ProductTransferStructure">
 						<typeDef xsi:type="ObjectType">
-							<property name="ItemsKey" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="ItemsKey" type="xs:string" lowerBound="1" form="Attribute"/>
 							<property name="Category">
 								<typeDef xsi:type="ObjectType">
-									<property name="ProductCode" type="xs:unsignedLong"/>
+									<property name="ProductCode" type="xs:string"/>
 									<property name="Name" type="xs:string"/>
 									<property name="ESKLP" type="xs:string"/>
 									<property name="UnitCodeMax" type="xs:string"/>
 									<property name="UnitCodeMin" type="xs:string"/>
-									<property name="Ration" type="xs:unsignedByte"/>
+									<property name="Ration" type="xs:double"/>
 									<property name="Category" type="xs:string"/>
 									<property name="SubCategory" type="xs:string"/>
 								</typeDef>
 							</property>
 							<property name="ProductSerial" type="xs:string"/>
 							<property name="Barcode" type="xs:string"/>
-							<property name="Price" type="xs:decimal"/>
-							<property name="NumMin" type="xs:unsignedByte"/>
-							<property name="NumMax" type="xs:unsignedByte"/>
+							<property name="Price" type="xs:double"/>
+							<property name="NumMin" type="xs:double"/>
+							<property name="NumMax" type="xs:double"/>
 							<property name="ValidityPeriod" type="xs:date"/>
 							<property name="Finance">
 								<typeDef xsi:type="ObjectType">
-									<property name="FinanceCode" type="xs:unsignedByte"/>
-									<property name="FinanceName" type="xs:unsignedByte"/>
+									<property name="FinanceCode" type="xs:string"/>
+									<property name="FinanceName" type="xs:string"/>
 								</typeDef>
 							</property>
 							<property name="KSU" type="xs:string"/>
@@ -59,9 +59,9 @@
 								<typeDef xsi:type="ObjectType">
 									<property name="MDLPStructure">
 										<typeDef xsi:type="ObjectType">
-											<property name="MDLPKey" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+											<property name="MDLPKey" type="xs:string" lowerBound="1" form="Attribute"/>
 											<property name="SGTIN" type="xs:string"/>
-											<property name="NumMark" type="xs:unsignedByte"/>
+											<property name="NumMark" type="xs:double"/>
 										</typeDef>
 									</property>
 								</typeDef>
@@ -70,7 +70,7 @@
 					</property>
 				</typeDef>
 			</property>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="CreateUpdateFinanceWMHS">
@@ -78,33 +78,33 @@
 			<property name="pIDo" type="xs:string"/>
 			<property name="Finance">
 				<typeDef xsi:type="ObjectType">
-					<property name="FinanceCode" type="xs:unsignedByte"/>
+					<property name="FinanceCode" type="xs:string"/>
 					<property name="FinanceName" type="xs:string"/>
 				</typeDef>
 			</property>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="CreateUpdateProductWMHS">
 		<typeDef xsi:type="ObjectType">
-			<property name="pIDo" type="xs:time"/>
+			<property name="pIDo" type="xs:string"/>
 			<property name="Product">
 				<typeDef xsi:type="ObjectType">
-					<property name="ProductCode" type="xs:unsignedLong"/>
+					<property name="ProductCode" type="xs:string"/>
 					<property name="Name" type="xs:string"/>
-					<property name="ESKLP" type="xs:anyType"/>
-					<property name="RLS" type="xs:unsignedInt"/>
+					<property name="ESKLP" type="xs:string"/>
+					<property name="RLS" type="xs:string"/>
 					<property name="UnitCodeMax" type="xs:string"/>
 					<property name="UnitCodeMin" type="xs:string"/>
-					<property name="Ration" type="xs:unsignedByte"/>
-					<property name="BarcodeMain" type="xs:unsignedLong"/>
+					<property name="Ration" type="xs:double"/>
+					<property name="BarcodeMain" type="xs:string"/>
 					<property name="Category" type="xs:string"/>
 					<property name="SubCategory" type="xs:string"/>
-					<property name="PKU" type="xs:unsignedByte"/>
+					<property name="PKU" type="xs:string"/>
 					<property name="ProductGroup" type="xs:string"/>
 				</typeDef>
 			</property>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="DeleteDocumentWMHS">
@@ -113,7 +113,7 @@
 			<property name="DocNum" type="xs:string"/>
 			<property name="StoreCod" type="xs:string"/>
 			<property name="DocDate" type="xs:date"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="GetAPTRWMHS">
@@ -121,9 +121,9 @@
 			<property name="pIDo" type="xs:string"/>
 			<property name="DateBegin" type="xs:date"/>
 			<property name="DateEnd" type="xs:date"/>
-			<property name="sdstDoc" type="xs:unsignedByte"/>
+			<property name="sdstDoc" type="xs:string"/>
 			<property name="DepCodeFrom" type="xs:string"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="GetDEPAWMHS">
@@ -131,37 +131,37 @@
 			<property name="pIDo" type="xs:string"/>
 			<property name="DateBegin" type="xs:date"/>
 			<property name="DateEnd" type="xs:date"/>
-			<property name="sdstDoc" type="xs:unsignedByte"/>
+			<property name="sdstDoc" type="xs:string"/>
 			<property name="DepCodeFrom" type="xs:string"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="GetDepartmentListWMHS">
 		<typeDef xsi:type="ObjectType">
 			<property name="pIDo" type="xs:string"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="GetFinanceListWMHS">
 		<typeDef xsi:type="ObjectType">
 			<property name="pIDo" type="xs:string"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="GetPresenceAndMovementOSTWMHS">
 		<typeDef xsi:type="ObjectType">
 			<property name="pIDo" type="xs:string"/>
-			<property name="DepCode" type="xs:unsignedByte"/>
+			<property name="DepCode" type="xs:string"/>
 			<property name="DepStoreCode" type="xs:string"/>
 			<property name="Date" type="xs:date"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="VerifyChangeUnitRatioWMHS">
 		<typeDef xsi:type="ObjectType">
 			<property name="pIDo" type="xs:string"/>
-			<property name="ProductCode" type="xs:unsignedLong"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="ProductCode" type="xs:string"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="VerifyDocumentMinusWMHS">
@@ -169,7 +169,7 @@
 			<property name="pIDo" type="xs:string"/>
 			<property name="DocNum" type="xs:string"/>
 			<property name="DocDate" type="xs:date"/>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="pCreatePresenceAPTOSTWMHS">
@@ -180,26 +180,26 @@
 				<typeDef xsi:type="ObjectType">
 					<property name="ProductTransferStructure">
 						<typeDef xsi:type="ObjectType">
-							<property name="ItemsKey" type="xs:unsignedByte" lowerBound="1" form="Attribute"/>
+							<property name="ItemsKey" type="xs:string" lowerBound="1" form="Attribute"/>
 							<property name="Category">
 								<typeDef xsi:type="ObjectType">
-									<property name="ProductCode" type="xs:unsignedLong"/>
+									<property name="ProductCode" type="xs:string"/>
 									<property name="Name" type="xs:string"/>
 									<property name="ESKLP" type="xs:string"/>
 									<property name="UnitCodeMax" type="xs:string"/>
 									<property name="UnitCodeMin" type="xs:string"/>
-									<property name="Ration" type="xs:unsignedByte"/>
+									<property name="Ration" type="xs:double"/>
 									<property name="Category" type="xs:string"/>
 									<property name="SubCategory" type="xs:string"/>
 								</typeDef>
 							</property>
 							<property name="Barcode" type="xs:string"/>
-							<property name="NumMin" type="xs:unsignedByte"/>
-							<property name="NumMax" type="xs:unsignedByte"/>
+							<property name="NumMin" type="xs:double"/>
+							<property name="NumMax" type="xs:double"/>
 							<property name="Finance">
 								<typeDef xsi:type="ObjectType">
-									<property name="FinanceCode" type="xs:unsignedByte"/>
-									<property name="FinanceName" type="xs:unsignedByte"/>
+									<property name="FinanceCode" type="xs:string"/>
+									<property name="FinanceName" type="xs:string"/>
 								</typeDef>
 							</property>
 							<property name="KSU" type="xs:string"/>
@@ -207,7 +207,7 @@
 					</property>
 				</typeDef>
 			</property>
-			<property name="RequestName" type="xs:anyType"/>
+			<property name="RequestName" type="xs:string"/>
 		</typeDef>
 	</property>
 	<property name="pCreateQTMCWMHSRequest">
