@@ -27,7 +27,7 @@
 			<property name="PharmStoreCode" type="xs:string"/>
 			<property name="Items">
 				<typeDef xsi:type="ObjectType">
-					<property name="ProductTransferStructure">
+					<property name="ProductTransferStructure" lowerBound="0" upperBound="-1">
 						<typeDef xsi:type="ObjectType">
 							<property name="ItemsKey" type="xs:string" lowerBound="1" form="Attribute"/>
 							<property name="Category">
@@ -57,7 +57,7 @@
 							<property name="KSU" type="xs:string"/>
 							<property name="MDLP">
 								<typeDef xsi:type="ObjectType">
-									<property name="MDLPStructure">
+									<property name="MDLPStructure" lowerBound="0" upperBound="-1">
 										<typeDef xsi:type="ObjectType">
 											<property name="MDLPKey" type="xs:string" lowerBound="1" form="Attribute"/>
 											<property name="SGTIN" type="xs:string"/>
