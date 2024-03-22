@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<Configuration uuid="c4f7b2a3-989b-450c-b64c-d235d3ab741e">
 		<InternalInfo>
 			<xr:ContainedObject>
@@ -41,7 +41,7 @@
 			</Synonym>
 			<Comment/>
 			<NamePrefix/>
-			<ConfigurationExtensionCompatibilityMode>Version8_3_23</ConfigurationExtensionCompatibilityMode>
+			<ConfigurationExtensionCompatibilityMode>Version8_3_24</ConfigurationExtensionCompatibilityMode>
 			<DefaultRunMode>ManagedApplication</DefaultRunMode>
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
@@ -210,9 +210,26 @@
 					<app:functionality>DocumentScanning</app:functionality>
 					<app:use>false</app:use>
 				</app:functionality>
+				<app:functionality>
+					<app:functionality>SpeechToText</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Geofences</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>IncomingShareRequests</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>AllIncomingShareRequestsTypesProcessing</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
 			</UsedMobileApplicationFunctionalities>
 			<StandaloneConfigurationRestrictionRoles/>
 			<MobileApplicationURLs/>
+			<AllowedIncomingShareRequestTypes/>
 			<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
 			<DefaultInterface/>
 			<DefaultStyle/>
@@ -282,7 +299,7 @@
 			<Subsystem>Бит_Доработки</Subsystem>
 			<Subsystem>КлиентHTTP</Subsystem>
 			<Subsystem>РЛС</Subsystem>
-			<Subsystem>ИнтергацияQMS</Subsystem>
+			<Subsystem>бит_ИнтеграцияQMS</Subsystem>
 			<StyleItem>АктуальнаяПодпискаЦвет</StyleItem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВажныеДанныеЦветБЭД</StyleItem>
@@ -3292,6 +3309,7 @@
 			<ExchangePlan>ОбновлениеИнформационнойБазы</ExchangePlan>
 			<ExchangePlan>Полный</ExchangePlan>
 			<ExchangePlan>СинхронизацияДанныхЧерезУниверсальныйФормат</ExchangePlan>
+			<ExchangePlan>бит_ПланОбменаQMS</ExchangePlan>
 			<XDTOPackage>AgentScripts</XDTOPackage>
 			<XDTOPackage>ApdexExport</XDTOPackage>
 			<XDTOPackage>ApdexExport_1_0_0_2</XDTOPackage>
@@ -3428,6 +3446,8 @@
 			<XDTOPackage>УведомлениеОбУточненииЭД_01_01</XDTOPackage>
 			<XDTOPackage>УниверсальныйФайлДопДанных</XDTOPackage>
 			<XDTOPackage>УправлениеПриложениями</XDTOPackage>
+			<XDTOPackage>бит_QMSПакет</XDTOPackage>
+			<XDTOPackage>бит_QMSВспомогательныйПакет</XDTOPackage>
 			<WebService>DMILService</WebService>
 			<WebService>EnterpriseDataExchange_1_0_1_1</WebService>
 			<WebService>EnterpriseDataUpload_1_0_1_1</WebService>
@@ -5446,6 +5466,7 @@
 			<Enum>ЮридическоеФизическоеЛицо</Enum>
 			<Enum>ЮрФизЛицо</Enum>
 			<Enum>сок_СостоянияПриходныхНакладных</Enum>
+			<Enum>бит_ВидыУчетаQMS</Enum>
 			<Report>ABCКлассификацияНоменклатуры</Report>
 			<Report>АнализВерсийОбъектов</Report>
 			<Report>АнализЖурналаРегистрации</Report>
@@ -5728,6 +5749,7 @@
 			<DataProcessor>КонсольКлиентаHTTP</DataProcessor>
 			<DataProcessor>РЛС_ЗагрузкаДанныхИзСервиса</DataProcessor>
 			<DataProcessor>сок_попыткаСинхронизацииСправочниковСБитФинанс</DataProcessor>
+			<DataProcessor>бит_ИнтеграцияQMS</DataProcessor>
 			<InformationRegister>ABCКлассификацияНоменклатуры</InformationRegister>
 			<InformationRegister>АбонентыЭДО</InformationRegister>
 			<InformationRegister>АвторизацияВСервисе1СФреш</InformationRegister>
@@ -6135,6 +6157,7 @@
 			<InformationRegister>сок_БуферЗаявок</InformationRegister>
 			<InformationRegister>сок_ПоследнийМенеджерЗакупки</InformationRegister>
 			<InformationRegister>had_СоотношениеГруппыНоменклатурыИПользователя</InformationRegister>
+			<InformationRegister>бит_СоответствияОбъектовУчетаQMS</InformationRegister>
 			<AccumulationRegister>ВыручкаИСебестоимостьПродаж</AccumulationRegister>
 			<AccumulationRegister>ДанныеПоступленийДляПроектаПоМониторингуЦен</AccumulationRegister>
 			<AccumulationRegister>ДвиженияНоменклатураДоходыРасходы</AccumulationRegister>
